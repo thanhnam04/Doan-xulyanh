@@ -335,7 +335,7 @@ Trong miền không gian, ta xử lý trực tiếp trên từng điểm ảnh, 
     Trong nhiều trường hợp, người ta dùng chuyển đổi Fourier để chuyển ảnh từ miền không gian sang miền tần số.
 \end{enumerate}
 \section{Khái niệm chuỗi Fourier và chuyển đổi Fourier}
-\section{Xử lý ảnh trong miền tần số}
+
      Chuỗi Fourỉer (Fourier series) được nhà Toán học người Pháp tên Jean Baptiste Joseph Fourier đưa ra vào thế kỷ 19. Ông khẳng định rằng với bất kỳ hàm số $f(t)$ tuần hoàn với chu kỳ $T$ đều có thể biểu diễn được dưới dạng tổng của các hàm số sine và cosine với những tần số khác nhau, mỗi hàm số nhân với một hệ số tương ứng. Khi đó, ta gọi tổng các chuỗi hàm số sine và cosine này là chuỗi Fourier.
 
     ...
@@ -345,21 +345,47 @@ Trong miền không gian, ta xử lý trực tiếp trên từng điểm ảnh, 
 \subsubsection{Hàm 1 biến}
 Chuỗi Fourier có dạng
 \begin{equation}
-	\label{141}
+	\label{131}
     f(t)= \sum_{n=-\infty} ^{\infty} c_ne^{i\dfrac{2\pi n}{T}t},
 \end{equation}
 với
 \begin{equation}
-	\label{142}
+	\label{132}
     c_n=\dfrac{1}{T}\displaystyle\int_{-T/2}^{T/2} f(t)e^{-i\dfrac{2\pi n}{T}t}dt,\quad n=0,\pm 1,\pm 2, \pm 3,...
 \end{equation}
-Phương trình (\ref{141}) là cách khai triển hàm số sine và cosine theo công thức Euler trong trường số phức:
+Phương trình (\ref{131}) là cách khai triển hàm số $\sin$ và $\cos$ theo công thức Euler trong trường số phức:
 \begin{equation}
-	\label{143}
+	\label{133}
     e^{i\varphi}=\cos\varphi+i \sin\varphi
 \end{equation}
-Đối với những hàm số không có tính tuần hoàn, nhưng diện tích dưới đường cong của hàm số đó là hữu hạn, ta có thể biểu diễn hàm số đó dưới dạng tích phân của hàm sine và cosine nhân với hàm trọng số. Biểu thức thu được gọi là chuyển đổi Fourier.
-Ta xác định phương trình chuyển đổi Fourier của một hàm số liên tục $f(t)$ có biến t liên tục như sau:
+Đối với những hàm số không có tính tuần hoàn, nhưng diện tích dưới đường cong của hàm số đó là hữu hạn, ta có thể biểu diễn hàm số đó dưới dạng tích phân của hàm $\sin$ và $\cos$ nhân với hàm trọng số. Biểu thức thu được gọi là biến đổi Fourier.
+Ta xác định phương trình biến đổi Fourier của một hàm số liên tục $f(t)$ có biến t liên tục như sau:
+\begin{equation}
+	\label{134}
+    \mathcal{F}\{f(t)\}(\mu)=\int_{-\infty}^{+\infty}f(t)e^{-i2\pi\mu t}dt
+\end{equation}
+với $\mu$ là biến liên tục. Vì khi lấy xong tích phân sẽ mất t nên ta chỉ còn lại $\mu$, vậy ta sẽ ký hiệu lại phương trình biến đổi Fourier cho rõ ràng hơn như sau:
+
+\begin{equation}
+	\label{135}
+  \mathcal{F}(\mu)=\int_{-\infty}^{+\infty}f(t)e^{-i2\pi\mu t}dt
+\end{equation}
+
+Ngược lại, cho trước $F(\mu)$, ta có thể tìm lại $f(t)$ bằng cách sử dụng chuyển đổi ngược Fourier (inverse Fourier transform), $f(t)=\mathcal{F}^{-1}\{f(t)\}$, viết là:
+
+\begin{equation}
+	\label{136}
+    f(t)=\int_{-\infty}^{+\infty}\mathcal{F}(\mu)e^{i2\pi\mu t}d\mu,
+\end{equation}
+
+sử dụng công thức Euler, ta viết lại phương trình (\ref{135}) như sau:
+
+\begin{equation}
+	\label{137}
+     \mathcal{F}(\mu)=\int_{-\infty}^{+\infty}f(t)[\cos(2\pi\mu t)-i\sin(2\pi\mu t)]dt.
+\end{equation}
+
+Biến còn lại khi lấy tích phân là $\mu$, chính là tần số của hàm lượng giác nên miền của chuyển đổi Fourier là miền tần số.
 
 
 \subsection{Biến đổi Fourier cho hàm rời rạc}
