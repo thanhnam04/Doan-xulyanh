@@ -224,11 +224,11 @@ Tiểu luận này được hoàn thành tại trường Đại Học Sài Gòn 
 \begin{center}
 	\begin{tabular}{ |p{3cm}|p{5cm}|  }
 		\hline
-		TƯTT & Tối ưu tuyến tính  \\ \hline
-		PACB & Phương án cực biên \\ \hline
-		PATƯ & Phương án tối ưu \\ \hline
-			PA & Phương án\\ \hline
-		BT& Bài toán  \\ \hline
+		DFT & Discrete Fourier Transforms  \\ \hline
+		IDFT & Inverse Discrete Fourier Transforms  \\ \hline
+		 & Phương án tối ưu \\ \hline
+			 & Phương án\\ \hline
+		& Bài toán  \\ \hline
 	
 		\hline
 	\end{tabular}
@@ -351,7 +351,7 @@ Chuỗi Fourier có dạng
 với
 \begin{equation}
 	\label{142}
-    c_n=\dfrac{1}{T}\int_{-T/2}^{T/2} f(t)e^{-i\dfrac{2\pi n}{T}t}dt,\quad n=0,\pm 1,\pm 2, \pm 3,...
+    c_n=\dfrac{1}{T}\displaystyle\int_{-T/2}^{T/2} f(t)e^{-i\dfrac{2\pi n}{T}t}dt,\quad n=0,\pm 1,\pm 2, \pm 3,...
 \end{equation}
 Phương trình (\ref{141}) là cách khai triển hàm số sine và cosine theo công thức Euler trong trường số phức:
 \begin{equation}
@@ -366,7 +366,7 @@ Ta xác định phương trình chuyển đổi Fourier của một hàm số li
 
 Vì các điểm ảnh là các điểm dữ liệu rời rạc nên ta áp dụng biến đổi Fourier, ta cần xây dựng một công thức sử dụng cho các biến rời rạc.
 
-\subsubsection{Hàm 1 biến}
+\subsubsection{Hàm một biến số}
 
 Giả sử ra có bộ dữ liệu dãy $x_n$, (với $n= 1,2,3,...,N)$, ta xác định DFT(Discrete Fourier Transforms) cho $x_n$ như sau: 
 \begin{equation}
@@ -378,7 +378,17 @@ Biến đổi Fourier ngược(IDFT) là
 	\label{145}
     x_n =\sum_{k=1}^N\mathcal{X}_ne^{\dfrac{ik2\pi n}{N}},\quad n=\overline{1,N}
 \end{equation}
+\subsubsection{Hàm hai biến số}
+\subsection{Biến đổi Fourier nhanh(FFT)}
+\subsubsection{Hàm một biến sô}
+để chuyển ảnh từ miền không gian sang miền tần số bằng cách sử dụng chuyển đổi Fourier thông thường đòi hỏi chi phí lớn $(O(N^2)$ với $N$ là số điểm ảnh).
 
+Thuật toán FFT thông dụng nhất là thuật toán do J.W.Cooley và John Tukey đề xuất, tính chuyển đổi Fourier cho các giá trị rời rạc bằng cách sử dụng đệ quy tính các giá trị ở vị trí chẵn lẻ. 
+
+
+\begin{equation}
+\mathcal{X}_k = \underbrace{\sum_{m=1}^{\dfrac{N}{2}}}_{ \text{DFT cho phần chẵn}}
+\end{equation}
 \section{Tổng kết chương}
 
 	\chapter*{Kết luận}                         % Chương 3

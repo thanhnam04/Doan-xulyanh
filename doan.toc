@@ -2,8 +2,8 @@
 \contentsline {chapter}{Lời cam đoan}{i}{chapter*.2}%
 \contentsline {chapter}{Lời cảm ơn}{ii}{chapter*.3}%
 \contentsline {chapter}{Mục lục}{iii}{chapter*.3}%
-\contentsline {chapter}{Danh mục các từ viết tắt}{iv}{chapter*.4}%
-\contentsline {chapter}{Danh mục các bảng, hình vẽ}{v}{chapter*.5}%
+\contentsline {chapter}{Danh mục các từ viết tắt}{v}{chapter*.4}%
+\contentsline {chapter}{Danh mục các bảng, hình vẽ}{vi}{chapter*.5}%
 \contentsline {chapter}{{\bf Lời nói đầu}\rm }{1}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}\centering Xử lý ảnh trong miền tần số}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Giới thiệu và đôi nét về miền tần số}{2}{section.1.1}%
@@ -13,7 +13,10 @@
 \contentsline {subsection}{\numberline {1.4.1}Chuyển đổi Fourier cho hàm liên tục}{4}{subsection.1.4.1}%
 \contentsline {subsubsection}{\numberline {1.4.1.1}Hàm 1 biến}{4}{subsubsection.1.4.1.1}%
 \contentsline {subsection}{\numberline {1.4.2}Biến đổi Fourier cho hàm rời rạc}{5}{subsection.1.4.2}%
-\contentsline {subsubsection}{\numberline {1.4.2.1}Hàm 1 biến}{5}{subsubsection.1.4.2.1}%
-\contentsline {section}{\numberline {1.5}Tổng kết chương}{5}{section.1.5}%
-\contentsline {chapter}{{\bf Kết luận}\rm }{6}{chapter*.8}%
-\contentsline {chapter}{{\bf Tài liệu tham khảo}}{7}{chapter*.9}%
+\contentsline {subsubsection}{\numberline {1.4.2.1}Hàm một biến số}{5}{subsubsection.1.4.2.1}%
+\contentsline {subsubsection}{\numberline {1.4.2.2}Hàm hai biến số}{5}{subsubsection.1.4.2.2}%
+\contentsline {subsection}{\numberline {1.4.3}Biến đổi Fourier nhanh(FFT)}{5}{subsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.3.1}Hàm một biến sô}{5}{subsubsection.1.4.3.1}%
+\contentsline {section}{\numberline {1.5}Tổng kết chương}{6}{section.1.5}%
+\contentsline {chapter}{{\bf Kết luận}\rm }{7}{chapter*.8}%
+\contentsline {chapter}{{\bf Tài liệu tham khảo}}{8}{chapter*.9}%
