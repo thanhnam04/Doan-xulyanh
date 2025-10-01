@@ -109,10 +109,10 @@
 	\end{figure}
 	
 	\vspace{1cm}
-	{\Huge\textbf{BÁO CÁO TỔNG KẾT \\ \hspace{0.5cm} ĐỒ ÁN MÔN HỌC\\XỬ LÝ ẢNH}\par}
+	{\Huge\textbf{BÁO CÁO TỔNG KẾT \\ \hspace{0.5cm} ĐỒ ÁN MÔN HỌC\\PHÂN TÍCH VÀ XỬ LÝ ẢNH}\par}
 	\vspace{3cm}
 	{\Huge\textbf{Xử lý ảnh trên miền tần số \\(Image Enhancement in the Frequency Domain) }\par}
-	\large\textbf{ Thuộc nhóm ngành khoa học: Toán-Ứng dụng\\ Chủ nhiệm đề tài: Nguyễn Thành Nam }\par		
+	% \large\textbf{ Thuộc nhóm ngành khoa học: Toán-Ứng dụng\\ Chủ nhiệm đề tài: Nguyễn Thành Nam }\par		
 	\vspace{2cm}
 	\large{\textbf{Giảng viên hướng dẫn: PGS.TS Phạm Thế Bảo}}
 	\vfill
@@ -135,7 +135,7 @@
 	
 	\vspace{1cm}
 	{\Large\textbf{BÁO CÁO TỔNG KẾT \\ \hspace{0.5cm} ĐỒ ÁN MÔN HỌC \\
-  XỦ LÝ ẢNH}\par}
+  PHÂN TÍCH VÀ XỬ LÝ ẢNH}\par}
 	\vspace{2cm}
 	{\Large\textbf{Xử lý ảnh trên miền tần số \\(Image Enhancement in the Frequency Domain)}\par}
 	\vspace{3cm}
@@ -145,15 +145,15 @@
 	\large{}
 	\vspace{1.5cm}
 	
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|}
   \hline
-  MSV & Họ và tên & Nhiệm vụ & Đánh giá (\%) \\ 
+  MSV & Họ và tên  \\ 
   \hline
-   3122480034  &  Nguyễn Thành Nam         &          &               \\ 
+   3122480034  &  Nguyễn Thành Nam                       \\ 
   \hline
-   3122480042  &   Bùi Tấn Phát        &          &               \\ 
+   3122480042  &   Bùi Tấn Phát                       \\ 
   \hline
-   3122480002  &   Trần Đức Anh        &          &               \\ 
+   3122480002  &   Trần Đức Anh                    \\ 
   \hline
 \end{tabular}
 
@@ -285,9 +285,100 @@ Tiểu luận này được hoàn thành tại trường Đại Học Sài Gòn 
 Trong bài tiểu luận này chúng tôi nghiên cứu về xử lý ảnh trên miền tần số. Công thức toán học để sử dụng. Ảnh đầu vào của các phép xử lý sẽ là ảnh xám của 1 bức hình bình thường, sau đó dùng các phương pháp xử lý ảnh trên miền tần số để làm sắc nét ảnh hơn hoặc làm mờ ảnh đi để 
 bảo mật. 
 
+
+Ta sẽ tìm hiểu khái niệm miền tần số trong không gian 1 chiều.
+
+\begin{enumerate}
+    \item Chu kỳ của $\cos t$ là $2\pi$ giây, nghĩa là tín hiệu sẽ được lặp lại sau mỗi $2\pi$ giây.
+
+    \item Chu kỳ của $\cos(2\pi t)$ là 1 giây.
+
+\item Ta ký hiệu chu kỳ là $T$.
+
+\item Đơn vị đo cho tần số là $Hz$ (Herts), ký hiệu là $f$, tương ứng với số chu kỳ xảy ra trong 1 giây
+$$f=\dfrac{1}{T}$$
+
+\item Hàm $\cos(2\pi \cdot ft)$ có chu kỳ $1/T$ và tần số $f$.
+
+\item Đơn vị đo cho tần số góc là $rad/s$, ký hiệu là $\omega$
+
+$$\omega = \dfrac{2\pi}{T}$$
+
+Ví dụ: Giả sử một bức ảnh có các điểm ảnh thỏa hàm số
+$$f(x,y)=128+A \sin \left(\dfrac{22\pi u x}{N-1}+\phi\right)$$
+
+Khi đó, ta biết được ảnh có mức xám trung bình là 128, biên độ $A \in [1,127]$, độ rọng của ảnh là $N, \phi$ là pha va $u$ là tần số không gian( số vòng hàm $\sin $ "vừa với độ rộng của hình, chia cho $N \rightarrow $ tần số không gian trong 1 vòng đơn vị trên  điểm ảnh).
+
+Cho hàm
+$$f(x,y)=128+127 \sin \left(\dfrac{2\pi \cdot 3x}{100-1}+0\right).$$
+
+Ta được ảnh tương ứng của hàm số $f(x,y)$ là
+
+\begin{figure}[H]
+\label{1.1}
+    \centering
+\includegraphics[width=0.5\linewidth]{img/Screenshot 2025-10-01 132803.png}
+    \caption{Ảnh $f(x,y)$}
+\end{figure}
+
+\end{enumerate}
 \section{Khác biệt giữa miền không gian và miền tần số}
+Trong miền không gian, ta xử lý trực tiếp trên từng điểm ảnh, còn trong miền tần số ta xử lý dựa trên tốc độ thay đổi giá trị của điểm ảnh trên miền không gian.
+
+\begin{enumerate}
+    \item Miền không gian: Ma trận ảnh đầu vào $\rightarrow$ Xử lý $\rightarrow$ Ma trận ảnh đầu ra.
+
+    \item Miền tần số: Ảnh vào $\rightarrow$ Phân bố tần số $\rightarrow$ Xử lý $\rightarrow$ Chuyển đổi ngược $\rightarrow$ Ảnh ra.
+
+    Miền tằn số không gian có thể tạo ra mối quan hệ chu kỳ rỡ ràng trong miền không gian, trong miền tần số, một số toán tử xử lý ảnh sẽ trở nên hiệu quả hơn.
+
+    Trong nhiều trường hợp, người ta dùng chuyển đổi Fourier để chuyển ảnh từ miền không gian sang miền tần số.
+\end{enumerate}
 \section{Khái niệm chuỗi Fourier và chuyển đổi Fourier}
 \section{Xử lý ảnh trong miền tần số}
+     Chuỗi Fourỉer (Fourier series) được nhà Toán học người Pháp tên Jean Baptiste Joseph Fourier đưa ra vào thế kỷ 19. Ông khẳng định rằng với bất kỳ hàm số $f(t)$ tuần hoàn với chu kỳ $T$ đều có thể biểu diễn được dưới dạng tổng của các hàm số sine và cosine với những tần số khác nhau, mỗi hàm số nhân với một hệ số tương ứng. Khi đó, ta gọi tổng các chuỗi hàm số sine và cosine này là chuỗi Fourier.
+
+    ...
+
+    \textbf{Hình 1.4.1} Minh họa về chuỗi Fourier, hàm sóng ở dòng cuối cùng là kết quả tổ hợp tuyến tính của 4 hàm sóng ở trên hàm số ở dưới cùng chính là tổng của bốn hàm số ở phía trên.
+\subsection{Chuyển đổi Fourier cho hàm liên tục}
+\subsubsection{Hàm 1 biến}
+Chuỗi Fourier có dạng
+\begin{equation}
+	\label{141}
+    f(t)= \sum_{n=-\infty} ^{\infty} c_ne^{i\dfrac{2\pi n}{T}t},
+\end{equation}
+với
+\begin{equation}
+	\label{142}
+    c_n=\dfrac{1}{T}\int_{-T/2}^{T/2} f(t)e^{-i\dfrac{2\pi n}{T}t}dt,\quad n=0,\pm 1,\pm 2, \pm 3,...
+\end{equation}
+Phương trình (\ref{141}) là cách khai triển hàm số sine và cosine theo công thức Euler trong trường số phức:
+\begin{equation}
+	\label{143}
+    e^{i\varphi}=\cos\varphi+i \sin\varphi
+\end{equation}
+Đối với những hàm số không có tính tuần hoàn, nhưng diện tích dưới đường cong của hàm số đó là hữu hạn, ta có thể biểu diễn hàm số đó dưới dạng tích phân của hàm sine và cosine nhân với hàm trọng số. Biểu thức thu được gọi là chuyển đổi Fourier.
+Ta xác định phương trình chuyển đổi Fourier của một hàm số liên tục $f(t)$ có biến t liên tục như sau:
+
+
+\subsection{Biến đổi Fourier cho hàm rời rạc}
+
+Vì các điểm ảnh là các điểm dữ liệu rời rạc nên ta áp dụng biến đổi Fourier, ta cần xây dựng một công thức sử dụng cho các biến rời rạc.
+
+\subsubsection{Hàm 1 biến}
+
+Giả sử ra có bộ dữ liệu dãy $x_n$, (với $n= 1,2,3,...,N)$, ta xác định DFT(Discrete Fourier Transforms) cho $x_n$ như sau: 
+\begin{equation}
+	\label{144}
+    \mathcal{X}_n= \dfrac{1}{N}\sum_{i=1}^Nx_ke^{\dfrac{-ik2\pi n}{N}},\quad n=\overline{1,N}.
+\end{equation}
+Biến đổi Fourier ngược(IDFT) là
+\begin{equation}
+	\label{145}
+    x_n =\sum_{k=1}^N\mathcal{X}_ne^{\dfrac{ik2\pi n}{N}},\quad n=\overline{1,N}
+\end{equation}
+
 \section{Tổng kết chương}
 
 	\chapter*{Kết luận}                         % Chương 3
