@@ -389,6 +389,43 @@ Thuật toán FFT thông dụng nhất là thuật toán do J.W.Cooley và John 
 \begin{equation}
 \mathcal{X}_k = \underbrace{\sum_{m=1}^{\dfrac{N}{2}}}_{ \text{DFT cho phần chẵn}}
 \end{equation}
+\section{Xử lý ảnh-Lọc ảnh trong miền tần số}
+\subsection{Khái niệm về xử lý ảnh trong miền tần số}
+Khi chụp ảnh, ta có thể thu được các ảnh có tần số thấp (sự thay đổi mức xám của ảnh ít, ví dụ như ảnh một bức tường) hay ảnh có tần số cao (ví dụ như biên của vật thể). Vì vậy, ta cần có bộ lọc $H(u,v)$ có thể làm giảm đi tần số cao trong khi đi qua các tần số thấp (gọi là lọc thông thấp) làm cho ảnh mờ đi. Ngược lại, ta cần có bộ lọc có tính chất ngược với lọc thông thấp (gọi là lọc thông cao) giúp tăng cường chi tiết hình dạng vật thể, đồng thời làm giảm độ tương phản ảnh. Hình ảnh sau mô tả điều này.
+
+Định lý tích chập cho ta mối quan hệ giữa miền không gian và miền tần số, cụ thể, thông qua tích chập, một ảnh trong miền không gian có thể chuyển qua miền tần số và ngược lại.
+
+Quy trình lọc ảnh trong miền tần số như sau:
+\[\text{Ảnh}\rightarrow\text{Biến đổi Fourier}\rightarrow\text{Lọc}\rightarrow\text{Biến đổi Fourier ngược}
+\rightarrow\text{Ảnh}\]
+\begin{enumerate}
+\item Bước 1: Xử lý ảnh trong miền không gian, tức tăng hoặc giảm độ sáng của ảnh.
+\item Bước 2: Lấy DFT của ảnh.
+\item Bước 3: Canh giữa DFT, tức mang DFT từ góc ảnh ra giữa ảnh, trong Matlab ta sử dụng hàm shififft để thực hiện.
+\item Bước 4: Thực hiện tích chập với hàm lọc.
+\item Bước 5: Trượt DFT từ giữa ảnh ra góc.
+\item Bước 6: Lấy chuyển đổi ngược IDFT, tức chuyển ảnh từ miền tần số sang miền không gian.
+\end{enumerate}
+\subsection{Các bộ lọc băng thông trong miền tần số}
+
+Khái niệm bộ lọc trong miền tần số tương tự như khái niệm mặt nạ trong miền không gian.
+
+Sau khi chuyển ảnh sang miền không gian, ta áp dụng một số bộ lọc trong quy trình lọc ảnh nhằm làm mờ ảnh, giảm nhiễu ảnh hoặc làm rõ-làm nét ảnh.
+
+Các bộ lọc thông dụng:
+\begin{enumerate}
+\item Lọc thông thấp/cao Ideal (Ideal low/high pass filter)
+\item Lọc thông thấp/cao Gaus (Gaussian low/high pass filter
+).
+
+\item Lọc thông thấp/cao Butterworth (Butterworth low/high pass filter).
+
+
+
+\end{enumerate}
+
+Ta sẽ đi qua một số ứng dụng của bộ lọc này.
+
 \section{Tổng kết chương}
 
 	\chapter*{Kết luận}                         % Chương 3

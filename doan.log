@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  1 OCT 2025 14:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  1 OCT 2025 15:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1283,7 +1283,7 @@ Package caption Info: scrextend package is loaded.
 \caption@addmargin@hsize=\dimen388
 \caption@addmargin@linewidth=\dimen389
 Package caption Info: End \AtBeginDocument code.
-<img/logodhsg.png, id=89, 1223.57124pt x 1223.57124pt>
+<img/logodhsg.png, id=101, 1223.57124pt x 1223.57124pt>
 File: img/logodhsg.png Graphic file (type png)
 <use img/logodhsg.png>
 Package pdftex.def Info: img/logodhsg.png  used on input line 107.
@@ -1392,11 +1392,11 @@ LaTeX Font Warning: Font shape `U/lasy/m/n' in size <13> not available
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <6.5> not available
 (Font)              size <6> substituted on input line 2.
 
-)
+[3])
 \tf@toc=\write5
 \openout5 = `doan.toc'.
 
- [3]
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1500,7 +1500,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [2
 
 ]
-<img/Screenshot 2025-10-01 132803.png, id=167, 239.39438pt x 234.8775pt>
+<img/Screenshot 2025-10-01 132803.png, id=182, 239.39438pt x 234.8775pt>
 File: img/Screenshot 2025-10-01 132803.png Graphic file (type png)
 <use img/Screenshot 2025-10-01 132803.png>
 Package pdftex.def Info: img/Screenshot 2025-10-01 132803.png  used on input line 320.
@@ -1541,19 +1541,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 
-LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 403.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7
+[7]
 
-]
+LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 440.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1563,7 +1561,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8
 
-] [9] (doan.aux)
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9
+
+] [10] (doan.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1574,20 +1582,20 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
 Package rerunfilecheck Info: File `doan.out' has not changed.
-(rerunfilecheck)             Checksum: 9639355A55AC73C953AA97BCD3B3D3B7;3998.
+(rerunfilecheck)             Checksum: B517DF6258EC7F65E948DF6E298F874E;4894.
  ) 
 Here is how much of TeX's memory you used:
- 35865 strings out of 475248
- 744770 string characters out of 5758285
+ 35883 strings out of 475248
+ 744993 string characters out of 5758285
  1927785 words of memory out of 5000000
- 56570 multiletter control sequences out of 15000+600000
+ 56575 multiletter control sequences out of 15000+600000
  581074 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,12n,117p,1208b,601s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Home\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on doan.pdf (17 pages, 962543 bytes).
+Output written on doan.pdf (18 pages, 970097 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 215 words of extra memory for PDF output out of 10000 (max. 10000000)
 
