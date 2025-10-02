@@ -425,9 +425,12 @@ Ta có công thức biến đổi Fourier và biến đổi Fourier ngược cho
 Biến đổi Fourier thuận:
 \begin{equation}
 \mathcal{F}(u,v) = \int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}f(x,y)e^{-2\pi i(ux+vy)}dxdy
-\end{equation}\
-\
+\end{equation}
+
 Biến đổi Fourier ngược:
+\begin{equation}
+\mathcal{F}^{-1}(u,v) =f(x,y)= \int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}f(x,y)e^{2\pi i(ux+vy)}dudv
+\end{equation}
 
 
 
@@ -445,9 +448,17 @@ Giả sử ra có bộ dữ liệu dãy $x_n$, (với $n= 1,2,3,...,N)$, ta xác
 Biến đổi Fourier ngược(IDFT) là
 \begin{equation}
 	\label{145}
-    x_n =\sum_{k=1}^N\mathcal{X}_ne^{\dfrac{ik2\pi n}{N}},\quad n=\overline{1,N}
+    x_n =\sum_{k=1}^N\mathcal{X}_ne^{\dfrac{ik2\pi n}{N}},\quad n=\overline{1,N}.
 \end{equation}
+Về bản chất, biến đổi Fourier có sử dụng số phức. Nhưng trong xử lý ảnh ta quan tâm đến phần số thực để làm, do đó xem phần ảo bằng $0$.
 \subsubsection{Hàm hai biến số}
+Giả sử hàm $f(x,y)$ là ảnh đầu vào, DFT cho hàm hai biến này là: 
+\begin{equation}
+\mathcal{F}(u,v) = \dfrac{1}{MN}\sum_{x=1}^{M}\sum_{y=1}^{N} f(x,y)e^{-2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
+\end{equation}
+\begin{equation}
+\mathcal{F}^{-1}(u,v)=f(x,y) =\sum_{u=1}^{M}\sum_{v=1}^{N} \mathcal{F}(u,v)e^{2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
+\end{equation}
 \subsection{Biến đổi Fourier nhanh(FFT)}
 \subsubsection{Hàm một biến sô}
 để chuyển ảnh từ miền không gian sang miền tần số bằng cách sử dụng chuyển đổi Fourier thông thường đòi hỏi chi phí lớn $(O(N^2)$ với $N$ là số điểm ảnh).

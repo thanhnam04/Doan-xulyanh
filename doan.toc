@@ -14,12 +14,12 @@
 \contentsline {subsubsection}{\numberline {1.3.1.2}Biến đổi Fourier cho hàm hai biến số}{7}{subsubsection.1.3.1.2}%
 \contentsline {subsection}{\numberline {1.3.2}Biến đổi Fourier cho hàm rời rạc}{7}{subsection.1.3.2}%
 \contentsline {subsubsection}{\numberline {1.3.2.1}Hàm một biến số}{7}{subsubsection.1.3.2.1}%
-\contentsline {subsubsection}{\numberline {1.3.2.2}Hàm hai biến số}{7}{subsubsection.1.3.2.2}%
-\contentsline {subsection}{\numberline {1.3.3}Biến đổi Fourier nhanh(FFT)}{7}{subsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.3.1}Hàm một biến sô}{7}{subsubsection.1.3.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Hàm hai biến số}{8}{subsubsection.1.3.2.2}%
+\contentsline {subsection}{\numberline {1.3.3}Biến đổi Fourier nhanh(FFT)}{8}{subsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.3.1}Hàm một biến sô}{8}{subsubsection.1.3.3.1}%
 \contentsline {section}{\numberline {1.4}Xử lý ảnh-Lọc ảnh trong miền tần số}{8}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Khái niệm về xử lý ảnh trong miền tần số}{8}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Các bộ lọc băng thông trong miền tần số}{9}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Tổng kết chương}{9}{section.1.5}%
-\contentsline {chapter}{{\bf Kết luận}\rm }{10}{chapter*.13}%
-\contentsline {chapter}{{\bf Tài liệu tham khảo}}{11}{chapter*.14}%
+\contentsline {section}{\numberline {1.5}Tổng kết chương}{10}{section.1.5}%
+\contentsline {chapter}{{\bf Kết luận}\rm }{11}{chapter*.13}%
+\contentsline {chapter}{{\bf Tài liệu tham khảo}}{12}{chapter*.14}%
