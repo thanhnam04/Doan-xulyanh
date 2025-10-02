@@ -33,7 +33,7 @@
 
 \usepackage{tocloft}
 \usepackage{xcolor}
-
+\usepackage{listings}
 \renewcommand{\cftchapfont}{\color{red!85}}       % Chương
 
 \usepackage[labelfont=bf]{caption}
@@ -73,8 +73,19 @@
 	\newdimen\stringwidth\setbox0=\hbox{#1}
 	\stringwidth=\wd0
 	\hspace*{-\parindent}\hspace*{.5\textwidth}\hspace*{-.5\wd0}#1\hfill #2\bigskip
-	
 }  
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red!70!brown},
+    commentstyle=\color{green!50!black},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    showstringspaces=false,
+    frame=single
+}
 \usepackage{scrextend}
 \fancyhf{}
 \lhead{}
@@ -266,7 +277,7 @@ Tiểu luận này được hoàn thành tại trường Đại Học Sài Gòn 
 
 	
 \vspace{3cm}
-\rightline{{\it {Tp. HCM, tháng 5  năm 2024}} \hspace*{0cm}}
+\rightline{{\it {Tp. HCM, tháng 5  năm 2025}} \hspace*{0cm}}
 \rightline{\textbf{Tác giả} \hspace*{2cm}}
 
 
@@ -330,7 +341,7 @@ Trong miền không gian, ta xử lý trực tiếp trên từng điểm ảnh, 
 
     \item Miền tần số: Ảnh vào $\rightarrow$ Phân bố tần số $\rightarrow$ Xử lý $\rightarrow$ Chuyển đổi ngược $\rightarrow$ Ảnh ra.
 
-    Miền tằn số không gian có thể tạo ra mối quan hệ chu kỳ rỡ ràng trong miền không gian, trong miền tần số, một số toán tử xử lý ảnh sẽ trở nên hiệu quả hơn.
+    Miền tần số không gian có thể tạo ra mối quan hệ chu kỳ rỡ ràng trong miền không gian, trong miền tần số, một số toán tử xử lý ảnh sẽ trở nên hiệu quả hơn.
 
     Trong nhiều trường hợp, người ta dùng chuyển đổi Fourier để chuyển ảnh từ miền không gian sang miền tần số.
 \end{enumerate}
@@ -460,15 +471,95 @@ Giả sử hàm $f(x,y)$ là ảnh đầu vào, DFT cho hàm hai biến này là
 \mathcal{F}^{-1}(u,v)=f(x,y) =\sum_{u=1}^{M}\sum_{v=1}^{N} \mathcal{F}(u,v)e^{2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
 \end{equation}
 \subsection{Biến đổi Fourier nhanh(FFT)}
-\subsubsection{Hàm một biến sô}
-để chuyển ảnh từ miền không gian sang miền tần số bằng cách sử dụng chuyển đổi Fourier thông thường đòi hỏi chi phí lớn $(O(N^2)$ với $N$ là số điểm ảnh).
+\subsubsection{Hàm một biến số}
+Để chuyển ảnh từ miền không gian sang miền tần số bằng cách sử dụng chuyển đổi Fourier thông thường đòi hỏi chi phí lớn $(O(N^2)$ với $N$ là số điểm ảnh).
 
 Thuật toán FFT thông dụng nhất là thuật toán do J.W.Cooley và John Tukey đề xuất, tính chuyển đổi Fourier cho các giá trị rời rạc bằng cách sử dụng đệ quy tính các giá trị ở vị trí chẵn lẻ. 
 
 
 \begin{equation}
-\mathcal{X}_k = \underbrace{\sum_{m=1}^{\dfrac{N}{2}}}_{ \text{DFT cho phần chẵn}}
+	\label{1314}
+\mathcal{X}_k = \underbrace{\sum_{m=1}^{\dfrac{N}{2}}x_{2m}e^{-\dfrac{2\pi i}{N}(2m)k}}_{ \text{DFT cho phần chẵn}} + \underbrace{\sum_{m=1}^{\dfrac{N}{2}}x_{2m+1}e^{-\dfrac{2\pi i}{N}(2m+1)k}}_{\text{DFT cho phần lẻ}}.
 \end{equation}
+\begin{equation}
+	\label{1315}
+\mathcal{X}_k = \sum_{m=1}^{\dfrac{N}{2}}x_{2m}e^{-\dfrac{2\pi i}{N/2}mk} + e^{-\dfrac{2\pi i }{N}k}\sum_{m=1}^{\dfrac{N}{2}}x_{2m+1}e^{-\dfrac{2\pi i}{N/2}mk}.
+\end{equation}
+
+Ta có thể viết lại $X_k$ cho gọn hơn như sau: 
+\begin{equation}
+	\label{1316}
+\mathcal{X}_k = E_k + e^{-\dfrac{2\pi i }{N}k}O_k,
+\end{equation}
+với $E_k, O_k$ lần lượt là tổng các phần chẵn và phần lẻ.
+
+Do tính tuần hoàn có chu kỳ của DFT nên
+\begin{equation}
+    E_{k+\tfrac{N}{2}} = E_k
+\end{equation}
+và
+\begin{equation}
+    O_{k+\tfrac{N}{2}} = O_k
+\end{equation}
+
+Khi đó, ta viết lại phương trình (\ref{1314}) và (\ref{1315}) thành
+\begin{equation}
+	\label{1319}
+    \mathcal{X}_k = 
+    \begin{cases}
+        E_k + e^{-\tfrac{2\pi i}{N}k} O_k, & 0 \leq k < \tfrac{N}{2} \\
+        E_{k-N/2} + e^{-\tfrac{2\pi i}{N}k} O_{k-N/2}, & \tfrac{N}{2} \leq k < N
+    \end{cases}
+\end{equation}
+
+Mặt khác, $e^{-\tfrac{2\pi i}{N}k}$ hình thành từ:
+\begin{equation*}
+    e^{-\tfrac{2\pi i}{N}(k+N/2)} 
+    = e^{-\tfrac{2\pi i}{N}k - \pi i} 
+    = e^{-\pi i} e^{-\tfrac{2\pi i}{N}k} 
+    = -e^{-\tfrac{2\pi i}{N}k}
+\end{equation*}
+
+Khi đó, ta có thể giảm khối lượng tính toán xuống một nửa. Với $0 \leq k < N/2$, từ phương trình (\ref{1319}) ta được:
+\begin{equation}
+    \mathcal{X}_k = E_k + e^{-\tfrac{2\pi i}{N}k} O_k
+\end{equation}
+\begin{equation}
+    \mathcal{X}_{k+N/2} = E_k - e^{-\tfrac{2\pi i}{N}k} O_k
+\end{equation}
+
+
+\begin{lstlisting}[caption={Thuật toán FFT đệ quy dạng ditfft2}, label={code:fft}]
+import cmath
+
+def ditfft2(x, N, s):
+    """
+    x: list day so (co the la phuc)
+    N: kich thuoc FFT (phai la luy thua cua 2)
+    s: buoc nhay (stride)
+    """
+    if N == 1:
+        return [x[0]]  # Truong hop co so
+    
+    # Tinh FFT phan chan va le
+    X_even = ditfft2(x[0::2*s], N//2, 2*s)  # (x0, x2s, x4s, ...)
+    X_odd  = ditfft2(x[s::2*s], N//2, 2*s)  # (xs, x3s, x5s, ...)
+    
+    X = [0] * N
+    for k in range(N//2):
+        t = X_even[k]
+        exp_term = cmath.exp(-2j * cmath.pi * k / N) * X_odd[k]
+        X[k] = t + exp_term
+        X[k + N//2] = t - exp_term
+    
+    return X
+\end{lstlisting}
+\subsubsection{Hàm hai biến số}
+Từ ý tưởng của hàm một biến, ta có thể tính được FFT của hàm hai biến bằng cách tính theo một chiều với mỗi giá trị của biến $x$(theo từng cột). Sau đó tính ngược lại theo $y$(theo từng hàng) với giá trị thu được ở trên.
+
+Trong Python, ta có thể sử dụng hàm \texttt{fft2} để đưa ảnh sang chuỗi Fourier và dùng \texttt{ifft2} để trả ngược lại ảnh lúc đầu.
+\subsection{Định lý tích chập}
+Trong xử lý ảnh hoặc tăng cường ảnh trong miền không gian, người ta sử dụng khái niệm về tích chập , trong đó ảnh sau khi được xử lý bằng tích chập của ảnh ban đầu và bộ lọc ảnh tạo thành. Về mặt Toán học, ta giả sử hai hàm số liên tục, ta có định nghĩa tích chập $*$ của hai hàm số này như bên dưới.
 \section{Xử lý ảnh-Lọc ảnh trong miền tần số}
 \subsection{Khái niệm về xử lý ảnh trong miền tần số}
 Khi chụp ảnh, ta có thể thu được các ảnh có tần số thấp (sự thay đổi mức xám của ảnh ít, ví dụ như ảnh một bức tường) hay ảnh có tần số cao (ví dụ như biên của vật thể). Vì vậy, ta cần có bộ lọc $H(u,v)$ có thể làm giảm đi tần số cao trong khi đi qua các tần số thấp (gọi là lọc thông thấp) làm cho ảnh mờ đi. Ngược lại, ta cần có bộ lọc có tính chất ngược với lọc thông thấp (gọi là lọc thông cao) giúp tăng cường chi tiết hình dạng vật thể, đồng thời làm giảm độ tương phản ảnh. Hình ảnh sau mô tả điều này.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  2 OCT 2025 09:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  2 OCT 2025 10:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1124,24 +1124,47 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforetabskip=\skip114
 \cfttabindent=\skip115
 \cfttabnumwidth=\skip116
-) (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+) (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count378
+\lst@gtempboxa=\box87
+\lst@token=\toks58
+\lst@length=\count379
+\lst@currlwidth=\dimen374
+\lst@column=\count380
+\lst@pos=\count381
+\lst@lostspace=\dimen375
+\lst@width=\dimen376
+\lst@newlines=\count382
+\lst@lineno=\count383
+\lst@maxwidth=\dimen377
+ (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count384
+\lst@skipnumbers=\count385
+\lst@framebox=\box88
+) (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/07/31 v3.6n Customizing captions (AR)
  (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen374
-\captionmargin=\dimen375
-\caption@leftmargin=\dimen376
-\caption@rightmargin=\dimen377
-\caption@width=\dimen378
-\caption@indent=\dimen379
-\caption@parindent=\dimen380
-\caption@hangindent=\dimen381
+\caption@tempdima=\dimen378
+\captionmargin=\dimen379
+\caption@leftmargin=\dimen380
+\caption@rightmargin=\dimen381
+\caption@width=\dimen382
+\caption@indent=\dimen383
+\caption@parindent=\dimen384
+\caption@hangindent=\dimen385
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count378
-\c@continuedfloat=\count379
+\c@caption@flags=\count386
+\c@continuedfloat=\count387
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
  (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
@@ -1154,22 +1177,24 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
-\big@size=\dimen382
+\big@size=\dimen386
 ) (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 ) (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
 )
-\c@dn=\count380
-\c@tc=\count381
-\c@dl=\count382
-\c@md=\count383
-\c@bd=\count384
-\c@hq=\count385
-\c@nx=\count386
-\c@vd=\count387
-\c@cy=\count388
- (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrextend.sty
+\c@dn=\count388
+\c@tc=\count389
+\c@dl=\count390
+\c@md=\count391
+\c@bd=\count392
+\c@hq=\count393
+\c@nx=\count394
+\c@vd=\count395
+\c@cy=\count396
+ (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrextend.sty
 Package: scrextend 2023/07/07 v3.41 KOMA-Script package (extend other classes with features of KOMA-Script classes)
  (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.sty
 Package: scrkbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
@@ -1192,26 +1217,26 @@ LaTeX Warning: Command \@footnotemark  has changed.
 ) (doan.aux)
 \openout1 = `doan.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1249,73 +1274,74 @@ LaTeX Font Info:    ... okay on input line 91.
 
 (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count389
-\scratchdimen=\dimen383
-\scratchbox=\box87
-\nofMPsegments=\count390
-\nofMParguments=\count391
-\everyMPshowfont=\toks58
-\MPscratchCnt=\count392
-\MPscratchDim=\dimen384
-\MPnumerator=\count393
-\makeMPintoPDFobject=\count394
-\everyMPtoPDFconversion=\toks59
+\scratchcounter=\count397
+\scratchdimen=\dimen387
+\scratchbox=\box89
+\nofMPsegments=\count398
+\nofMParguments=\count399
+\everyMPshowfont=\toks59
+\MPscratchCnt=\count400
+\MPscratchDim=\dimen388
+\MPnumerator=\count401
+\makeMPintoPDFobject=\count402
+\everyMPtoPDFconversion=\toks60
 ) (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 91.
+Package hyperref Info: Link coloring OFF on input line 102.
  (doan.out) (doan.out)
 \@outlinefile=\write4
 \openout4 = `doan.out'.
 
-\c__nicematrix_shift_Ldots_last_row_dim=\dimen385
-\c__nicematrix_shift_exterior_Vdots_dim=\dimen386
-\c__nicematrix_innersep_middle_dim=\dimen387
-\c@tabularnotesi=\count395
-\enitdp@tabularnotes=\count396
-\c@tabularnotes*i=\count397
-\enitdp@tabularnotes*=\count398
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen389
+\c__nicematrix_shift_exterior_Vdots_dim=\dimen390
+\c__nicematrix_innersep_middle_dim=\dimen391
+\c@tabularnotesi=\count403
+\enitdp@tabularnotes=\count404
+\c@tabularnotes*i=\count405
+\enitdp@tabularnotes*=\count406
+\c@lstlisting=\count407
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: scrextend package is loaded.
-\caption@addmargin@hsize=\dimen388
-\caption@addmargin@linewidth=\dimen389
+\caption@addmargin@hsize=\dimen392
+\caption@addmargin@linewidth=\dimen393
 Package caption Info: End \AtBeginDocument code.
-<img/logodhsg.png, id=101, 1223.57124pt x 1223.57124pt>
+<img/logodhsg.png, id=109, 1223.57124pt x 1223.57124pt>
 File: img/logodhsg.png Graphic file (type png)
 <use img/logodhsg.png>
-Package pdftex.def Info: img/logodhsg.png  used on input line 107.
+Package pdftex.def Info: img/logodhsg.png  used on input line 118.
 (pdftex.def)             Requested size: 170.71652pt x 170.70135pt.
  [1
 
 {C:/Users/Home/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img/logodhsg.png>]
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 148.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 148.
+(Font)              <7> on input line 159.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 159.
  (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 148.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 159.
  (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 148.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 159.
  (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.167 \end{titlingpage}
+l.178 \end{titlingpage}
                         [1]
-Underfull \hbox (badness 10000) in paragraph at lines 181--187
+Underfull \hbox (badness 10000) in paragraph at lines 192--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--187
+Underfull \hbox (badness 10000) in paragraph at lines 192--198
 
  []
 
@@ -1330,16 +1356,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.192 	\chapter
+l.203 	\chapter
                *{Lời cảm ơn} [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
+Underfull \hbox (badness 10000) in paragraph at lines 213--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
+Underfull \hbox (badness 10000) in paragraph at lines 213--219
 
  []
 
@@ -1405,12 +1431,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
-Underfull \hbox (badness 2941) in paragraph at lines 227--227
+Underfull \hbox (badness 2941) in paragraph at lines 238--238
 []|\T5/cmr/m/n/13 Discrete Fourier Trans-
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 228--228
+Underfull \hbox (badness 1275) in paragraph at lines 239--239
 []|\T5/cmr/m/n/13 Inverse Dis-crete Fourier
  []
 
@@ -1447,66 +1473,66 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Ch\uhorn \ohorn ng 1.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 282.
+(hyperref)                removing `\<let>-command' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 282.
+(hyperref)                removing `\\' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 282.
+(hyperref)                removing `\@centercr' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 282.
+(hyperref)                removing `\rightskip' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 282.
+(hyperref)                removing `\@flushglue' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 282.
+(hyperref)                removing `\leftskip' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 282.
+(hyperref)                removing `\@flushglue' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 282.
+(hyperref)                removing `\finalhyphendemerits' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 282.
+(hyperref)                removing `\z@' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 282.
+(hyperref)                removing `\parindent' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 282.
+(hyperref)                removing `\z@' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 282.
+(hyperref)                removing `\parfillskip' on input line 293.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 282.
+(hyperref)                removing `\z@skip' on input line 293.
 
 [2
 
 ]
-<img/Screenshot 2025-10-01 132803.png, id=182, 239.39438pt x 234.8775pt>
+<img/Screenshot 2025-10-01 132803.png, id=192, 239.39438pt x 234.8775pt>
 File: img/Screenshot 2025-10-01 132803.png Graphic file (type png)
 <use img/Screenshot 2025-10-01 132803.png>
-Package pdftex.def Info: img/Screenshot 2025-10-01 132803.png  used on input line 320.
+Package pdftex.def Info: img/Screenshot 2025-10-01 132803.png  used on input line 331.
 (pdftex.def)             Requested size: 230.46729pt x 226.12135pt.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 321.
+(Font)              <6> on input line 332.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1516,15 +1542,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [3 <./img/Screenshot 2025-10-01 132803.png>]
-<img/fourier.png, id=192, 252.945pt x 449.68pt>
+<img/fourier.png, id=202, 252.945pt x 449.68pt>
 File: img/fourier.png Graphic file (type png)
 <use img/fourier.png>
-Package pdftex.def Info: img/fourier.png  used on input line 364.
+Package pdftex.def Info: img/fourier.png  used on input line 375.
 (pdftex.def)             Requested size: 142.26378pt x 252.91693pt.
-<img/fourier1.png, id=193, 256.70906pt x 394.47375pt>
+<img/fourier1.png, id=203, 256.70906pt x 394.47375pt>
 File: img/fourier1.png Graphic file (type png)
 <use img/fourier1.png>
-Package pdftex.def Info: img/fourier1.png  used on input line 369.
+Package pdftex.def Info: img/fourier1.png  used on input line 380.
 (pdftex.def)             Requested size: 142.26378pt x 218.61047pt.
 
 
@@ -1538,32 +1564,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.371 		 \end{figure}
+l.382 		 \end{figure}
                      
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.371 		 \end{figure}
+l.382 		 \end{figure}
                      ]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.377 \begin{equation}
+l.388 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.377 \begin{equation}
+l.388 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.377 \begin{equation}
+l.388 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.377 \begin{equation}
+l.388 \begin{equation}
                       
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1597,6 +1623,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 532.
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 532.
+ (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1614,19 +1645,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [10]
 
-LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 520.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11
+[11]
 
-]
+LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 611.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1636,7 +1665,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12
 
-] [13] (doan.aux)
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13
+
+] [14] (doan.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1647,20 +1686,20 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
 Package rerunfilecheck Info: File `doan.out' has not changed.
-(rerunfilecheck)             Checksum: 5BF97DC3AFD8E2258E408C83477F7B60;5101.
+(rerunfilecheck)             Checksum: E3606D5ABB4AF088C27E70F2E35D2410;5437.
  ) 
 Here is how much of TeX's memory you used:
- 35922 strings out of 475248
- 745615 string characters out of 5758285
- 1928785 words of memory out of 5000000
- 56596 multiletter control sequences out of 15000+600000
- 581908 words of font info for 96 fonts, out of 8000000 for 9000
+ 37756 strings out of 475248
+ 770175 string characters out of 5758285
+ 2103785 words of memory out of 5000000
+ 58377 multiletter control sequences out of 15000+600000
+ 584474 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,12n,117p,1208b,620s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Home\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on doan.pdf (21 pages, 1156126 bytes).
+ 108i,12n,117p,1208b,1424s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Home\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on doan.pdf (22 pages, 1192871 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 429 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
