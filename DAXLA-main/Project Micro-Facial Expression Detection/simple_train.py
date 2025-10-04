@@ -6,6 +6,8 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 from sklearn.utils import shuffle
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 def augment_image(img):
     """Simple data augmentation"""
     augmented = []
@@ -29,7 +31,7 @@ def load_data():
     X, y = [], []
     
     # Load Truth data (0)
-    truth_dir = 'data/micro/train/truth'
+    truth_dir = os.path.join(script_dir, 'data/micro/train/truth')
     for filename in os.listdir(truth_dir):
         if filename.endswith('.jpg'):
             img_path = os.path.join(truth_dir, filename)
@@ -43,7 +45,7 @@ def load_data():
                     y.append(0)  # Truth
     
     # Load Lie data (1)
-    lie_dir = 'data/micro/train/lie'
+    lie_dir = os.path.join(script_dir, 'data/micro/train/lie')
     for filename in os.listdir(lie_dir):
         if filename.endswith('.jpg'):
             img_path = os.path.join(lie_dir, filename)
@@ -95,10 +97,11 @@ def train_model():
     print(f"Test accuracy: {test_acc:.3f}")
     
     # Save model
-    with open('micro_model_simple.pkl', 'wb') as f:
+    model_path = os.path.join(script_dir, 'micro_model_simple.pkl')
+    with open(model_path, 'wb') as f:
         pickle.dump(model, f)
     
-    print("Model saved as 'micro_model_simple.pkl'")
+    print(f"Model saved as '{model_path}'")
     return model
 
 if __name__ == "__main__":
