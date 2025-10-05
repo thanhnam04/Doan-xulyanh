@@ -159,14 +159,14 @@
 \begin{tabular}{|c|c|}
   \hline
   MSV & Họ và tên  \\ 
+	\hline
+	   3122480001  &   Trần Đức Anh                    \\
   \hline
    3122480034  &  Nguyễn Thành Nam                       \\ 
   \hline
    3122480042  &   Bùi Tấn Phát                       \\ 
   \hline
-   3122480002  &   Trần Đức Anh                    \\ 
-  \hline
-\end{tabular}
+ \end{tabular}
 
 	\vspace{0.8cm}
 	
@@ -410,21 +410,21 @@ với $\mu$ là biến liên tục. Vì khi lấy xong tích phân sẽ mất t 
 
 \begin{equation}
 	\label{135}
-  \mathcal{F}(\mu)=\int\limits_{-\infty}^{+\infty}f(t)e^{-2\pi i \mu t}dt
+  \hat{f}(\mu)=\int\limits_{-\infty}^{+\infty}f(t)e^{-2\pi i \mu t}dt
 \end{equation}
 
-Ngược lại, cho trước $F(\mu)$, ta có thể tìm lại $f(t)$ bằng cách sử dụng chuyển đổi ngược Fourier (inverse Fourier transform), $f(t)=\mathcal{F}^{-1}\{f(t)\}$, viết là:
+Ngược lại, cho trước $\hat{f}(\mu)$, ta có thể tìm lại $f(t)$ bằng cách sử dụng chuyển đổi ngược Fourier (inverse Fourier transform), $f(t)=\mathcal{F}^{-1}\{\hat{f}(\mu)\}$, viết là:
 
 \begin{equation}
 	\label{136}
-    f(t)=\int\limits_{-\infty}^{+\infty}\mathcal{F}(\mu)e^{2\pi i \mu t}d\mu,
+    f(t)=\int\limits_{-\infty}^{+\infty}\hat{f}(\mu)e^{2\pi i \mu t}d\mu,
 \end{equation}
 
 sử dụng công thức Euler, ta viết lại phương trình (\ref{135}) như sau:
 
 \begin{equation}
 	\label{137}
-     \mathcal{F}(\mu)=\int\limits_{-\infty}^{+\infty}f(t)[\cos(2\pi\mu t)-i\sin(2\pi\mu t)]dt.
+     \hat{f}(\mu)=\int\limits_{-\infty}^{+\infty}f(t)[\cos(2\pi\mu t)-i\sin(2\pi\mu t)]dt.
 \end{equation}
 
 Biến còn lại khi lấy tích phân là $\mu$, chính là tần số của hàm lượng giác nên miền của chuyển đổi Fourier là miền tần số.
@@ -560,7 +560,32 @@ Từ ý tưởng của hàm một biến, ta có thể tính được FFT của 
 Trong Python, ta có thể sử dụng hàm \texttt{fft2} để đưa ảnh sang chuỗi Fourier và dùng \texttt{ifft2} để trả ngược lại ảnh lúc đầu.
 \subsection{Định lý tích chập}
 Trong xử lý ảnh hoặc tăng cường ảnh trong miền không gian, người ta sử dụng khái niệm về tích chập , trong đó ảnh sau khi được xử lý bằng tích chập của ảnh ban đầu và bộ lọc ảnh tạo thành. Về mặt Toán học, ta giả sử hai hàm số liên tục, ta có định nghĩa tích chập $*$ của hai hàm số này như bên dưới.
-\section{Xử lý ảnh-Lọc ảnh trong miền tần số}
+
+\begin{equation}
+	\label{1322}
+f(t) \ast g(t) = \int\limits_{-\infty}^{+\infty}f(\tau)g(t -\tau)d\tau.
+\end{equation}
+Ta áp dụng tích chập cho hàm hai biến sau khi biến đổi Fourier như sau: 
+\begin{equation}
+\label{1323}
+\mathcal{F}\{f(t)\ast g(t)\} = \int\limits_{-\infty}^{+\infty}\left[\int\limits_{-\infty}^{+\infty}f(\tau)g(t-\tau)d\tau\right]e^{-2\pi i\mu t}dt,
+\end{equation}
+từ đây ta có: 
+\begin{align*}
+\mathcal{F}\{f(t)\ast g(t)\} &= \int\limits_{-\infty}^{+\infty}f(\tau)\left[\int\limits_{-\infty}^{+\infty}g(t-\tau)e^{-2\pi i\mu t}d\tau\right]dt\\
+&=\int\limits_{-\infty}^{+\infty}f(\tau)e^{-2\pi i \mu t}d\tau\int\limits_{-\infty}^{+\infty}g(u)e^{-2\pi i\mu u}du\\
+&=\mathcal{F}(f)(\mu)\mathcal{F}(g)(\mu)=\hat{f}(\mu)\hat{g}(\mu).
+\end{align*}
+Vậy giả sử $\mathcal{F}\{f(t)\} = \hat{f}(\mu), \mathcal{F}\{g(t)\} = \hat{g}(\mu)$, khi đó: 
+\begin{equation}
+\mathcal{F}\{f(t)\ast g(t)\} = \hat{f}(\mu)\hat{g}(\mu).
+\end{equation}
+Áp dụng cho trường hợp hai chiều, giả sử $f(x,y)$ là ảnh đầu vào, $h(x,y)$ là bộ lọc ảnh, $\mathcal{F}\{f(x,y)\}=\hat{f}(\mu,\eta)$, $\mathcal{F}\{g(x,y)\} = \hat{g}(\mu,\eta)$, khi đó
+\begin{equation}
+\mathcal{F}\{f(x,y)\ast g(x,y)\} = \hat{f}(\mu,\eta)\hat{g}(\mu,\eta).
+\end{equation}
+
+\section{Xử lý ảnh trong miền tần số}
 \subsection{Khái niệm về xử lý ảnh trong miền tần số}
 Khi chụp ảnh, ta có thể thu được các ảnh có tần số thấp (sự thay đổi mức xám của ảnh ít, ví dụ như ảnh một bức tường) hay ảnh có tần số cao (ví dụ như biên của vật thể). Vì vậy, ta cần có bộ lọc $H(u,v)$ có thể làm giảm đi tần số cao trong khi đi qua các tần số thấp (gọi là lọc thông thấp) làm cho ảnh mờ đi. Ngược lại, ta cần có bộ lọc có tính chất ngược với lọc thông thấp (gọi là lọc thông cao) giúp tăng cường chi tiết hình dạng vật thể, đồng thời làm giảm độ tương phản ảnh. Hình ảnh sau mô tả điều này.
 
