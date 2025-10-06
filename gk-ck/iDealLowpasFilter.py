@@ -28,12 +28,13 @@ H[D <= D0] = 1
 # Áp dụng mặt nạ trong miền tần số
 G = fshift * H
 
-# Tính phổ biên độ (log scale) và chuẩn hóa cho rõ
-magnitude_filtered = 20 * np.log(np.abs(G) + 1)
-magnitude_filtered = magnitude_filtered / np.max(magnitude_filtered)
+# Biến đổi ngược về miền không gian
+f_ishift = np.fft.ifftshift(G)
+img_filtered = np.fft.ifft2(f_ishift)
+img_filtered = np.abs(img_filtered)
 
 # --- Hiển thị kết quả ---
-fig, axes = plt.subplots(1, 3, figsize=(14, 6))
+fig, axes = plt.subplots(1, 2, figsize=(12, 6))
 
 # 1. Ảnh gốc
 axes[0].imshow(img_np, cmap='gray')
@@ -44,18 +45,6 @@ axes[0].axis('off')
 axes[1].imshow(H, cmap='gray')
 axes[1].set_title(f'Mặt nạ Ideal Low-Pass (D0={D0})')
 axes[1].axis('off')
-
-# 3. Ảnh trong miền tần số sau khi áp mặt nạ (phóng to)
-axes[2].imshow(magnitude_filtered, cmap='gray')
-axes[2].set_title('Miền tần số sau khi áp mặt nạ')
-axes[2].axis('off')
-
-# --- Thêm mũi tên giữa ảnh 2 và ảnh 3 ---
-arrow_x = 0.65  # vị trí tương đối
-arrow_y = 0.5
-arrow = FancyArrow(0.57, arrow_y, 0.05, 0, transform=fig.transFigure,
-                   width=0.01, color='black', head_width=0.04, head_length=0.02)
-fig.patches.append(arrow)
 
 plt.tight_layout()
 plt.show()
