@@ -445,7 +445,7 @@ Biến đổi Fourier ngược:
 
 
 
-\subsection{Biến đổi Fourier cho hàm rời rạc}
+\subsection{Biến đổi Fourier cho hàm rời rạc - DFT}
 
 Vì các điểm ảnh là các điểm dữ liệu rời rạc nên ta áp dụng biến đổi Fourier, ta cần xây dựng một công thức sử dụng cho các biến rời rạc.
 
@@ -474,7 +474,7 @@ Giả sử hàm $f(x,y)$ là ảnh đầu vào, DFT cho hàm hai biến này là
 \subsubsection{Hàm một biến số}
 Để chuyển ảnh từ miền không gian sang miền tần số bằng cách sử dụng chuyển đổi Fourier thông thường đòi hỏi chi phí lớn $(O(N^2)$ với $N$ là số điểm ảnh).
 
-Thuật toán FFT thông dụng nhất là thuật toán do J.W.Cooley và John Tukey đề xuất, tính chuyển đổi Fourier cho các giá trị rời rạc bằng cách sử dụng đệ quy tính các giá trị ở vị trí chẵn lẻ. 
+Thuật toán FFT (Fast Fourier Transforms) thông dụng nhất là thuật toán do J.W.Cooley và John Tukey đề xuất, tính chuyển đổi Fourier cho các giá trị rời rạc bằng cách sử dụng đệ quy tính các giá trị ở vị trí chẵn lẻ. 
 
 
 \begin{equation}
@@ -587,7 +587,20 @@ Vậy giả sử $\mathcal{F}\{f(t)\} = \hat{f}(\mu), \mathcal{F}\{g(t)\} = \hat
 
 \section{Xử lý ảnh trong miền tần số}
 \subsection{Khái niệm về xử lý ảnh trong miền tần số}
-Khi chụp ảnh, ta có thể thu được các ảnh có tần số thấp (sự thay đổi mức xám của ảnh ít, ví dụ như ảnh một bức tường) hay ảnh có tần số cao (ví dụ như biên của vật thể). Vì vậy, ta cần có bộ lọc $H(u,v)$ có thể làm giảm đi tần số cao trong khi đi qua các tần số thấp (gọi là lọc thông thấp) làm cho ảnh mờ đi. Ngược lại, ta cần có bộ lọc có tính chất ngược với lọc thông thấp (gọi là lọc thông cao) giúp tăng cường chi tiết hình dạng vật thể, đồng thời làm giảm độ tương phản ảnh. Hình ảnh sau mô tả điều này.
+Khi chụp ảnh, ta có thể thu được các ảnh có tần số thấp (sự thay đổi mức xám của ảnh ít, ví dụ như ảnh một bức tường) hay ảnh có tần số cao (ví dụ như biên của vật thể). Vì vậy, ta cần có một bộ lọc $H(u,v)$ lọc bỏ các tần số cao và giữ lại tần số thấp (được gọi là lọc thông thấp) làm cho ảnh mờ đi hoặc loại bỏ các tần số thấp giữ lại tần số cao (được gọi là lọc thông cao) làm tăng cường chi tiết vật thể và đồng thời giảm độ tương phản. Hình ảnh mô tả điều này bên dưới
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{img/highpassLowpassDemo.png}
+	\caption{Ảnh phía trên là đồ thị hàm tần số ứng với ảnh phía dưới.}
+\end{figure}
+Để biết được ảnh trong miền tần số như thế nào ta quan sát ảnh sau: 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{img/moonFrequencydomain.png}
+	\captionsetup{justification=centering}
+	\caption{Ảnh gốc (bên trái) và ảnh trong miền tần số khi dùng hàm \texttt{fft2} trong Python để biến đổi (ảnh bên phải) }
+\end{figure}
 
 
 
