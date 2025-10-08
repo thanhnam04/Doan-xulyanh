@@ -296,6 +296,11 @@ Tiểu luận này được hoàn thành tại trường Đại Học Sài Gòn 
 Trong bài tiểu luận này chúng tôi nghiên cứu về xử lý ảnh trên miền tần số. Sử dụng công cụ toán học để tính toán và ứng dụng cho xử lý ảnh/ lọc ảnh trên miền tần số. Ảnh đầu vào của các phép xử lý sẽ là ảnh xám của 1 bức hình bình thường, sau đó dùng các phương pháp xử lý ảnh trên miền tần số để làm sắc nét ảnh hơn hoặc làm mờ ảnh đi để 
 bảo mật. 
 
+Khái niệm lọc ảnh dễ dàng nhận thấy trong miền tần số. Giúp tăng cường ảnh $f(x,y)$. Ảnh tăng cường được xây dựng nên thông qua tích chập sau: 
+\[\overbrace{g(m,n)}^{\text{Ảnh tăng cường}} = \underbrace{h(x,y)}_{PSS}\ast\underbrace{f(x,y)}_{\text{Ảnh}}.\]
+Ta cũng có thể cài đặt tăng cường ảnh trong miền tần số và thiết kế hàm tương ứng như: 
+\[\overbrace{\hat{g}(u,v)}^{\text{Ảnh tăng cường}} = \underbrace{\hat{h}(u,v)}_{\text{Hàm biến đổi}} \ast \overbrace{\hat{f}(u,v)}^{\text{Ảnh}},\]
+với các kí hiệu hàm trên là các kết quả của các biến đổi Fourier.
 
 Ta sẽ tìm hiểu khái niệm miền tần số trong không gian 1 chiều.
 
@@ -369,7 +374,6 @@ với
 \[a_0 = \dfrac{1}{2\pi}\int\limits_{-\pi}^{\pi}f(x)dx,\]
 \[a_n = \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi}f(x)\cos nxdx,\quad n=1,2,\ldots\]
 \[b_n = \dfrac{1}{\pi}\int\limits_{-\pi}^{\pi}f(x)\sin nxdx,\quad n=1,2,\ldots\]
-
      \begin{figure}[H]
 		 \centering
 		 \includegraphics[width=5cm]{img/fourier.png}
@@ -442,7 +446,34 @@ Biến đổi Fourier ngược:
 \begin{equation}
 \mathcal{F}^{-1}(u,v) =f(x,y)= \int\limits_{-\infty}^{+\infty}\int\limits_{-\infty}^{+\infty}f(x,y)e^{2\pi i(ux+vy)}dudv
 \end{equation}
+Một số ví dụ về biến đổi Fourier với ảnh.
+		 \begin{figure}[H]
+			\centering
+			\includegraphics[width = 0.8\linewidth]{img/anhVaphodolon1.png}
+			\caption{Ảnh-$f(x,y)$ (bên trái) và Phổ độ lớn $\hat{f}(u,v)$ (bên phải)}
+		 \end{figure}
+		 \begin{figure}[H]
+			\centering
+			\includegraphics[width = 0.8\linewidth]{img/anhVaphodolon1-3d.png}
+			\caption{$\hat{f}(u,v)$ trong không gian 3 chiều}
+		 \end{figure}
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width = 0.8\linewidth]{img/anhVaphodolon2.png}
+			\caption{Ảnh-$f(x,y)$ (bên trái) và Phổ độ lớn $\hat{f}(u,v)$ (bên phải)}
+		 \end{figure}
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width = 0.8\linewidth]{img/anhVaphodolon3.png}
+			\caption{Ảnh-$f(x,y)$ (bên trái) và Phổ độ lớn $\hat{f}(u,v)$ (bên phải)}
+		 \end{figure}
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width = 0.8\linewidth]{img/anhVaphodolon4.png}
+			\caption{Ảnh-$f(x,y)$ (bên trái) và Phổ độ lớn $\hat{f}(u,v)$ (bên phải)}
+		 \end{figure}
 
+		 \textbf{Nhận xét:} Ta thấy khi kích thước đối tượng tăng lên trong miền không gian thì tương ứng "kích thước'' - mức độ biến động lên xuống trong miền tần số giảm. Nhưng có xu hướng dao động rộng hơn với nhịp độ rất nhỏ. Hay nói cách khác là các tần số thấp nhiều hơn hẳn ảnh kích thước nhỏ.
 
 
 \subsection{Biến đổi Fourier cho hàm rời rạc - DFT}
@@ -451,25 +482,34 @@ Vì các điểm ảnh là các điểm dữ liệu rời rạc nên ta áp dụ
 
 \subsubsection{Hàm một biến số}
 
-Giả sử ra có bộ dữ liệu dãy $x_n$, (với $n= 1,2,3,...,N)$, ta xác định DFT(Discrete Fourier Transforms) cho $x_n$ như sau: 
+Giả sử ra có bộ dữ liệu dãy $f_n$, (với $n= 1,2,3,...,N)$ là dãy-vector-ảnh 1-D, ta xác định DFT(Discrete Fourier Transforms) cho $f_n$ như sau: 
 \begin{equation}
 	\label{144}
-    \mathcal{X}_n= \dfrac{1}{N}\sum_{i=1}^Nx_ke^{\dfrac{-ik2\pi n}{N}},\quad n=\overline{1,N}.
+    f_n= \dfrac{1}{N}\sum_{i=1}^N\hat{f}(k)e^{\dfrac{-ik2\pi n}{N}},\quad n=\overline{1,N}.
 \end{equation}
 Biến đổi Fourier ngược(IDFT) là
 \begin{equation}
 	\label{145}
-    x_n =\sum_{k=1}^N\mathcal{X}_ne^{\dfrac{ik2\pi n}{N}},\quad n=\overline{1,N}.
+    \hat{f}(k) =\sum_{k=1}^Nf_ne^{\dfrac{ik2\pi n}{N}},\quad n=\overline{1,N}.
 \end{equation}
-Về bản chất, biến đổi Fourier có sử dụng số phức. Nhưng trong xử lý ảnh ta quan tâm đến phần số thực để làm, do đó xem phần ảo bằng $0$.
+
+\textbf{Lưu ý:}
+
+- $\hat{f}(k)$ là phức dù cho $f_n$ là thực.
+
+- Ta cài đặt trực tiếp DFT thì có độ phức tạp là $O(N^2)$.
+
+- Ta có thể dùng FFT được nói đến sau đây để cài đặt DFT hiệu quả hơn. Nhưng đây không phải là một biến đổi mới.
+
 \subsubsection{Hàm hai biến số}
-Giả sử hàm $f(x,y)$ là ảnh đầu vào, DFT cho hàm hai biến này là: 
+Giả sử hàm $f(x,y),x = 1,\ldots,M, y = 1,\ldots,N$ là ảnh đầu vào rời rạc $M\times N$, DFT cho hàm hai biến (DFT 2-D) này là: 
 \begin{equation}
-\mathcal{F}(u,v) = \dfrac{1}{MN}\sum_{x=1}^{M}\sum_{y=1}^{N} f(x,y)e^{-2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
+\mathcal{F}(u,v) = \sum_{x=1}^{M}\sum_{y=1}^{N} f(x,y)e^{-2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
 \end{equation}
 \begin{equation}
-\mathcal{F}^{-1}(u,v)=f(x,y) =\sum_{u=1}^{M}\sum_{v=1}^{N} \mathcal{F}(u,v)e^{2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
+\mathcal{F}^{-1}(u,v)=f(x,y) =\dfrac{1}{MN}\sum_{u=1}^{M}\sum_{v=1}^{N} \mathcal{F}(u,v)e^{2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
 \end{equation}
+
 \subsection{Biến đổi Fourier nhanh(FFT)}
 \subsubsection{Hàm một biến số}
 Để chuyển ảnh từ miền không gian sang miền tần số bằng cách sử dụng chuyển đổi Fourier thông thường đòi hỏi chi phí lớn $(O(N^2)$ với $N$ là số điểm ảnh).
