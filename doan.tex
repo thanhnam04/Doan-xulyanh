@@ -663,9 +663,400 @@ lọc Gauss low/high
 
 
 
-\section{Tổng kết chương}
+\subsection{Làm mờ ảnh trong miền tần số}
 
-	\chapter*{Kết luận}                         % Chương 3
+Ta có thể làm mờ ảnh bằng cách giảm các tần số cao, tức ta sử dụng phép lọc thông thấp.
+
+Phép mờ ảnh có những tính chất sau:
+
+- Tất cả giá trị trong mặt nạ mờ đều dương.
+
+- Tổng các giá trị bằng 1.
+
+- Làm giảm phần cạnh bằng mặt nạ mờ.
+
+- Khi kích thước mặt nạ tăng.
+
+\subsubsection{Lọc thông thấp Ideal}
+
+Là phép lọc 2 chiều đi qua tất cả tần số mà không làm giảm chúng trong bán kính đường tròn $D_0$ tính từ tâm phép lọc và "chặt cụt" tất cả tần số bên ngoài hình tròn này.
+
+Bộ lọc này xác định như sau:
+
+với $D_0$ là hằng số dương và $D(u,v)$ là khoảng cách giữa điểm $(u,v)$ trong miền tần số tâm của hình chữ nhật tần số, tức:
+\subsubsection{Lọc thông thấp Gauss}
+
+Đặc trưng cho nhiễu đó là hàm mật độ xác suất thể hiện sự phân bố của nhiễu. Ta sử dụng hàm phân phối Gauss làm bộ lọc nhằm làm mờ ảnh và giảm nhiễu. Trong trường hợp 1 chiều, phân phối Gauss có công thức:
+
+*công thức*
+
+với $\sigma$ là độ lệch chuẩn của phân phối, Ta giả sử phân phối này có trung bình là 0.
+
+*hình ảnh*
+
+Khi xử lý ảnh, ta sẽ sử dụng hàm phân phối Gauss cho 2 chiều, hình thành bằng tích của 2 hàm Gauss 1 chiều x và y 
+
+*công thức*
+
+Bộ lọc thông thấp Gauss có dạng:
+
+*công thức*
+
+với $D(u,v)$ là khoảng cách từ điểm $(u,v)$ đến tâm hình.
+
+Ta sẽ xử lý ảnh sau với phép lọc thông thấp Gauss
+
+*hình ảnh*
+
+khỏi tạo bộ lọc
+
+*dòng code*
+
+Ảnh của bộ lọc ở miền khong gian chuyển sang miền tần số là 
+
+*hình ảnh*
+
+Sử dụng thuật toán 1.5 - 3, ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sao đó lấy biến đổi ngược.
+
+Ta được ảnh sau khi lọc là:
+
+*hình*
+
+Ta quan sát phổ của ảnh ban đầu và sau khi lọc (hướng trên - phải xuống dưới - trái)
+
+*hình*
+
+Ta thấy rằng sau khi lọc, độ biến thiên tần số của ảnh ít hơn ảnh gốc, đồng thời các giá trị tần số ảnh sau khi lọc cao hơn ảnh gốc.
+
+Ảnh sau khi lọc không xảy ra hiệu ứng chuông như phép lọc thông thấp Ideal. Phép lọc thông thấp Gauss này cho ảnh mượt hơn.
+\subsubsection{Lọc thông thấp Butterworth}
+
+Bộ lọc này bao gồm các tính chất của lọc thông thấp Ideal và lọc thông thấp Gauss. Bộ lọc thông thấp Butterworth có dạng sau:
+
+*công thức*
+
+
+Trong đó:
+
+- $D(u,v)$ là khoảng cách từ tâm ảnh đến điểm $(u,v)$ (giống như trong lọc thông thấp Ideal).
+
+- $D_0$ là tần số chặt cụt.
+
+-$n$ là cấp của bộ lọc.
+
+Từ dạng của bộ lọc, ta có những tính chất sau
+
+- Với $D(u,v) \ll D_0, H\approx 1$
+
+- Với $D(u,v) \gg D_0, H\approx 0$
+
+- Với $D(u,v) = D_0, H= \dfrac{1}{2}$
+
+Bây giờ, ta sử dụng bộ lọc này để lọc ảnh Mặt Trăng
+
+*ảnh*
+
+Khởi tạo bộ lọc có kích thước $P \times Q$ (bằng với kích thước hình ban đầu)
+
+*code*
+
+Khi đó, ta được ảnh bộ lọc trong miền không gian và miền tần số là 
+
+*ảnh*
+
+Sử dụng thuật toán 1.5 - 3, ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sau đó lấy chuyển đổi ngược.
+
+Ta được ảnh sau khi lọc là:
+
+*ẢNH*
+
+Ta quan sát phổ của ảnh gốc và sau khi lọc 
+
+*ảnh*
+
+Với bộ lọc này, ảnh sau khi lọc có độ biến thiên tần số ít hơn, không làm tăng giá trị tần số, hiệu ứng chuông ảnh hưởng không đáng kể. 
+
+
+
+\subsection{Ứng dụng phép lọc làm mờ ảnh}
+
+Phép lọc này có nhiều ứng dụng như:
+
+- Nhận dạng ký tự trong tri thức máy.
+
+- Dùng trong công nghiệp in ấn.
+
+- Xử lý ảnh trên vệ tinh hoặc trên không trung.
+
+- ...
+
+Hình ảnh dưới đây cho thấy một đoạn văn có độ phân giải thấp, một vài ký tự bị đứt gãy. 
+
+Sử dụng phép lọc thông thấp Gauss, ta được ảnh đoạn vă rõ nét hơn.
+
+*ảnh*
+
+Mặc dù mất người dễ dàng nhận diện nét chữ đứt gãy nhưng hệ thống nhận dạng của máy thì không thấy như vậy. Một cách giải quyết đó là ta bắc cầu các mảnh nhỏ lại với nhau bằng cách làm mờ chúng. Hình bên phải cho thấy các kí tự rất nét bằng bộ lọc thông thấp Gauss với $D_0 = 80$.
+
+Lọc thông thấp còn được áp dụng trong công nghiệp in ấn với nhiều hàm số dùng để "sơ chế" ảnh, bao gồm ảnh chưa xác định rõ hình dạng. Hình ảnh dưới đây là một ứng dụng của lọc thông thấp, giúp ảnh mượt hơn, dễ nhìn hơn.
+
+*ảnh*
+
+Với ảnh người, mục tiêu hướng đến là làm giảm độ nét của đương da mảnh và các nhược điểm nhỏ. Trong hình nền, ta đã làm giảm độ nét đường da quanh mắt, giúp cho ánh nhìn mượt mà hơn.
+
+Ảnh sau cho ta 2 ứng dụng của lọc thông thấp trên cùng một hình nhưng với các đối tượng khác nhau. Ảnh bên trái có độ phân giải bức xạ rất cao, đó là ảnh Vịnh Mexico (tối) và Florida (sáng) do vệ tinh NOAA chụp lại. Biên của các vật thể trong nước được chụp bởi vòng lặp dòng. Ảnh này dùng để minh họa ảnh viễn thám với cảm biến có xu hướng đưa ra các dòng quét rõ ràng theo hướng quét cảnh.
+
+*ảnh*
+
+Lọc thông thấp cho kết quả thô nhưng đây là cách đơn giản để làm giảm hiệu ứng đường sọc ngang này. Hình giữa sử dụng lọc thông thấp Gauss với $D_0=50$. Làm giảm các hiệu ứng đường quét này giúp đơn giản hóa việc phát hiện các đặc tính như các biên giữa dòng nước biển.
+
+Ảnh bên phải là kết quả của phép lọc thông thấp Gauss với $D_0=20$. Ảnh này cho thấy vật thể bị làm mờ nhiều chi tiết nhất có thể, để lại các đặc tính nhận dạng lớn. Cụ thể, cách lọc này là một phần của bước chuẩn bị cho hệ thống phân tích hình ảnh nhằm tìm kiếm các đặc tính ở rìa ảnh.
+
+Phép lọc thông thấp giúp đơn giản hóa khi phân tích bằng cách tính trung bình các đặc tính nhỏ hơn đặc tính mong muốn.
+\subsection{Lọc sắc ảnh}
+
+Ta có thể làm mở ảnh bằng cách làm giảm các tần số cao khi sử dụng chuyển đổi Fourier. Bây giờ, để làm sắc các biên ảnh, ta sẽ lọc các tần số cao và làm giảm các phần có tần số thấp bởi vì đường biên vật thể trong ảnh có độ biến thiên tần số lớn, ứng với các tần số cao.
+
+*ảnh*
+
+Khi đi qua đường biên, độ biến thiên tần số lớn.
+
+Cho bộ lọc thông thấp, ta thu được bộ lọc thông cao bằng công thức:
+
+\begin{equation}
+    \hat{h}_{HP}(u,v) = 1 - \hat{h}_{LP}(u,v)
+\end{equation}
+
+với $\hat{h}_{HP}(u,v)$ là hàm chuyển đổi lọc thông thấp. Công thức này có nghĩa rằng khi lọc thông thấp. Công thức này có nghĩa rằng khi lọc thông thấp làm giảm tần số thì lọc thông cao bỏ qua điều đó và ngược lại.
+
+Bây giờ, ta sẽ tìm hiểu một số bộ lọc thông cao.
+
+\subsubsection{Lọc thông cao Ideal}
+
+Lọc thông cao Ideal có dạng như sau:
+
+\begin{equation}
+    \hat{h}(u,v)=\begin{cases}
+    \begin{aligned}
+        0& \text{ nếu }  \hat{d}(u,v) \le D_0\\
+        0& \text{ nếu }  \hat{d}(u,v) > D_0
+    \end{aligned}
+\end{cases}
+\end{equation}
+
+
+Ta thấy rằng dạng của lọc thông cao Ideal ngược với dạng của lọc thông thấp Ideal. Ta dùng phép lọc này để lọc hình sau: 
+
+*ảnh*
+
+Khởi tạo bộ lọc 
+
+*code*
+
+Ta được hình ảnh bộ lọc từ miền không gian sang miền tần số như sau:
+
+*ảnh*
+
+Sử dụng thuật toán 1.5-3, ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sau đó lấy chuyển đổi ngược.
+
+Ta được ảnh sau khi lọc là:
+
+*Ảnh*
+
+Nhìn vào ảnh, ta thấy rằng phép lọc này gây ra hiệu ứng chuông. Ta quan sát phổ của ảnh gốc và ảnh sau khi lọc (trên - phải xuống dưới - trái)
+
+*ảnh*
+
+Phép lọc này biến các giá trị tần số khác biên trở nên gần như nhau, đồng thời làm nổi bật tần số ở biên quả bí ngô.
+
+Ảnh sau đây minh họa hiệu ứng chuông khi sử dụng phép lọc thông cao Ideal với giá trị $D_0$ (từ trái sang) lần lượt là 15, 30 và 80
+
+*Ảnh*
+
+\subsubsection{Lọc thông cao Gauss}
+Phép lọc thông cao Gauss 2 chiều (2-D) có dạng: 
+\begin{equation}
+    \hat{g}(u,v) = 1- e^{-\dfrac{\hat{d}^2(u,v)}{2\sigma^2}}.    
+\end{equation}
+Ta dùng phép lọc này để lọc ảnh quả dưa hấu sau: 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{img/Duahau.png}
+\caption{Ảnh quả dưa hấu}
+\end{figure}
+Khởi tạo bộ lọc trong python với \texttt{matplotlib}: 
+\begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+
+# 1 Doc anh goc
+img = Image.open("img/duahau.png").convert("L")
+f = np.array(img)
+P, Q = f.shape
+
+# 2 Tao bo loc thong cao Gauss
+sig = 40
+b = 2 * sig * sig
+
+h = np.zeros((P, Q))
+for i in range(P):
+    for j in range(Q):
+        D = (i - P/2)**2 + (j - Q/2)**2
+        h[i, j] = 1 - np.exp(-D / b)
+
+# Dich tam bo loc ve giua
+H = np.fft.fftshift(h)
+
+# 3 Bien doi Fourier anh va ap bo loc
+F = np.fft.fft2(f)
+F_shift = np.fft.fftshift(F)
+G = H * F_shift
+
+# 4 Bien doi nguoc de lay anh sau loc
+G_ishift = np.fft.ifftshift(G)
+filtered_img = np.abs(np.fft.ifft2(G_ishift))
+
+# 5 Hien thi ket qua
+plt.figure(figsize=(10, 6))
+
+# Bo loc trong mien khong gian
+plt.subplot(1, 3, 1)
+plt.imshow(h, cmap='gray')
+plt.title("Bo loc thong cao mien khong gian")
+plt.axis('off')
+
+# Bo loc trong mien tan so
+plt.subplot(1, 3, 2)
+plt.imshow(H, cmap='gray')
+plt.title("Bo loc thong cao mien tan so")
+plt.axis('off')
+
+# Anh sau khi loc
+plt.subplot(1, 3, 3)
+plt.imshow(filtered_img, cmap='gray')
+plt.title("Anh sau loc")
+plt.axis('off')
+
+plt.tight_layout()
+plt.show()
+\end{lstlisting}
+Ta được ảnh bộ lọc trong miền không gian và miền tần số như sau: 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/HPGhighlowfilter.png}
+\caption{Ảnh lọc thông cao Gauss miền không gian(bên trái) sang miền tần số(bên phải)}
+\end{figure}
+\subsubsection{Lọc thông cao Butterworth}
+
+
+
+Phép lọc thông cao Butterworth trong không gian 2 chiều có cấp $n$ và tần số chặt cụt $D_0$ xác định bởi công thức
+
+*công thức*
+
+Với $D(u,v)$ là khoảng cách từ tâm hình ảnh đến tọa độ $(u,v)$.
+
+Ta dùng bộ lọc này để lọc hình quả bí ngô:
+
+*hình ảnh*
+
+Khởi tạo bộ lọc
+
+*Code*
+
+Ta được ảnh của bộ lọc trong miền không gian và miền tần số như sau:
+
+*ảnh*
+
+Sử dụng thuật toán 1.5-3, ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sau đó lấy chuyển đổi ngược. 
+
+*ảnh*
+
+Ta quan sát phổ của ảnh trước và sau khi lọc
+
+*ảnh*
+
+Ảnh sau khi lọc có xảy ra hiệu ứng chuông nhưng nhẹ hơn lọc thông cao Ideal, phổ tần số và ảnh cho thấy phần biên có tần số cao hơn hẳn những phần khác.
+
+Hình ảnh sau là ví dụ của phép lọc thông cao Butterworth cấp 2 với các mức $D_0$ lần lượt (trái sang phải) là 15, 30 và 80
+
+*ảnh*
+\subsection{Ứng dụng phép lọc sắc nét ảnh}
+Các phép lọc ảnh tần số cao này còn được sử dụng để nhận diện dấu vân tay con người. Một yếu tố quan trọng để máy móc nhận diện được vân tay đó là làm sao để tăng cường các đường vân và giảm thiểu đi các vết bẩn trên vân. 
+
+Để tăng cường độ sắc của đường vân ta chú tâm vào yếu tố quan trọng chính là đường vân tay chứa các tần số cao, không thay đổi khi ta sử dụng phép lọc thông cao. Mặt khác phép lọc này còn giảm các thầnh phần chứa tần số thấp ví dụ như phông nền hoặc các vết bẩn. Vì vậy, ta thu được ảnh tăng cường bằng cách giảm tất cả đặc trưng khác ngoại trừ đặc trưng có tần số cao.
+
+Hình ảnh vân tay này là sử dụng phép lọc thông cao Butterworth cấp 4 và tần số chặt cụt là 50.
+
+*hình 1.5-36*
+
+Để có thể quan sát, ta sẽ biến đổi ảnh bên phải theo quy tắc điểm ảnh là giá trị âm sẽ có màu đen, còn dương thì sẽ có màu trắng
+
+*hình 1.5-37*
+
+Sử dụng phép lọc thông cao, ta loại bỏ những vết bẩn có trong ảnh ta đang xét và thu về ảnh vân tay rõ nét, thuận lợi hơn nếu công tác trong điều tra vụ án.
+\subsection{Lọc chặn}
+Đây là một ứng dụng của lọc ảnh trong miền tần số. Phép lọc chặn loại bỏ (hoặc đi qua) các tần số riêng biệt nào đó, ví dụ như nhiễu chu kỳ ứng với các nhánh hay các đường trong miền tần số, ta sẽ thiết kế một bộ lọc có tần số 0 tại những vị trí đó sẽ loại bỏ các tần số nhiễu.\\
+
+Ví dụ về nhiễu chu kỳ như khảm ảnh khi kết hợp nhiều ảnh lại để tạo khảm, nhiễu dòng quét khi dùng máy ảnh quét, hay nhiễu bán sắc (kiểu gợn sóng) của bức ảnh trong tờ báo dưới đây.
+
+*hình 1.5-38*\\
+
+Chuyển ảnh vào miền tần số, ta được ảnh sau:
+
+*hình 1.5-39*
+\\
+
+Ta có thể thấy trên ảnh có những đỉnh nhỏ, các đỉnh này tương ứng với dạng nhiễu chu kì của ảnh bên miền không gian.\\
+
+Các bước lọc chặn:
+\begin{enumerate}
+    \item Nhìn vào các phổ $|\hat{f}(u,v)|$ của ảnh nhiễu $f(x,y),$ tìm vị trí tần số có liên quan đến nhiễu.
+    \item Tạo ảnh mặt nạ $\widehat{m}(u,v)$ với vết khuyết (các số 0) tại vị trí đó, những vị trí còn lại có giá trị bằng 1.
+    \item Lấy tích mặt nạ với ảnh ban đầu đã được chuyển đổi, các giá trị 0 sẽ làm mất các tần số nhiễu:
+    $$\hat{g}(u,v)=\widehat{m}(u,v)\hat{f}(u,v).$$
+    \item Lấy biến đổi Fourier ngược để thu về ảnh khôi phục:
+    $$g(x,y)=\mathcal{F}^{-1}\left(\hat{g}(u,v)\right).$$
+
+   
+    
+\end{enumerate}
+ Ta xác định vị trí có vết khuyết trong ảnh miền tần số sau:
+
+    *hình 1.5-40*
+    \\
+
+    Lấy tích chập, chuyển đổi ngược, ta được kết quả:
+
+    *hình1.5-41*
+    \\
+
+    Như vậy ta đã loại bỏ các đường quết của ảnh ban đầu.
+    \\
+
+    Một ví dụ sau về phép lọc ảnh
+
+    *hình 1.5-42*
+	\chapter*{Kết luận}
+    Sau khi tìm hiểu về lọc ảnh trong miền tần số, ta thấy phép lọc này có chức năng lọc những tần số thấp và cao trong ảnh.
+    \begin{enumerate}
+        \item Với thành phần có tần số cao liên quan đến biên vật thể trong ảnh, làm rõ biên. Các phép lọc trong cao làm giảm các thành phần số và bỏ qua thành phần tần số cao.
+        \item Với thành phần có thành số thấp liên quan đến vùng mượt trong ảnh, làm mở ảnh. Cho phép lọc thông thấp giảm các thành phần tần số cao và bỏ qua thành phần tần số thấp.
+    \end{enumerate}
+
+   Ngoài ra, phép lọc chặn giúp chúng ta loại bỏ các nhiễu lặp trong ảnh, làm giảm các tần số chọn trược (và một vài lân cận) và bỏ qua các tần số nhiễu khác.
+   \\
+
+   Quy trình chung khi lọc trong miền tần số:
+
+   \begin{enumerate}
+       \item Dùng thuật toán FFT chuyển ảnh $f(x,y)$ sang miền tần số thành ảnh $\hat{f}(u,v)$.
+       \item Tạo bộ lọc $h(x,y)$ cùng kích thước với ảnh cần lọc, dùng FFT chuyển sang miền tần số thành $\hat{h}(u,v).$
+    \item Thực hiện phép tính $\hat{g}(u,v)=\hat{h}(u,v)\hat{f}(u,v).$
+    \item Lấy chuyển sổ đổi ngược IFFT của $\hat{g}(u,v),$ ta được hình $g(x,y)$ là hình sau khi lọc.
+   \end{enumerate}
+    % Chương 3
 	\addcontentsline{toc}{chapter}{{\bf  Kết luận}\rm}
 	\indent
 	\thispagestyle{fancy}
