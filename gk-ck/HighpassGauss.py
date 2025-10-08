@@ -12,6 +12,8 @@ u = np.arange(M)
 v = np.arange(N)
 U, V = np.meshgrid(u - M/2, v - N/2, indexing='ij')
 
+
+
 D0 = 40  # tần số cắt (điều chỉnh để thấy rõ)
 H = 1 - np.exp(-(U**2 + V**2) / (2 * (D0**2)))
 
