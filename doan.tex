@@ -504,10 +504,10 @@ Biến đổi Fourier ngược(IDFT) là
 \subsubsection{Hàm hai biến số}
 Giả sử hàm $f(x,y),x = 1,\ldots,M, y = 1,\ldots,N$ là ảnh đầu vào rời rạc $M\times N$, DFT cho hàm hai biến (DFT 2-D) này là: 
 \begin{equation}
-\mathcal{F}(u,v) = \sum_{x=1}^{M}\sum_{y=1}^{N} f(x,y)e^{-2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
+\hat{f}(u,v) = \sum_{x=1}^{M}\sum_{y=1}^{N} f(x,y)e^{-2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
 \end{equation}
 \begin{equation}
-\mathcal{F}^{-1}(u,v)=f(x,y) =\dfrac{1}{MN}\sum_{u=1}^{M}\sum_{v=1}^{N} \mathcal{F}(u,v)e^{2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
+\mathcal{F}^{-1}\{\hat{f}(u,v)\}=f(x,y) =\dfrac{1}{MN}\sum_{u=1}^{M}\sum_{v=1}^{N} \mathcal{F}(u,v)e^{2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}
 \end{equation}
 
 \subsection{Biến đổi Fourier nhanh(FFT)}
@@ -717,6 +717,25 @@ Phép mờ ảnh có những tính chất sau:
 
 - Khi kích thước mặt nạ tăng.
 
+Ta có thể làm mờ ảnh bằng cách giảm hoặc loại bỏ các thành phần tần số cao trong ảnh, vì các tần số cao tương ứng với các chi tiết nhỏ của ảnh và các biên cạnh ảnh.
+
+Phương pháp này tương đương với việc dùng bộ lọc thông thấp (Low pass filter) trong miền tần số.
+
+Khi ta biến đổi ảnh $f(x,y)$ sang miền tần số, ta được: 
+\begin{equation}
+	\label{141}
+	\hat{f}(u,v) = \mathcal{F}\{f(x,y)\} = \sum_{x=1}^{M}\sum_{y=1}^{N} f(x,y)e^{-2\pi i\left(\frac{ux}{M}+\frac{vy}{N}\right)}.
+\end{equation}
+Sau đó, ta nhân với một bộ lọc thông thấp $\hat{h}(u,v)$: 
+\begin{equation}
+\label{142}
+\hat{g}(u,v) = \hat{h}(u,v)\cdot\hat{f}(u,v),
+\end{equation}
+cuối cùng, ta biến đổi ngược để thu được ảnh mờ : 
+\begin{equation}
+\label{143}
+g(x,y) = \mathcal{F}^{-1}\{\hat{g}(u,v)\}
+\end{equation}
 \subsubsection{Lọc thông thấp Ideal}
 
 Là phép lọc 2 chiều đi qua tất cả tần số mà không làm giảm chúng trong bán kính đường tròn $D_0$ tính từ tâm phép lọc và "chặt cụt" tất cả tần số bên ngoài hình tròn này.

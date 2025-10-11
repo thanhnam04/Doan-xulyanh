@@ -27,11 +27,11 @@
 \contentsline {subsubsection}{\numberline {1.4.3.2}Lọc thông thấp Gauss}{17}{subsubsection.1.4.3.2}%
 \contentsline {subsubsection}{\numberline {1.4.3.3}Lọc thông thấp Butterworth}{18}{subsubsection.1.4.3.3}%
 \contentsline {subsection}{\numberline {1.4.4}Ứng dụng phép lọc làm mờ ảnh}{19}{subsection.1.4.4}%
-\contentsline {subsection}{\numberline {1.4.5}Lọc sắc ảnh}{20}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.5}Lọc sắc ảnh}{21}{subsection.1.4.5}%
 \contentsline {subsubsection}{\numberline {1.4.5.1}Lọc thông cao Ideal}{21}{subsubsection.1.4.5.1}%
 \contentsline {subsubsection}{\numberline {1.4.5.2}Lọc thông cao Gauss}{22}{subsubsection.1.4.5.2}%
 \contentsline {subsubsection}{\numberline {1.4.5.3}Lọc thông cao Butterworth}{24}{subsubsection.1.4.5.3}%
 \contentsline {subsection}{\numberline {1.4.6}Ứng dụng phép lọc sắc nét ảnh}{25}{subsection.1.4.6}%
-\contentsline {subsection}{\numberline {1.4.7}Lọc chặn}{25}{subsection.1.4.7}%
-\contentsline {chapter}{{\bf Kết luận}\rm }{27}{Item.27}%
-\contentsline {chapter}{{\bf Tài liệu tham khảo}}{29}{chapter*.23}%
+\contentsline {subsection}{\numberline {1.4.7}Lọc chặn}{26}{subsection.1.4.7}%
+\contentsline {chapter}{{\bf Kết luận}\rm }{28}{Item.27}%
+\contentsline {chapter}{{\bf Tài liệu tham khảo}}{30}{chapter*.23}%
