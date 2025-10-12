@@ -872,7 +872,7 @@ Lọc thông thấp cho kết quả thô nhưng đây là cách đơn giản đ�
 Ảnh bên phải là kết quả của phép lọc thông thấp Gauss với $D_0=20$. Ảnh này cho thấy vật thể bị làm mờ nhiều chi tiết nhất có thể, để lại các đặc tính nhận dạng lớn. Cụ thể, cách lọc này là một phần của bước chuẩn bị cho hệ thống phân tích hình ảnh nhằm tìm kiếm các đặc tính ở rìa ảnh.
 
 Phép lọc thông thấp giúp đơn giản hóa khi phân tích bằng cách tính trung bình các đặc tính nhỏ hơn đặc tính mong muốn.
-\subsection{Lọc sắc ảnh}
+\subsection{Làm sắc ảnh trong miền tần số}
 
 Ta có thể làm mở ảnh bằng cách làm giảm các tần số cao khi sử dụng chuyển đổi Fourier. Bây giờ, để làm sắc các biên ảnh, ta sẽ lọc các tần số cao và làm giảm các phần có tần số thấp bởi vì đường biên vật thể trong ảnh có độ biến thiên tần số lớn, ứng với các tần số cao.
 
@@ -991,11 +991,6 @@ plt.imshow(H, cmap='gray')
 plt.title("Bo loc thong cao mien tan so")
 plt.axis('off')
 
-# Anh sau khi loc
-plt.subplot(1, 3, 3)
-plt.imshow(filtered_img, cmap='gray')
-plt.title("Anh sau loc")
-plt.axis('off')
 
 plt.tight_layout()
 plt.show()
@@ -1003,7 +998,7 @@ plt.show()
 Ta được ảnh bộ lọc trong miền không gian và miền tần số như sau: 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\linewidth]{img/HPGhighlowfilter.png}
+\includegraphics[width=0.8\linewidth]{img/GaussHP-KG-TS.png}
 \caption{Ảnh lọc thông cao Gauss miền không gian(bên trái) sang miền tần số(bên phải)}
 \end{figure}
 \subsubsection{Lọc thông cao Butterworth}
