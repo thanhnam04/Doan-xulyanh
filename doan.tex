@@ -736,6 +736,73 @@ cuối cùng, ta biến đổi ngược để thu được ảnh mờ :
 \label{143}
 g(x,y) = \mathcal{F}^{-1}\{\hat{g}(u,v)\}
 \end{equation}
+Ảnh thu được $g(x,y)$ là phiên bản đã được làm mờ của ảnh gốc $f(x,y)$, do các thành phần tần số cao trong phổ bị giảm hoặc loại bỏ. 
+
+\subsubsection*{Tính chất của phép làm mờ ảnh}
+Phép làm mờ ảnh bằng bộ lọc thông thấp có những tính chất sau:
+
+\begin{itemize}
+	\item \textbf{Tất cả các giá trị trong mặt nạ mờ đều dương:}  
+	Các giá trị của mặt nạ $h(x,y)$ thỏa mãn 
+	\[
+	h(x,y) > 0, \quad \forall (x,y).
+	\]
+	Điều này đảm bảo rằng mỗi điểm ảnh mới là một tổ hợp lồi của các điểm ảnh lân cận, giúp ảnh mờ đi nhưng không bị méo màu.
+
+	\item \textbf{Tổng các giá trị trong mặt nạ bằng 1:}  
+	Để duy trì mức sáng trung bình của ảnh, ta cần chuẩn hóa mặt nạ sao cho
+	\[
+	\sum_{x}\sum_{y} h(x,y) = 1.
+	\]
+	Nếu tổng này khác 1, ảnh sau khi làm mờ có thể bị tối hoặc sáng hơn so với ảnh gốc.
+
+	\item \textbf{Làm giảm biên cạnh bằng mặt nạ mờ:}  
+	Các biên ảnh tương ứng với tần số cao. Khi nhân với bộ lọc thông thấp, các thành phần này bị triệt tiêu, dẫn đến ảnh mờ hơn:
+	\[
+	g(x,y) = f(x,y) * h(x,y),
+	\]
+	trong đó ký hiệu $*$ biểu thị phép chập (convolution). Theo định lý chập, trong miền tần số ta có:
+	\[
+	\mathcal{F}\{g(x,y)\} = \mathcal{F}\{f(x,y)*h(x,y)\} = \hat{f}(u,v)\cdot\hat{h}(u,v).
+	\]
+
+	\item \textbf{Khi kích thước mặt nạ tăng, ảnh càng mượt:}  
+	Mặt nạ càng lớn $\Rightarrow$ loại bỏ nhiều tần số cao hơn $\Rightarrow$ ảnh càng bị mờ mạnh và mượt hơn.
+\end{itemize}
+
+\subsubsection*{Một số bộ lọc thông thấp thường dùng}
+Các bộ lọc thông thấp $\hat{h}(u,v)$ thường được sử dụng trong miền tần số gồm:
+
+\begin{itemize}
+	\item \textbf{Bộ lọc thông thấp lý tưởng (Ideal Low-pass Filter - ILPF):}
+	\[
+	\hat{h}(u,v) =
+	\begin{cases}
+	1, & D(u,v) \le D_0,\\
+	0, & D(u,v) > D_0,
+	\end{cases}
+	\]
+	trong đó $D(u,v) = \sqrt{(u-u_0)^2 + (v-v_0)^2}$ là khoảng cách từ điểm $(u,v)$ đến tâm phổ.  
+	Lọc lý tưởng cho kết quả mờ mạnh nhưng thường gây hiện tượng gợn sóng (ringing effect).
+
+	\item \textbf{Bộ lọc thông thấp Butterworth (BLPF):}
+	\[
+	\hat{h}(u,v) = \frac{1}{1 + \left(\dfrac{D(u,v)}{D_0}\right)^{2n}},
+	\]
+	trong đó $n$ là bậc của bộ lọc. Khi $n$ tăng, biên của bộ lọc càng dốc và đáp ứng gần giống bộ lọc lý tưởng.
+
+	\item \textbf{Bộ lọc thông thấp Gauss (GLPF):}
+	\[
+	\hat{h}(u,v) = e^{-\dfrac{D(u,v)^2}{2\sigma^2}},
+	\]
+	trong đó $\sigma$ điều khiển độ mờ của ảnh. Bộ lọc Gauss có đặc tính mượt, không gây rung biên, và được sử dụng phổ biến nhất.
+\end{itemize}
+
+\subsubsection*{Kết luận}
+Làm mờ ảnh trong miền tần số là quá trình loại bỏ các tần số cao bằng cách nhân phổ ảnh với bộ lọc thông thấp.  
+Khi giảm tần số cao nhiều hơn (tức là giảm $D_0$ hoặc $\sigma$), ảnh sẽ càng mờ và mượt.  
+Ngược lại, nếu chọn ngưỡng lớn, ảnh chỉ bị làm mờ nhẹ và vẫn giữ được các chi tiết biên.
+
 \subsubsection{Lọc thông thấp Ideal}
 
 Là phép lọc 2 chiều đi qua tất cả tần số mà không làm giảm chúng trong bán kính đường tròn $D_0$ tính từ tâm phép lọc và "chặt cụt" tất cả tần số bên ngoài hình tròn này.
@@ -1001,6 +1068,123 @@ Ta được ảnh bộ lọc trong miền không gian và miền tần số như
 \includegraphics[width=0.8\linewidth]{img/GaussHP-KG-TS.png}
 \caption{Ảnh lọc thông cao Gauss miền không gian(bên trái) sang miền tần số(bên phải)}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{img/SauLocGaussHP.png}
+\caption{Ảnh quả dưa hấu sau khi lọc thông cao Gauss}
+\end{figure}
+Ta quan sát phổ miền tần số của ảnh trước và sau khi lọc thông cao Gauss: 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/Hinh1-14.png}
+\caption{So sánh phổ tần số của ảnh trước và sau khi lọc}
+\end{figure}
+\begin{table}[H]
+\centering
+\caption{Tổng hợp đặc điểm và tác dụng của lọc thông cao Gauss}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Nội dung} & \textbf{Mô tả} \\ \hline
+Ảnh gốc & Chứa nhiều tần số thấp, vùng sáng tối mượt và ít chi tiết \\ \hline
+Ảnh sau lọc & Giữ lại chi tiết và biên, loại bỏ vùng phẳng và chậm biến \\ \hline
+Độ mịn & Giảm mạnh sau khi lọc, hình ảnh trở nên sắc nét hơn \\ \hline
+Độ sắc nét & Tăng rõ rệt, các biên vật thể nổi bật hơn \\ \hline
+Phổ tần số ảnh gốc & Tập trung năng lượng ở trung tâm (tần số thấp chiếm ưu thế) \\ \hline
+Phổ tần số sau lọc & Trung tâm tối đi, năng lượng chuyển ra vùng rìa (tần số cao) \\ \hline
+Tác dụng chính & Nhấn mạnh chi tiết, làm rõ cấu trúc và biên của vật thể \\ \hline
+Cơ chế hoạt động & Loại bỏ thành phần tần số thấp, giữ lại tần số cao trong phổ Fourier \\ \hline
+Ưu điểm & Đường cong Gauss trơn, không gây nhiễu hoặc hiện tượng chuông \\ \hline
+Ứng dụng & Tăng cường ảnh, phát hiện biên, làm sắc nét ảnh trong xử lý ảnh số \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{lstlisting}
+	# gaussian_highpass_duahau.py
+# Loc thong cao Gauss cho anh duahau.png va hien thi pho tan so
+
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+
+# === a Doc anh goc (grayscale) ===
+img = Image.open("img/duahau.png").convert("L")   # anh xam
+f = np.array(img, dtype=np.float64)
+P, Q = f.shape
+
+# === b Tao bo loc thong cao Gauss ===
+sigma = 40.0                # do rong sigma
+b = 2 * sigma * sigma
+
+# tao luoi toa do
+u = np.arange(P)
+v = np.arange(Q)
+U, V = np.meshgrid(u, v, indexing='ij')
+
+# khoang cach D(u,v) den tam
+D2 = (U - P/2)**2 + (V - Q/2)**2
+
+# ham loc thong cao Gauss
+H = 1 - np.exp(-D2 / b)
+
+# === c Bien doi Fourier anh goc ===
+F = np.fft.fft2(f)
+F_shift = np.fft.fftshift(F)
+
+# === d Nhan pho anh voi bo loc ===
+G_shift = F_shift * H
+
+# === e Bien doi nguoc Fourier ===
+G = np.fft.ifftshift(G_shift)
+g = np.fft.ifft2(G)
+g_real = np.real(g)
+
+g_min, g_max = g_real.min(), g_real.max()
+g_norm = (g_real - g_min) / (g_max - g_min) * 255
+g_uint8 = np.clip(g_norm, 0, 255).astype(np.uint8)
+
+# === g Pho tan so ===
+# dung log(1 + |F|) de nhin ro hon
+mag_F = np.log(1 + np.abs(F_shift))
+mag_G = np.log(1 + np.abs(G_shift))
+
+# === h Hien thi ket qua ===
+plt.figure(figsize=(14,8))
+
+plt.subplot(2,3,1)
+plt.title("Anh goc")
+plt.imshow(f, cmap='gray')
+plt.axis('off')
+
+# plt.subplot(2,3,2)
+# plt.title("Bo loc thong cao Gauss (H)")
+# plt.imshow(H, cmap='gray')
+# plt.axis('off')
+
+plt.subplot(2,3,2)
+plt.title("Anh sau khi loc")
+plt.imshow(g_uint8, cmap='gray')
+plt.axis('off')
+
+plt.subplot(2,3,4)
+plt.title("Pho tan so anh goc")
+plt.imshow(mag_F, cmap='gray')
+plt.axis('off')
+
+# plt.subplot(2,3,5)
+# plt.axis('off')
+
+plt.subplot(2,3,5)
+plt.title("Pho tan so sau khi loc")
+plt.imshow(mag_G, cmap='gray')
+plt.axis('off')
+
+plt.tight_layout()
+plt.show()
+
+\end{lstlisting}
 \subsubsection{Lọc thông cao Butterworth}
 
 
@@ -1144,7 +1328,7 @@ Bài báo cáo này đạt được các vấn đề sau đây:
 		
 
 		
-		\bibitem{M} Michael Bartholomew-Biggs - Nonlinear Optimization with Engineering Applications (2008, Springer).
+		\bibitem{P} Phạm Thế Bảo - Bài giảng Phân tích và xử lý ảnh (2025).
 		
 	%	\bibitem{H} Hu T.C.-Linear and Integer Programming Made Easy.
 		

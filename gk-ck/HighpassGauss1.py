@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 # 1 Doc anh goc
-img = Image.open("img/duahau.png").convert("L")
+img = Image.open("img/pumpkin.png").convert("L")
 f = np.array(img)
 P, Q = f.shape
 
