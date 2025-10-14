@@ -665,12 +665,10 @@ Sau khi chuyển ảnh sang miền không gian, ta áp dụng một số bộ l�
 
 Các bộ lọc thông dụng:
 \begin{enumerate}
+\item Lọc thông thấp/cao Ideal ().
 \item Lọc thông thấp/cao Gaus (Gaussian low/high pass filter
 ).
-
 \item Lọc thông thấp/cao Butterworth (Butterworth low/high pass filter).
-
-
 \end{enumerate}
 
 Ta sẽ đi qua một số ứng dụng của bộ lọc này.
@@ -798,9 +796,20 @@ Các bộ lọc thông thấp $\hat{h}(u,v)$ thường được sử dụng tron
 \end{center}
 \begin{enumerate}[label=$\bullet$]
 \item \textbf{Bộ lọc thông cao Butterworth}
-\[\hat{h}(u,v) = \frac{1}{1 + \left[\dfrac{D_0}{D(u,v)}\right]^{2n}}\]
+\[\hat{h}(u,v) = \frac{1}{1 + \left[\dfrac{D_0}{D(u,v)}\right]^{2n}},\]
+trong đó: 
+\begin{enumerate}
+	\item[-] n là thứ tự lọc.
+	\item[-] $D_0$ là tần số cắt.
+
+\end{enumerate}
 
 \item \textbf{Bộ lọc thông cao Gauss}
+\[\hat{h}(u,v) = 1- e^{-\dfrac{D(u,v)^2}{2\sigma^2}},\]
+trong đó: 
+\begin{enumerate}
+\item[-] Tham số $\sigma$ đo mức độ lan truyền hay phân tán của đường cong Gauss.
+\end{enumerate}
 \end{enumerate}
 
 
@@ -813,41 +822,50 @@ Ngược lại, nếu chọn ngưỡng lớn, ảnh chỉ bị làm mờ nhẹ v
 \subsubsection{Lọc thông thấp Gauss}
 
 Đặc trưng cho nhiễu đó là hàm mật độ xác suất thể hiện sự phân bố của nhiễu. Ta sử dụng hàm phân phối Gauss làm bộ lọc nhằm làm mờ ảnh và giảm nhiễu. Trong trường hợp 1 chiều, phân phối Gauss có công thức:
-
-*công thức*
-
+\begin{equation}
+G(x) = \dfrac{1}{\sqrt{2\pi \sigma^2}}e^{-\dfrac{x^2}{2\sigma^2}}
+\end{equation}
 với $\sigma$ là độ lệch chuẩn của phân phối, Ta giả sử phân phối này có trung bình là 0.
-
-*hình ảnh*
-
-Khi xử lý ảnh, ta sẽ sử dụng hàm phân phối Gauss cho 2 chiều, hình thành bằng tích của 2 hàm Gauss 1 chiều x và y 
-
-*công thức*
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/phanphoigauss.png}
+\caption{Đồ thị phân phối Gauss}
+\end{figure}
+Khi xử lý ảnh, ta sẽ sử dụng hàm phân phối Gauss cho 2 chiều, hình thành bằng tích của 2 hàm Gauss 1 chiều $x$ và $y$ 
+\begin{equation}
+G(x,y) =  \dfrac{1}{\sqrt{2\pi \sigma^2}}e^{-\dfrac{x^2+y^2}{2\sigma^2}}
+\end{equation}
 Bộ lọc thông thấp Gauss có dạng:
-
-*công thức*
-
-với $D(u,v)$ là khoảng cách từ điểm $(u,v)$ đến tâm hình.
+\begin{equation}
+G(u,v) =  \dfrac{1}{\sqrt{2\pi \sigma^2}}e^{-\dfrac{D^2(u,v)}{2\sigma^2}}
+\end{equation}
+với $D(u,v)$ là khoảng cách từ điểm $(u,v)$ đến tâm hình $(0,0)$.
 
 Ta sẽ xử lý ảnh sau với phép lọc thông thấp Gauss
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4
+\linewidth]{img/moon.jpg}
+\caption{Ảnh mặt trăng}
+\end{figure}
+khởi tạo bộ lọc
 
-*hình ảnh*
 
-khỏi tạo bộ lọc
 
-*dòng code*
-
-Ảnh của bộ lọc ở miền khong gian chuyển sang miền tần số là 
-
-*hình ảnh*
-
+Ảnh của bộ lọc ở miền không gian chuyển sang miền tần số là 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/LPG-spacedomainTo-frequency.png}
+\caption{Bộ lọc Gauss trong miền không gian (trái) sang miền tần số (phải)}
+\end{figure}
 Sử dụng thuật toán 1.5 - 3, ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sao đó lấy biến đổi ngược.
 
 Ta được ảnh sau khi lọc là:
-
-*hình*
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/anhsauLocLowpass.png}
+\caption{Ảnh mặt trăng sau bộ lọc thông thấp Gauss}
+\end{figure}
 Ta quan sát phổ của ảnh ban đầu và sau khi lọc (hướng trên - phải xuống dưới - trái)
 
 *hình*
