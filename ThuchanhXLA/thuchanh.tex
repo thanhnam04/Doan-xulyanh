@@ -1,0 +1,337 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{vietnam}\usepackage{amsmath, amsthm, amssymb,latexsym,amscd,amsfonts,enumerate}
+\usepackage[top=2.5cm, bottom=2.3cm, left=2.3cm, right=2.5cm]{geometry} 
+\usepackage{color, fancyhdr, graphicx, wrapfig}
+\usepackage[unicode]{hyperref}
+\usepackage[vietnamese]{babel}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}	
+\usepackage{mathtools}
+\usepackage{ulem}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{tkz-euclide}
+\usepackage{tikz,tkz-tab}
+\usepackage{empheq} %gói móc nhọn cho hệ pt
+\usepackage{graphicx} 
+\usepackage{hhline} % Sử dụng gói lệnh hhline
+\usepackage{ltablex}% gói tách bảng khi quá dài
+\usepackage{titling}
+\usepackage{nicematrix}
+\usepackage{secdot}
+\usepackage{enumitem}
+\usepackage{enumerate}
+\usepackage{array}
+\usepackage{multirow}
+\usetikzlibrary{calc}
+\usepackage{longtable}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage[bottom]{footmisc}
+
+\usepackage{tocloft}
+\usepackage{xcolor}
+\usepackage{listings}
+\renewcommand{\cftchapfont}{\color{red!85}}       % Chương
+
+\usepackage[labelfont=bf]{caption}
+\everymath{\displaystyle}
+
+\usepackage{exscale,relsize,makeidx}
+%\usepackage{refcheck}
+
+\definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{blizzardblue}{rgb}{0.67, 0.9, 0.93}
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\numberwithin{equation}{section}
+\theoremstyle{definition} %định nghĩa chữ thường không in nghiêng cho các môi trường định nghĩa toán học
+\newtheorem{dn}{Định nghĩa}[chapter]
+\newtheorem{tc}{Tính chất}[chapter]
+\newtheorem{dl}{Định lý}[chapter]
+\newtheorem{md}{Mệnh đề}[chapter]
+\newtheorem{bd}{Bổ đề}[chapter]
+\newtheorem{hq}{Hệ quả}[chapter]
+\newtheorem{nx}{Nhận xét}[chapter]
+\newtheorem{vd}{Ví dụ}[chapter]
+\newtheorem{cy}{Chú ý}[chapter]
+\pagenumbering{roman}\pagestyle{plain}
+%\pagestyle{fancy}chapter
+%\lhead{\it \changefontsizes{11pt}Luận văn thạc sĩ:}
+%\rhead{\it Một số phương pháp vô hướng hóa cơ bản trong tối ưu đa mục tiêu}
+%\lfoot{\it Nguyễn Văn Vân } 			         
+%\rfoot{\it K19.2 trường ĐHSG}
+\renewcommand{\headrulewidth}{1,2pt} 	
+\renewcommand{\arraystretch}{1.3}%tạo dọ cao cho dòng		
+
+
+\newcommand{\dstc}[2]
+{
+	\newdimen\stringwidth\setbox0=\hbox{#1}
+	\stringwidth=\wd0
+	\hspace*{-\parindent}\hspace*{.5\textwidth}\hspace*{-.5\wd0}#1\hfill #2\bigskip
+}  
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red!70!brown},
+    commentstyle=\color{green!50!black},
+    numbers=left,
+    numberstyle=\tiny,
+    breaklines=true,
+    showstringspaces=false,
+    frame=single
+}
+\usepackage{scrextend}
+\fancyhf{}
+\lhead{}
+\chead{\thepage}
+\rhead{}
+\cfoot{}
+\rfoot{}
+\lfoot{}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.5pt}
+
+%\changefontsizes{13pt}
+
+\begin{document} 
+	\begin{titlepage}
+	\begin{tikzpicture}[remember picture, overlay]
+		
+		\draw[line width = 1.5pt] ($(current page.north west) + (1in,-0.8in)$) rectangle ($(current page.south east) + (-0.6in,0.8in)$);
+		
+	\end{tikzpicture}
+	\centering
+	\textbf{ỦY BAN NHÂN DÂN THÀNH PHỐ HỒ CHÍ MINH\smallskip\\
+		TRƯỜNG ĐẠI HỌC SÀI GÒN}\par
+	\rule{5cm}{0.5pt}\par
+	
+	
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=6cm]{logodhsg.png}
+		
+	\end{figure}
+	
+	\vspace{1cm}
+	{\LARGE\textbf{BÁO CÁO TỔNG KẾT \\ \hspace{0.5cm} ĐỒ ÁN MÔN HỌC\\PHÂN TÍCH VÀ XỬ LÝ ẢNH}\par}
+	\vspace{3cm}
+	\hspace{0.5cm}{\Large\textbf{NHẬN DIỆN NÓI DỐI DỰA TRÊN VI BIỂU CẢM \\(LIE DETECTION BASED ON MICROEXPRESSION) }\par}
+	% \large\textbf{ Thuộc nhóm ngành khoa học: Toán-Ứng dụng\\ Chủ nhiệm đề tài: Nguyễn Thành Nam }\par		
+	\vspace{2cm}
+	\large{\textbf{Giảng viên hướng dẫn: PGS.TS Phạm Thế Bảo}}
+	\vfill
+	\textbf{Thành phố Hồ Chí Minh, tháng 11  năm 2025}
+\end{titlepage}
+
+
+
+\begin{titlingpage} %BÌA PHỤ II
+	\begin{tikzpicture}[remember picture, overlay]
+		\draw[line width = 1.5pt] ($(current page.north west) + (1in,-0.8in)$) rectangle ($(current page.south east) + (-0.6in,0.8in)$);
+		
+	\end{tikzpicture}
+	\centering
+	\textbf{ỦY BAN NHÂN DÂN THÀNH PHỐ HỒ CHÍ MINH\smallskip\\
+		TRƯỜNG ĐẠI HỌC SÀI GÒN}\par
+	\rule{5cm}{0.5pt}\par
+	\vspace{5cm}
+	
+	
+	\vspace{1cm}
+	{\Large\textbf{BÁO CÁO TỔNG KẾT \\ \hspace{0.5cm} ĐỒ ÁN MÔN HỌC \\
+  PHÂN TÍCH VÀ XỬ LÝ ẢNH}\par}
+	\vspace{2cm}
+	\hspace{0.7cm}{\LARGE\textbf{Nhận diện nói dối dựa trên vi biểu cảm \\\hspace{0.5cm}(Lie Detection based on microexpression)}\par}
+	\vspace{1.5cm}
+	
+	\large\textbf{ }\par		
+	
+	\large{}
+	\vspace{1.5cm}
+	
+\begin{tabular}{|c|c|}
+  \hline
+  MSV & Họ và tên  \\ 
+	\hline
+	   3122480001  &   Trần Đức Anh                    \\
+  \hline
+   3122480034  &  Nguyễn Thành Nam                       \\ 
+  \hline
+   3122480042  &   Bùi Tấn Phát                       \\ 
+  \hline
+ \end{tabular}
+
+	\vspace{0.8cm}
+	
+	
+	
+	%	\includegraphics[height=2cm]{chukynew}
+	\vfill
+	\textbf{Thành phố Hồ Chí Minh, tháng 11  năm 2025}
+\end{titlingpage}
+	
+	%\large
+	\renewcommand{\baselinestretch}{1.2}
+	\fontsize{13pt}{20pt}\selectfont
+	
+	\chapter*{Lời cam đoan}
+	\thispagestyle{fancy}
+	\addcontentsline{toc}{chapter}{Lời cam đoan}
+	\vspace{1cm}
+	\indent
+	
+	Tôi tên là Nguyễn Thành Nam, Sinh viên lớp DTU1221, Khoa Toán-Ứng dụng, Khóa 22,  thuộc trường Đại học Sài Gòn.
+	
+	 Tôi xin cam đoan toàn bộ nội dung được trình bày trong bản báo cáo này  đều do chính tôi thực hiện dưới sự hướng dẫn của \textit{PGS.TS Phạm Thế Bảo}. Những kết quả nghiên cứu của tác giả khác được sử dụng trong đề tài  đều có trích dẫn đầy đủ. Tôi xin hoàn toàn chịu trách nhiệm nếu có các nội dung sao chép không hợp lệ hoặc vi phạm quy chế đào tạo. 
+	\\
+	\\
+	\\
+	\rightline{{\it {Tp. HCM, tháng 11  năm 2025}} \hspace*{0cm}}
+	\rightline{\textbf{Tác giả} \hspace*{2cm}}
+
+	
+	%\vspace*{1cm}
+	\rightline{\textbf{Nguyễn Thành Nam}\hspace*{0.9cm}}
+	
+	\chapter*{Lời cảm ơn}
+	\thispagestyle{fancy}
+	\addcontentsline{toc}{chapter}{Lời cảm ơn}
+	\vspace{1cm}
+	\indent
+	
+Tiểu luận này được hoàn thành tại trường Đại Học Sài Gòn dưới sự hướng dẫn của \textit{PGS.TS Phạm Thế Bảo}. Em xin bày tỏ lòng biết ơn chân thành và sâu sắc về sự tận tâm và nhiệt tình của Thầy trong suốt quá trình tác giả thực hiện đề tài.
+	
+	
+	\bigskip
+	Xin cám ơn Phòng Đào tạo  và Khoa Toán - Ứng dụng trường Đại học Sài Gòn, gia đình, bạn bè  và các thầy cô đã tạo nhiều điều kiện thuận lợi, giúp em hoàn thành đồ án môn học này.
+	\\
+	\\
+	\\
+	\rightline{{\it {Tp. HCM, tháng 11  năm 2025}} \hspace*{0cm}}
+	\rightline{\textbf{ Tác giả} \hspace*{2cm}}
+
+	
+	%\vspace*{1cm}
+	\rightline{\textbf{Nguyễn Thành Nam}\hspace*{0.9cm}}
+	\newpage
+	
+	\addcontentsline{toc}{chapter}{Mục lục}
+	\tableofcontents
+	%\thispagestyle{plain}
+
+	\chapter*{Danh mục các từ viết tắt  }
+\thispagestyle{fancy}
+\addcontentsline{toc}{chapter}{Danh mục các từ viết tắt}
+\vspace{1cm}
+\indent
+
+\begin{center}
+	\begin{tabular}{ |p{3cm}|p{5cm}|  }
+		\hline
+		DFT & Discrete Fourier Transforms  \\ \hline
+		IDFT & Inverse Discrete Fourier Transforms  \\ \hline
+		 & Phương án tối ưu \\ \hline
+			 & Phương án\\ \hline
+		& Bài toán  \\ \hline
+	
+		\hline
+	\end{tabular}
+\end{center}
+
+	\chapter*{Danh mục các bảng, hình vẽ  }
+\thispagestyle{fancy}
+\addcontentsline{toc}{chapter}{Danh mục các bảng, hình vẽ}
+\vspace{1cm}
+\indent
+
+\begin{longtable}{l   l }
+	\textbf{Hình, bảng}  & \textbf{Trang}       \\
+	%Hình \ref{hinhdothi} Nghiệm tối ưu của BT \ref{1133}. &       \pageref{hinhdothi}       \\
+	%Hình \ref{hinhthamso1}  Ví dụ \ref{2211}- BT có hàm mục tiêu không bị chặn. &       \pageref{hinhthamso1}         \\
+	%Hình \ref{hinhthamso2} Ví dụ \ref{2211}- BT đạt tối ưu.  &      \pageref{hinhthamso2}     \\
+	%Hình \ref{hinhthamso3} Ví dụ \ref{2211}- BT vẫn đạt tối ưu. &       \pageref{hinhthamso3}     \\
+	%Bảng đơn hình \ref{1-0} - \ref{3-0} Ví dụ \ref{122} - BT chứa tham số ở vế phải.  &   \pageref{1-0} \\
+	%Bảng đơn hình \ref{4-0} - \ref{5-0} Ví dụ \ref{2222} - TH2 BT chứa tham số ở hàm mục tiêu. &   \pageref{4-0} \\
+	%Bảng đơn hình \ref{6-0} - \ref{10-0} Ví dụ \ref{2233} - TH3 BT chứa tham số ở hàm mục tiêu. &   \pageref{6-0} \\
+	%Bảng đơn hình \ref{11-0} - \ref{13-0} Ví dụ \ref{2244} - BT chứa tham số ở hàm mục tiêu. &   \pageref{11-0} \\
+ %từ 14-0 là chương 3
+ %Bảng đơn hình \ref{14-0} - \ref{20-0} Ví dụ \ref{3322} - BT phân thức chứa tham số hàm mục tiêu. &   \pageref{14-0} \\
+
+
+\end{longtable}
+
+
+	\newpage
+	\pagenumbering{arabic} 
+	\chapter*{Lời nói đầu}
+	\thispagestyle{fancy}
+	\addcontentsline{toc}{chapter}{{\bf  Lời nói đầu}\rm}
+	\renewcommand{\baselinestretch}{1.2}
+
+	
+\vspace{3cm}
+\rightline{{\it {Tp. HCM, tháng 5  năm 2025}} \hspace*{0cm}}
+\rightline{\textbf{Tác giả} \hspace*{2cm}}
+
+
+
+\rightline{\textbf{Nguyễn Thành Nam}\hspace*{0.9cm}}
+
+	
+	
+	\newpage
+	\renewcommand{\baselinestretch}{1.2}
+	
+
+\chapter{\centering Phân tích-nhận diện nói dối và nói thật}
+\section{Tài liệu}
+
+	\chapter*{Kết luận}
+   
+	\begin{thebibliography}{99}
+		\addcontentsline{toc}{chapter}{{\bf  Tài liệu tham khảo}} 
+		\thispagestyle{fancy}
+		%	\item[\textbf{\large 1.}] \textbf{\large Tài liệu tham khảo chính thức}
+		
+		%\item[\textbf{\large 1.}] \textbf{\large Tài liệu tham khảo chính thức}
+		
+		
+		%Các tài liệu chính được tôi chọn lựa để tham khảo khi thực hiện luận văn là  tài liệu số \cite{Mat}, \cite{Gab1} và \cite{Gian}. 	Các vấn đề liên quan được chúng tôi khảo cứu trong các tài liệu còn lại.
+		
+
+		
+		\bibitem{P} Phạm Thế Bảo - Bài giảng Phân tích và xử lý ảnh (2025).
+		
+	%	\bibitem{H} Hu T.C.-Linear and Integer Programming Made Easy.
+		
+	%	\bibitem{L} Linear Programming - Foundations and Extensions - Springer US (2001).
+		
+	%	\bibitem{BB} Bùi Phúc Trung, Nguyễn Thị Ngọc Thanh, Vũ Thị Bích Liên,\textit{ Giáo trình Quy hoạch tuyến tính Tối ưu hóa}, NXB Lao Động-Xã Hội-2003.
+		
+	%	\bibitem{H} H. A. Eiselt · C.-L. Sandblom-Linear Programming
+	%	and its Applications.
+	%	\bibitem{P} Phan Hoàng Chơn,\textit{ Giáo trình Đại Số Tuyến tính}, Đại học Sài Gòn, 2023. 
+		
+	%	\bibitem{Đ} Nguyễn Hữu Điển, \textit{Giáo trình tối ưu tuyến tính và ứng dụng }, NXB Đại học Quốc gia Hà Nội, 2018. 
+	%	\bibitem{B} Bùi Minh Trí, \textit{Tối ưu hóa tập I}, Trường Đại học Bách Khoa Hà Nội,NXB Khoa học và Kỹ thuật.
+		
+	%			\bibitem{T}   Tạ Quang Sơn, \textit{Bài giảng Quy hoạch tuyến tính}, Đại học Sài Gòn, 2023.
+		
+	%	\bibitem{TT}   Tạ Quang Sơn, \textit{Bài giảng Quy hoạch phân thức tuyến tính}, Đại học Sài Gòn, 2022.
+		
+	\end{thebibliography}
+	
+	\newpage % Add a new page after the bibliography
+	
+	\thispagestyle{empty} % Ensure the new page is completely blank
+
+	\mbox{}
+
+\end{document}

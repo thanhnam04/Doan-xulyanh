@@ -665,7 +665,6 @@ Sau khi chuyển ảnh sang miền không gian, ta áp dụng một số bộ l�
 
 Các bộ lọc thông dụng:
 \begin{enumerate}
-\item Lọc thông thấp/cao Ideal (Ideal low/high pass filter)
 \item Lọc thông thấp/cao Gaus (Gaussian low/high pass filter
 ).
 
@@ -770,46 +769,47 @@ Phép làm mờ ảnh bằng bộ lọc thông thấp có những tính chất s
 	Mặt nạ càng lớn $\Rightarrow$ loại bỏ nhiều tần số cao hơn $\Rightarrow$ ảnh càng bị mờ mạnh và mượt hơn.
 \end{itemize}
 
-\subsubsection*{Một số bộ lọc thông thấp thường dùng}
+\begin{center}
+\textbf{Một số bộ lọc thông thấp}
+\end{center}
 Các bộ lọc thông thấp $\hat{h}(u,v)$ thường được sử dụng trong miền tần số gồm:
 
 \begin{itemize}
-	\item \textbf{Bộ lọc thông thấp lý tưởng (Ideal Low-pass Filter - ILPF):}
-	\[
-	\hat{h}(u,v) =
-	\begin{cases}
-	1, & D(u,v) \le D_0,\\
-	0, & D(u,v) > D_0,
-	\end{cases}
-	\]
-	trong đó $D(u,v) = \sqrt{(u-u_0)^2 + (v-v_0)^2}$ là khoảng cách từ điểm $(u,v)$ đến tâm phổ.  
-	Lọc lý tưởng cho kết quả mờ mạnh nhưng thường gây hiện tượng gợn sóng (ringing effect).
-
 	\item \textbf{Bộ lọc thông thấp Butterworth (BLPF):}
 	\[
 	\hat{h}(u,v) = \frac{1}{1 + \left(\dfrac{D(u,v)}{D_0}\right)^{2n}},
 	\]
-	trong đó $n$ là bậc của bộ lọc. Khi $n$ tăng, biên của bộ lọc càng dốc và đáp ứng gần giống bộ lọc lý tưởng.
+	trong đó
+	\begin{enumerate}[label=$-$]
+	\item 	$n$ là thứ tự lọc.
+	\item  $D(u,v) = \sqrt{(u-u_0)^2 + (v-v_0)^2}$ (thường chọn $(u_0,v_0) = (0,0)$).
+	\item $D_0$ là tần số cắt, hay tần số chặt cụt, còn được kí hiệu là $r_0$.
+	\end{enumerate}
 
 	\item \textbf{Bộ lọc thông thấp Gauss (GLPF):}
 	\[
 	\hat{h}(u,v) = e^{-\dfrac{D(u,v)^2}{2\sigma^2}},
 	\]
 	trong đó $\sigma$ điều khiển độ mờ của ảnh. Bộ lọc Gauss có đặc tính mượt, không gây rung biên, và được sử dụng phổ biến nhất.
+	
 \end{itemize}
+\begin{center}
+\textbf{Một số bộ lọc thông cao}
+\end{center}
+\begin{enumerate}[label=$\bullet$]
+\item \textbf{Bộ lọc thông cao Butterworth}
+\[\hat{h}(u,v) = \frac{1}{1 + \left[\dfrac{D_0}{D(u,v)}\right]^{2n}}\]
+
+\item \textbf{Bộ lọc thông cao Gauss}
+\end{enumerate}
+
+
 
 \subsubsection*{Kết luận}
 Làm mờ ảnh trong miền tần số là quá trình loại bỏ các tần số cao bằng cách nhân phổ ảnh với bộ lọc thông thấp.  
 Khi giảm tần số cao nhiều hơn (tức là giảm $D_0$ hoặc $\sigma$), ảnh sẽ càng mờ và mượt.  
 Ngược lại, nếu chọn ngưỡng lớn, ảnh chỉ bị làm mờ nhẹ và vẫn giữ được các chi tiết biên.
 
-\subsubsection{Lọc thông thấp Ideal}
-
-Là phép lọc 2 chiều đi qua tất cả tần số mà không làm giảm chúng trong bán kính đường tròn $D_0$ tính từ tâm phép lọc và "chặt cụt" tất cả tần số bên ngoài hình tròn này.
-
-Bộ lọc này xác định như sau:
-
-với $D_0$ là hằng số dương và $D(u,v)$ là khoảng cách giữa điểm $(u,v)$ trong miền tần số tâm của hình chữ nhật tần số, tức:
 \subsubsection{Lọc thông thấp Gauss}
 
 Đặc trưng cho nhiễu đó là hàm mật độ xác suất thể hiện sự phân bố của nhiễu. Ta sử dụng hàm phân phối Gauss làm bộ lọc nhằm làm mờ ảnh và giảm nhiễu. Trong trường hợp 1 chiều, phân phối Gauss có công thức:

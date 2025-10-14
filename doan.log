@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  12 OCT 2025 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  14 OCT 2025 08:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1309,7 +1309,7 @@ Package caption Info: scrextend package is loaded.
 \caption@addmargin@hsize=\dimen392
 \caption@addmargin@linewidth=\dimen393
 Package caption Info: End \AtBeginDocument code.
-<img/logodhsg.png, id=149, 1223.57124pt x 1223.57124pt>
+<img/logodhsg.png, id=145, 1223.57124pt x 1223.57124pt>
 File: img/logodhsg.png Graphic file (type png)
 <use img/logodhsg.png>
 Package pdftex.def Info: img/logodhsg.png  used on input line 118.
@@ -1526,7 +1526,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [2
 
 ]
-<img/Screenshot 2025-10-01 132803.png, id=241, 239.39438pt x 234.8775pt>
+<img/Screenshot 2025-10-01 132803.png, id=236, 239.39438pt x 234.8775pt>
 File: img/Screenshot 2025-10-01 132803.png Graphic file (type png)
 <use img/Screenshot 2025-10-01 132803.png>
 Package pdftex.def Info: img/Screenshot 2025-10-01 132803.png  used on input line 336.
@@ -1550,12 +1550,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4 <./img/Screenshot 2025-10-01 132803.png>]
-<img/fourier.png, id=258, 252.945pt x 449.68pt>
+<img/fourier.png, id=253, 252.945pt x 449.68pt>
 File: img/fourier.png Graphic file (type png)
 <use img/fourier.png>
 Package pdftex.def Info: img/fourier.png  used on input line 379.
 (pdftex.def)             Requested size: 142.26378pt x 252.91693pt.
-<img/fourier1.png, id=259, 256.70906pt x 394.47375pt>
+<img/fourier1.png, id=254, 256.70906pt x 394.47375pt>
 File: img/fourier1.png Graphic file (type png)
 <use img/fourier1.png>
 Package pdftex.def Info: img/fourier1.png  used on input line 384.
@@ -1615,17 +1615,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
-<img/anhVaphodolon1.png, id=294, 852.18375pt x 401.24907pt>
+<img/anhVaphodolon1.png, id=289, 852.18375pt x 401.24907pt>
 File: img/anhVaphodolon1.png Graphic file (type png)
 <use img/anhVaphodolon1.png>
 Package pdftex.def Info: img/anhVaphodolon1.png  used on input line 452.
 (pdftex.def)             Requested size: 368.74905pt x 173.62967pt.
-<img/anhVaphodolon1-3d.png, id=295, 599.23875pt x 434.37282pt>
+<img/anhVaphodolon1-3d.png, id=290, 599.23875pt x 434.37282pt>
 File: img/anhVaphodolon1-3d.png Graphic file (type png)
 <use img/anhVaphodolon1-3d.png>
 Package pdftex.def Info: img/anhVaphodolon1-3d.png  used on input line 457.
 (pdftex.def)             Requested size: 368.74905pt x 267.30008pt.
-<img/anhVaphodolon2.png, id=296, 727.21687pt x 301.8778pt>
+<img/anhVaphodolon2.png, id=291, 727.21687pt x 301.8778pt>
 File: img/anhVaphodolon2.png Graphic file (type png)
 <use img/anhVaphodolon2.png>
 Package pdftex.def Info: img/anhVaphodolon2.png  used on input line 462.
@@ -1639,12 +1639,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8 <./img/anhVaphodolon1.png>]
-<img/anhVaphodolon3.png, id=305, 730.22812pt x 299.61937pt>
+<img/anhVaphodolon3.png, id=300, 730.22812pt x 299.61937pt>
 File: img/anhVaphodolon3.png Graphic file (type png)
 <use img/anhVaphodolon3.png>
 Package pdftex.def Info: img/anhVaphodolon3.png  used on input line 467.
 (pdftex.def)             Requested size: 368.74905pt x 151.29973pt.
-<img/anhVaphodolon4.png, id=306, 729.47531pt x 295.1025pt>
+<img/anhVaphodolon4.png, id=301, 729.47531pt x 295.1025pt>
 File: img/anhVaphodolon4.png Graphic file (type png)
 <use img/anhVaphodolon4.png>
 Package pdftex.def Info: img/anhVaphodolon4.png  used on input line 472.
@@ -1695,12 +1695,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13]
-<img/highpassLowpassDemo.png, id=381, 887.56593pt x 535.2497pt>
+<img/highpassLowpassDemo.png, id=376, 887.56593pt x 535.2497pt>
 File: img/highpassLowpassDemo.png Graphic file (type png)
 <use img/highpassLowpassDemo.png>
 Package pdftex.def Info: img/highpassLowpassDemo.png  used on input line 634.
 (pdftex.def)             Requested size: 426.79134pt x 257.3743pt.
-<img/moonFrequencydomain.png, id=382, 722.7pt x 361.35pt>
+<img/moonFrequencydomain.png, id=377, 722.7pt x 361.35pt>
 File: img/moonFrequencydomain.png Graphic file (type png)
 <use img/moonFrequencydomain.png>
 Package pdftex.def Info: img/moonFrequencydomain.png  used on input line 640.
@@ -1732,7 +1732,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [16]
 
 LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 745.
+(Font)              size <12> substituted on input line 744.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1790,7 +1790,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
-<img/Duahau.png, id=448, 263.48438pt x 205.5178pt>
+<img/Duahau.png, id=446, 263.48438pt x 205.5178pt>
 File: img/Duahau.png Graphic file (type png)
 <use img/Duahau.png>
 Package pdftex.def Info: img/Duahau.png  used on input line 1010.
@@ -1804,6 +1804,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24 <./img/Duahau.png>]
+<img/GaussHP-KG-TS.png, id=472, 612.78937pt x 265.74281pt>
+File: img/GaussHP-KG-TS.png Graphic file (type png)
+<use img/GaussHP-KG-TS.png>
+Package pdftex.def Info: img/GaussHP-KG-TS.png  used on input line 1068.
+(pdftex.def)             Requested size: 368.74905pt x 159.91322pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1812,11 +1818,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-<img/GaussHP-KG-TS.png, id=508, 612.78937pt x 265.74281pt>
-File: img/GaussHP-KG-TS.png Graphic file (type png)
-<use img/GaussHP-KG-TS.png>
-Package pdftex.def Info: img/GaussHP-KG-TS.png  used on input line 1068.
-(pdftex.def)             Requested size: 368.74905pt x 159.91322pt.
 <img/SauLocGaussHP.png, id=509, 406.51875pt x 344.03531pt>
 File: img/SauLocGaussHP.png Graphic file (type png)
 <use img/SauLocGaussHP.png>
@@ -1966,20 +1967,20 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
 Package rerunfilecheck Info: File `doan.out' has not changed.
-(rerunfilecheck)             Checksum: 60F478A5DA4B14798341FEFCE91AE894;7527.
+(rerunfilecheck)             Checksum: E7047C5B4DF7B209262CBD7DED4B8DE9;7337.
  ) 
 Here is how much of TeX's memory you used:
  38133 strings out of 475248
- 776401 string characters out of 5758285
+ 776366 string characters out of 5758285
  2231785 words of memory out of 5000000
- 58554 multiletter control sequences out of 15000+600000
+ 58552 multiletter control sequences out of 15000+600000
  584785 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,117p,1208b,2030s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Home\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on doan.pdf (45 pages, 4518061 bytes).
+Output written on doan.pdf (45 pages, 4517548 bytes).
 PDF statistics:
- 806 PDF objects out of 1000 (max. 8388607)
- 318 named destinations out of 1000 (max. 500000)
- 376 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 805 PDF objects out of 1000 (max. 8388607)
+ 320 named destinations out of 1000 (max. 500000)
+ 368 words of extra memory for PDF output out of 10000 (max. 10000000)
 

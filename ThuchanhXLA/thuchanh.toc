@@ -1,0 +1,10 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {chapter}{Lời cam đoan}{i}{chapter*.2}%
+\contentsline {chapter}{Lời cảm ơn}{ii}{chapter*.3}%
+\contentsline {chapter}{Mục lục}{iii}{chapter*.3}%
+\contentsline {chapter}{Danh mục các từ viết tắt}{iv}{chapter*.4}%
+\contentsline {chapter}{Danh mục các bảng, hình vẽ}{v}{chapter*.5}%
+\contentsline {chapter}{{\bf Lời nói đầu}\rm }{1}{chapter*.6}%
+\contentsline {chapter}{\numberline {1}\centering Phân tích-nhận diện nói dối và nói thật}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Tài liệu}{2}{section.1.1}%
+\contentsline {chapter}{{\bf Tài liệu tham khảo}}{4}{chapter*.8}%
