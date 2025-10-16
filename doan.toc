@@ -1,10 +1,9 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{Lời cam đoan}{i}{chapter*.2}%
-\contentsline {chapter}{Lời cảm ơn}{ii}{chapter*.3}%
-\contentsline {chapter}{Mục lục}{iii}{chapter*.3}%
-\contentsline {chapter}{Danh mục các từ viết tắt}{v}{chapter*.4}%
-\contentsline {chapter}{Danh mục các bảng, hình vẽ}{vi}{chapter*.5}%
-\contentsline {chapter}{{\bf Lời nói đầu}\rm }{1}{chapter*.6}%
+\contentsline {chapter}{Lời cảm ơn}{i}{chapter*.2}%
+\contentsline {chapter}{Mục lục}{ii}{chapter*.2}%
+\contentsline {chapter}{Danh mục các từ viết tắt}{iv}{chapter*.3}%
+\contentsline {chapter}{Danh mục các bảng, hình vẽ}{v}{chapter*.4}%
+\contentsline {chapter}{{\bf Lời nói đầu}\rm }{1}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}\centering Xử lý ảnh trong miền tần số}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Giới thiệu và đôi nét về miền tần số}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Khác biệt giữa miền không gian và miền tần số}{4}{section.1.2}%
@@ -23,14 +22,15 @@
 \contentsline {subsection}{\numberline {1.4.1}Khái niệm về xử lý ảnh trong miền tần số}{14}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Các bộ lọc băng thông trong miền tần số}{16}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}Làm mờ ảnh trong miền tần số}{16}{subsection.1.4.3}%
-\contentsline {subsubsection}{\numberline {1.4.3.1}Lọc thông thấp Gauss}{19}{subsubsection.1.4.3.1}%
-\contentsline {subsubsection}{\numberline {1.4.3.2}Lọc thông thấp Butterworth}{22}{subsubsection.1.4.3.2}%
-\contentsline {subsection}{\numberline {1.4.4}Ứng dụng phép lọc làm mờ ảnh}{23}{subsection.1.4.4}%
-\contentsline {subsection}{\numberline {1.4.5}Làm sắc ảnh trong miền tần số}{25}{subsection.1.4.5}%
-\contentsline {subsubsection}{\numberline {1.4.5.1}Lọc thông cao Ideal}{25}{subsubsection.1.4.5.1}%
-\contentsline {subsubsection}{\numberline {1.4.5.2}Lọc thông cao Gauss}{26}{subsubsection.1.4.5.2}%
-\contentsline {subsubsection}{\numberline {1.4.5.3}Lọc thông cao Butterworth}{32}{subsubsection.1.4.5.3}%
-\contentsline {subsection}{\numberline {1.4.6}Ứng dụng phép lọc sắc nét ảnh}{33}{subsection.1.4.6}%
-\contentsline {subsection}{\numberline {1.4.7}Lọc chặn}{33}{subsection.1.4.7}%
-\contentsline {chapter}{{\bf Kết luận}\rm }{36}{Item.32}%
-\contentsline {chapter}{{\bf Tài liệu tham khảo}}{38}{chapter*.32}%
+\contentsline {subsubsection}{\numberline {1.4.3.1}Lọc thông thấp Ideal}{20}{subsubsection.1.4.3.1}%
+\contentsline {subsubsection}{\numberline {1.4.3.2}Lọc thông thấp Gauss}{23}{subsubsection.1.4.3.2}%
+\contentsline {subsubsection}{\numberline {1.4.3.3}Lọc thông thấp Butterworth}{26}{subsubsection.1.4.3.3}%
+\contentsline {subsection}{\numberline {1.4.4}Ứng dụng phép lọc làm mờ ảnh}{30}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Làm sắc ảnh trong miền tần số}{33}{subsection.1.4.5}%
+\contentsline {subsubsection}{\numberline {1.4.5.1}Lọc thông cao Ideal}{34}{subsubsection.1.4.5.1}%
+\contentsline {subsubsection}{\numberline {1.4.5.2}Lọc thông cao Gauss}{37}{subsubsection.1.4.5.2}%
+\contentsline {subsubsection}{\numberline {1.4.5.3}Lọc thông cao Butterworth}{43}{subsubsection.1.4.5.3}%
+\contentsline {subsection}{\numberline {1.4.6}Ứng dụng phép lọc sắc nét ảnh}{44}{subsection.1.4.6}%
+\contentsline {subsection}{\numberline {1.4.7}Lọc chặn}{44}{subsection.1.4.7}%
+\contentsline {chapter}{{\bf Kết luận}\rm }{47}{Item.33}%
+\contentsline {chapter}{{\bf Tài liệu tham khảo}}{49}{chapter*.48}%

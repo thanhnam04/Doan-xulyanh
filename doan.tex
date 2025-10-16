@@ -181,25 +181,7 @@
 	\renewcommand{\baselinestretch}{1.2}
 	\fontsize{13pt}{20pt}\selectfont
 	
-	\chapter*{Lời cam đoan}
-	\thispagestyle{fancy}
-	\addcontentsline{toc}{chapter}{Lời cam đoan}
-	\vspace{1cm}
-	\indent
-	
-	Tôi tên là Nguyễn Thành Nam, Sinh viên lớp DTU1221, Khoa Toán-Ứng dụng, Khóa 22,  thuộc trường Đại học Sài Gòn.
-	
-	 Tôi xin cam đoan toàn bộ nội dung được trình bày trong bản báo cáo này  đều do chính tôi thực hiện dưới sự hướng dẫn của \textit{PGS.TS Phạm Thế Bảo}. Những kết quả nghiên cứu của tác giả khác được sử dụng trong đề tài  đều có trích dẫn đầy đủ. Tôi xin hoàn toàn chịu trách nhiệm nếu có các nội dung sao chép không hợp lệ hoặc vi phạm quy chế đào tạo. 
-	\\
-	\\
-	\\
-	\rightline{{\it {Tp. HCM, tháng 11  năm 2025}} \hspace*{0cm}}
-	\rightline{\textbf{Tác giả} \hspace*{2cm}}
 
-	
-	%\vspace*{1cm}
-	\rightline{\textbf{Nguyễn Thành Nam}\hspace*{0.9cm}}
-	
 	\chapter*{Lời cảm ơn}
 	\thispagestyle{fancy}
 	\addcontentsline{toc}{chapter}{Lời cảm ơn}
@@ -237,11 +219,6 @@ Tiểu luận này được hoàn thành tại trường Đại Học Sài Gòn 
 		\hline
 		DFT & Discrete Fourier Transforms  \\ \hline
 		IDFT & Inverse Discrete Fourier Transforms  \\ \hline
-		 & Phương án tối ưu \\ \hline
-			 & Phương án\\ \hline
-		& Bài toán  \\ \hline
-	
-		\hline
 	\end{tabular}
 \end{center}
 
@@ -665,7 +642,7 @@ Sau khi chuyển ảnh sang miền không gian, ta áp dụng một số bộ l�
 
 Các bộ lọc thông dụng:
 \begin{enumerate}
-\item Lọc thông thấp/cao Ideal ().
+\item Lọc thông thấp/cao Ideal (Ideal low/high pass filter).
 \item Lọc thông thấp/cao Gaus (Gaussian low/high pass filter
 ).
 \item Lọc thông thấp/cao Butterworth (Butterworth low/high pass filter).
@@ -773,9 +750,18 @@ Phép làm mờ ảnh bằng bộ lọc thông thấp có những tính chất s
 Các bộ lọc thông thấp $\hat{h}(u,v)$ thường được sử dụng trong miền tần số gồm:
 
 \begin{itemize}
+	\item \textbf{Bộ lọc thông thấp lý tưởng (Ideal-ILPF)}
+\[
+H(u,v) =
+\begin{cases}
+1, & \text{nếu } D(u,v) \le D_0, \\[4pt]
+0, & \text{nếu } D(u,v) > D_0,
+\end{cases}
+\]
+trong đó $D(u,v) = \sqrt{(u - u_0)^2 + (v - v_0)^2}$, thường chọn $(u_0, v_0) = (0,0)$, $D_0$ là tần số cắt-tần số chặt cụt.
 	\item \textbf{Bộ lọc thông thấp Butterworth (BLPF):}
 	\[
-	\hat{h}(u,v) = \frac{1}{1 + \left(\dfrac{D(u,v)}{D_0}\right)^{2n}},
+	H(u,v) = \frac{1}{1 + \left(\dfrac{D(u,v)}{D_0}\right)^{2n}},
 	\]
 	trong đó
 	\begin{enumerate}[label=$-$]
@@ -786,7 +772,7 @@ Các bộ lọc thông thấp $\hat{h}(u,v)$ thường được sử dụng tron
 
 	\item \textbf{Bộ lọc thông thấp Gauss (GLPF):}
 	\[
-	\hat{h}(u,v) = e^{-\dfrac{D(u,v)^2}{2\sigma^2}},
+	H(u,v) = e^{-\dfrac{D(u,v)^2}{2\sigma^2}},
 	\]
 	trong đó $\sigma$ điều khiển độ mờ của ảnh. Bộ lọc Gauss có đặc tính mượt, không gây rung biên, và được sử dụng phổ biến nhất.
 	
@@ -795,8 +781,17 @@ Các bộ lọc thông thấp $\hat{h}(u,v)$ thường được sử dụng tron
 \textbf{Một số bộ lọc thông cao}
 \end{center}
 \begin{enumerate}[label=$\bullet$]
+\item \textbf{Bộ lọc thông cao Ideal}
+\[
+H(u,v) =
+\begin{cases}
+0, & \text{nếu } D(u,v) \le D_0, \\[4pt]
+1, & \text{nếu } D(u,v) > D_0,
+\end{cases}
+\]
+trong đó $D(u,v) = \sqrt{(u - u_0)^2 + (v - v_0)^2}$, thường chọn $(u_0, v_0) = (0,0)$.
 \item \textbf{Bộ lọc thông cao Butterworth}
-\[\hat{h}(u,v) = \frac{1}{1 + \left[\dfrac{D_0}{D(u,v)}\right]^{2n}},\]
+\[H(u,v) = \frac{1}{1 + \left[\dfrac{D_0}{D(u,v)}\right]^{2n}},\]
 trong đó: 
 \begin{enumerate}
 	\item[-] n là thứ tự lọc.
@@ -805,7 +800,7 @@ trong đó:
 \end{enumerate}
 
 \item \textbf{Bộ lọc thông cao Gauss}
-\[\hat{h}(u,v) = 1- e^{-\dfrac{D(u,v)^2}{2\sigma^2}},\]
+\[H(u,v) = 1- e^{-\dfrac{D(u,v)^2}{2\sigma^2}},\]
 trong đó: 
 \begin{enumerate}
 \item[-] Tham số $\sigma$ đo mức độ lan truyền hay phân tán của đường cong Gauss.
@@ -818,6 +813,85 @@ trong đó:
 Làm mờ ảnh trong miền tần số là quá trình loại bỏ các tần số cao bằng cách nhân phổ ảnh với bộ lọc thông thấp.  
 Khi giảm tần số cao nhiều hơn (tức là giảm $D_0$ hoặc $\sigma$), ảnh sẽ càng mờ và mượt.  
 Ngược lại, nếu chọn ngưỡng lớn, ảnh chỉ bị làm mờ nhẹ và vẫn giữ được các chi tiết biên.
+
+\subsubsection{Lọc thông thấp Ideal}
+Là phép lọc hai chiều qua tất cả tần số cắt mà không làm giảm nó trong bán kính đường tròn $D_0$ từ tâm phép lọc và "cắt" hết tần số bên ngoài hình tròn.
+
+\begin{equation}
+H(u,v) =
+\begin{cases}
+1, & \text{nếu } D(u,v) \le D_0, \\[4pt]
+0, & \text{nếu } D(u,v) > D_0,
+\end{cases}
+\end{equation}
+trong đó $D(u,v) = \sqrt{(u - u_0)^2 + (v - v_0)^2}$, thường chọn $(u_0, v_0) = (0,0).$
+
+Ta sẽ lọc ảnh sau
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\linewidth]{img/moon.jpg}
+\caption{Ảnh mặt trăng}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{img/Ideallowpass.png}
+\caption{Ảnh gốc và ảnh bộ lọc}
+\end{figure}
+
+Code gợi ý: 
+\begin{lstlisting}
+import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
+
+# Doc anh va chuyen sang kieu float (tuong duong double)
+# Dung r'' de tranh loi escape ky tu trong duong dan Windows
+f = Image.open(r'C:\ImageProcessing\Doan-xulyanh\img\moon.jpg').convert('L')
+f = np.array(f, dtype=float)
+
+# Kich thuoc anh
+P, Q = f.shape
+
+# Ban kinh bo loc
+D0 = 30.0
+
+# Tao bo loc thong thap ly tuong (Ideal Lowpass)
+h = np.zeros((P, Q))
+for i in range(P):
+    for j in range(Q):
+        if (i - P / 2)**2 + (j - Q / 2)**2 <= D0**2:
+            h[i, j] = 1
+
+# Hien thi anh goc va bo loc
+plt.figure(figsize=(10, 4))
+plt.subplot(1, 2, 1)
+plt.imshow(f, cmap='gray')
+plt.title('Anh goc')
+plt.axis('off')
+
+plt.subplot(1, 2, 2)
+plt.imshow(h, cmap='gray')
+plt.title(f'Bo loc thong thap ly tuong (D0={D0})')
+plt.axis('off')
+
+plt.show()
+
+# Thong tin kiem tra
+print("Kich thuoc anh:", f.shape)
+print("Bo loc h da tao xong voi ban kinh D0 =", D0)
+
+\end{lstlisting}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{img/moonFrequencydomain.png}
+\caption{Chuyển ảnh sang miền tần số}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{img/mienKG_mienTS.png}
+\caption{Chuyển từ miền không gian sang miền tần số}
+\end{figure}
 
 \subsubsection{Lọc thông thấp Gauss}
 
@@ -877,16 +951,12 @@ Ta thấy rằng sau khi lọc, độ biến thiên tần số của ảnh ít h
 
 Bộ lọc này bao gồm các tính chất của lọc thông thấp Ideal và lọc thông thấp Gauss. Bộ lọc thông thấp Butterworth có dạng sau:
 
-*công thức*
-
-
-Trong đó:
-
-- $D(u,v)$ là khoảng cách từ tâm ảnh đến điểm $(u,v)$ (giống như trong lọc thông thấp Ideal).
-
-- $D_0$ là tần số chặt cụt.
-
--$n$ là cấp của bộ lọc.
+\[H(u,v) = \frac{1}{1 + \left[\dfrac{D_0}{D(u,v)}\right]^{2n}},\]
+trong đó: 
+\begin{enumerate}
+	\item[-] n là thứ tự lọc.
+	\item[-] $D_0$ là tần số cắt.
+\end{enumerate}
 
 Từ dạng của bộ lọc, ta có những tính chất sau
 
@@ -897,29 +967,95 @@ Từ dạng của bộ lọc, ta có những tính chất sau
 - Với $D(u,v) = D_0, H= \dfrac{1}{2}$
 
 Bây giờ, ta sử dụng bộ lọc này để lọc ảnh Mặt Trăng
-
-*ảnh*
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\linewidth]{img/moon.jpg}
+\end{figure}
 
 Khởi tạo bộ lọc có kích thước $P \times Q$ (bằng với kích thước hình ban đầu)
 
-*code*
+\begin{lstlisting}
+	import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
+
+# Doc anh xam va chuyen sang kieu float
+f = Image.open(r'C:\ImageProcessing\Doan-xulyanh\img\moon.jpg').convert('L')
+f = np.array(f, dtype=float)
+
+# Kich thuoc anh
+P, Q = f.shape
+
+# Tham so bo loc Butterworth
+D0 = 10.0  # tan so cat
+n = 5      # bac bo loc
+
+# Tao bo loc thong thap Butterworth
+h = np.zeros((P, Q))
+for i in range(P):
+    for j in range(Q):
+        u = np.sqrt((i - P / 2)**2 + (j - Q / 2)**2)
+        h[i, j] = 1 / (1 + (u / D0)**(2 * n)))
+
+# Ap dung bo loc trong mien tan so
+F = np.fft.fft2(f)
+F_shift = np.fft.fftshift(F)
+H = np.fft.fftshift(h)
+G = H * F_shift
+g = np.abs(np.fft.ifft2(np.fft.ifftshift(G)))
+
+# Hien thi anh goc, bo loc va anh sau khi loc
+plt.figure(figsize=(12, 4))
+plt.subplot(1, 3, 1)
+plt.imshow(f, cmap='gray')
+plt.title('Anh goc')
+plt.axis('off')
+
+plt.subplot(1, 3, 2)
+plt.imshow(h, cmap='gray')
+plt.title(f'Bo loc Butterworth (D0={D0}, n={n})')
+plt.axis('off')
+
+plt.subplot(1, 3, 3)
+plt.imshow(g, cmap='gray')
+plt.title('Anh sau khi loc')
+plt.axis('off')
+
+plt.tight_layout()
+plt.show()
+
+print("Kich thuoc anh:", f.shape)
+print("Bo loc Butterworth da tao xong voi D0 =", D0, "va cap n =", n)
+\end{lstlisting}
 
 Khi đó, ta được ảnh bộ lọc trong miền không gian và miền tần số là 
-
-*ảnh*
-
-Sử dụng thuật toán 1.5 - 3, ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sau đó lấy chuyển đổi ngược.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/butterworthKG-TS.png}
+\caption{Bộ lọc miền không gian sang miền tần số}
+\end{figure}
 
 Ta được ảnh sau khi lọc là:
 
-*ẢNH*
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.35\linewidth]{img/butterworthLowpassFilter.png}
+\caption{Ảnh sau lọc}
+\end{figure}
+Ảnh bị mờ và hầu như mất các chi tiết cần có của ảnh gốc đi. Biến động khá nhiều và hầu như  giữ lại thông số ảnh khá ít. 
 
-Ta quan sát phổ của ảnh gốc và sau khi lọc 
+Một số ví dụ khác.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth]{img/BLPF2.png}
+\caption{}
+\end{figure}
 
-*ảnh*
-
-Với bộ lọc này, ảnh sau khi lọc có độ biến thiên tần số ít hơn, không làm tăng giá trị tần số, hiệu ứng chuông ảnh hưởng không đáng kể. 
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth]{img/BLPF1.png}
+\caption{}
+\end{figure}
 
 
 \subsection{Ứng dụng phép lọc làm mờ ảnh}
@@ -937,20 +1073,30 @@ Phép lọc này có nhiều ứng dụng như:
 Hình ảnh dưới đây cho thấy một đoạn văn có độ phân giải thấp, một vài ký tự bị đứt gãy. 
 
 Sử dụng phép lọc thông thấp Gauss, ta được ảnh đoạn vă rõ nét hơn.
-
-*ảnh*
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{img/ungdungmoanh1.png}
+	\caption{Ảnh trái:  đoạn văn có ký tự "ea" đứt gãy. Ảnh phải: ký tự "ea" liền nét bằng lọc thông thấp Gauss}
+\end{figure}
 Mặc dù mất người dễ dàng nhận diện nét chữ đứt gãy nhưng hệ thống nhận dạng của máy thì không thấy như vậy. Một cách giải quyết đó là ta bắc cầu các mảnh nhỏ lại với nhau bằng cách làm mờ chúng. Hình bên phải cho thấy các kí tự rất nét bằng bộ lọc thông thấp Gauss với $D_0 = 80$.
 
 Lọc thông thấp còn được áp dụng trong công nghiệp in ấn với nhiều hàm số dùng để "sơ chế" ảnh, bao gồm ảnh chưa xác định rõ hình dạng. Hình ảnh dưới đây là một ứng dụng của lọc thông thấp, giúp ảnh mượt hơn, dễ nhìn hơn.
 
-*ảnh*
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth]{img/ungdungmoanh2.png}
+\caption{Áp dụng lọc thông thấp để mắt trông trẻ hơn, ít nếp nhăn hơn (từ trái sang)}
+\end{figure}
 
 Với ảnh người, mục tiêu hướng đến là làm giảm độ nét của đương da mảnh và các nhược điểm nhỏ. Trong hình nền, ta đã làm giảm độ nét đường da quanh mắt, giúp cho ánh nhìn mượt mà hơn.
 
 Ảnh sau cho ta 2 ứng dụng của lọc thông thấp trên cùng một hình nhưng với các đối tượng khác nhau. Ảnh bên trái có độ phân giải bức xạ rất cao, đó là ảnh Vịnh Mexico (tối) và Florida (sáng) do vệ tinh NOAA chụp lại. Biên của các vật thể trong nước được chụp bởi vòng lặp dòng. Ảnh này dùng để minh họa ảnh viễn thám với cảm biến có xu hướng đưa ra các dòng quét rõ ràng theo hướng quét cảnh.
 
-*ảnh*
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth]{img/ungdungmoanh3.png}
+\caption{Dùng lọc thông thấp để giảm độ phân giải bức xạ (trái sang phải)}
+\end{figure}
 
 Lọc thông thấp cho kết quả thô nhưng đây là cách đơn giản để làm giảm hiệu ứng đường sọc ngang này. Hình giữa sử dụng lọc thông thấp Gauss với $D_0=50$. Làm giảm các hiệu ứng đường quét này giúp đơn giản hóa việc phát hiện các đặc tính như các biên giữa dòng nước biển.
 
@@ -961,17 +1107,22 @@ Phép lọc thông thấp giúp đơn giản hóa khi phân tích bằng cách t
 
 Ta có thể làm mở ảnh bằng cách làm giảm các tần số cao khi sử dụng chuyển đổi Fourier. Bây giờ, để làm sắc các biên ảnh, ta sẽ lọc các tần số cao và làm giảm các phần có tần số thấp bởi vì đường biên vật thể trong ảnh có độ biến thiên tần số lớn, ứng với các tần số cao.
 
-*ảnh*
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth]{img/lamsacanh1.png}
+\caption{Ảnh phải là đồ thị tần số khi đi quan đường biên vật thể}
+\end{figure}
+
 
 Khi đi qua đường biên, độ biến thiên tần số lớn.
 
 Cho bộ lọc thông thấp, ta thu được bộ lọc thông cao bằng công thức:
 
 \begin{equation}
-    \hat{h}_{HP}(u,v) = 1 - \hat{h}_{LP}(u,v)
+  H_{HP}(u,v) = 1 -   H_{LP}(u,v)
 \end{equation}
 
-với $\hat{h}_{HP}(u,v)$ là hàm chuyển đổi lọc thông thấp. Công thức này có nghĩa rằng khi lọc thông thấp. Công thức này có nghĩa rằng khi lọc thông thấp làm giảm tần số thì lọc thông cao bỏ qua điều đó và ngược lại.
+với $\  H_{HP}(u,v)$ là hàm chuyển đổi lọc thông thấp. Công thức này có nghĩa rằng khi lọc thông thấp. Công thức này có nghĩa rằng khi lọc thông thấp làm giảm tần số thì lọc thông cao bỏ qua điều đó và ngược lại.
 
 Bây giờ, ta sẽ tìm hiểu một số bộ lọc thông cao.
 
@@ -980,42 +1131,103 @@ Bây giờ, ta sẽ tìm hiểu một số bộ lọc thông cao.
 Lọc thông cao Ideal có dạng như sau:
 
 \begin{equation}
-    \hat{h}(u,v)=\begin{cases}
+      H(u,v)=\begin{cases}
     \begin{aligned}
-        0& \text{ nếu }  \hat{d}(u,v) \le D_0\\
-        0& \text{ nếu }  \hat{d}(u,v) > D_0
+        0& \text{ nếu }  D(u,v) \le D_0\\
+        1& \text{ nếu }  D(u,v) > D_0
     \end{aligned}
 \end{cases}
 \end{equation}
 
 
 Ta thấy rằng dạng của lọc thông cao Ideal ngược với dạng của lọc thông thấp Ideal. Ta dùng phép lọc này để lọc hình sau: 
-
-*ảnh*
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{img/Duahau.png}
+\caption{Ảnh quả dưa hấu}
+\end{figure}
 
 Khởi tạo bộ lọc 
+\begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
 
-*code*
+# 1. Doc anh goc (anh xam)
+img = Image.open(r'C:\ImageProcessing\Doan-xulyanh\img\duahau.png').convert('L')
+f = np.array(img, dtype=float)
+P, Q = f.shape
 
+# 2. Tao bo loc thong cao ly tuong (Ideal High-pass)
+D0 = 30.0  # ban kinh vong tron
+
+h = np.zeros((P, Q))
+for i in range(P):
+    for j in range(Q):
+        D = np.sqrt((i - P / 2)**2 + (j - Q / 2)**2)
+        if D > D0:
+            h[i, j] = 1
+        else:
+            h[i, j] = 0
+
+# Dich tam bo loc ve giua (mien tan so)
+H = np.fft.fftshift(h)
+
+# 3. Bien doi Fourier anh va ap dung bo loc
+F = np.fft.fft2(f)
+F_shift = np.fft.fftshift(F)
+G = H * F_shift
+
+# 4. Bien doi nguoc de lay anh sau khi loc
+G_ishift = np.fft.ifftshift(G)
+filtered_img = np.abs(np.fft.ifft2(G_ishift))
+
+# 5. Hien thi ket qua
+plt.figure(figsize=(12, 5))
+
+# Bo loc trong mien khong gian
+plt.subplot(1, 3, 1)
+plt.imshow(h, cmap='gray')
+plt.title('Bo loc thong cao (mien khong gian)')
+plt.axis('off')
+
+# Bo loc trong mien tan so
+plt.subplot(1, 3, 2)
+plt.imshow(H, cmap='gray')
+plt.title('Bo loc thong cao (mien tan so)')
+plt.axis('off')
+
+
+plt.tight_layout()
+plt.show()
+\end{lstlisting}
 Ta được hình ảnh bộ lọc từ miền không gian sang miền tần số như sau:
 
-*ảnh*
-
-Sử dụng thuật toán 1.5-3, ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sau đó lấy chuyển đổi ngược.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/idealhighpass/IHPF-bolocKG-bolocTS.png}
+\caption{Bộ lọc miền không gian (trái) sang miền tần số (phải)}
+\end{figure}
+Ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sau đó lấy chuyển đổi ngược.
 
 Ta được ảnh sau khi lọc là:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{img/idealhighpass/IHPFanhgocvaAnhsauloc.png}
+\caption{Ảnh quả dưa hấu sau khi lọc }
+\end{figure}
 
-*Ảnh*
-
-Nhìn vào ảnh, ta thấy rằng phép lọc này gây ra hiệu ứng chuông. Ta quan sát phổ của ảnh gốc và ảnh sau khi lọc (trên - phải xuống dưới - trái)
-
-*ảnh*
+Nhìn vào phép lọc này ta có thể thấy phép lọc này có hiệu ứng chuông cho ảnh sau lọc.
 
 Phép lọc này biến các giá trị tần số khác biên trở nên gần như nhau, đồng thời làm nổi bật tần số ở biên quả bí ngô.
 
 Ảnh sau đây minh họa hiệu ứng chuông khi sử dụng phép lọc thông cao Ideal với giá trị $D_0$ (từ trái sang) lần lượt là 15, 30 và 80
 
-*Ảnh*
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/idealhighpass/IHPFvidu1.png}
+\caption{Hiệu ứng chuông trong ảnh sử dụng bộ lọc thông cao Ideal}
+\end{figure}
 
 \subsubsection{Lọc thông cao Gauss}
 Phép lọc thông cao Gauss 2 chiều (2-D) có dạng: 
