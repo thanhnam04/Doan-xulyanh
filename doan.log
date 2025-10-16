@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  16 OCT 2025 10:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  16 OCT 2025 22:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2061,7 +2061,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [42]
-<img/pumpkin.png, id=848, 752.8125pt x 499.8675pt>
+<img/pumpkin.png, id=847, 752.8125pt x 499.8675pt>
 File: img/pumpkin.png Graphic file (type png)
 <use img/pumpkin.png>
 Package pdftex.def Info: img/pumpkin.png  used on input line 1435.
@@ -2091,7 +2091,7 @@ Package pdftex.def Info: img/butterworthhighpass/bolocKG-TS.png  used on input l
 <img/butterworthhighpass/anhsaulocHighpass.png, id=903, 349.7868pt x 253.6677pt>
 File: img/butterworthhighpass/anhsaulocHighpass.png Graphic file (type png)
 <use img/butterworthhighpass/anhsaulocHighpass.png>
-Package pdftex.def Info: img/butterworthhighpass/anhsaulocHighpass.png  used on input line 1504.
+Package pdftex.def Info: img/butterworthhighpass/anhsaulocHighpass.png  used on input line 1506.
 (pdftex.def)             Requested size: 322.65279pt x 233.99254pt.
 
 
@@ -2110,10 +2110,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [46 <./img/butterworthhighpass/anhsaulocHighpass.png>]
-<img/butterworthhighpass/vidu.png, id=968, 633.11531pt x 213.79875pt>
+<img/butterworthhighpass/anhsaulocD0=70.png, id=967, 349.7868pt x 253.6677pt>
+File: img/butterworthhighpass/anhsaulocD0=70.png Graphic file (type png)
+<use img/butterworthhighpass/anhsaulocD0=70.png>
+Package pdftex.def Info: img/butterworthhighpass/anhsaulocD0=70.png  used on input line 1564.
+(pdftex.def)             Requested size: 322.65279pt x 233.99254pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[47]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[48 <./img/butterworthhighpass/anhsaulocD0=70.png>]
+<img/butterworthhighpass/vidu.png, id=1029, 633.11531pt x 213.79875pt>
 File: img/butterworthhighpass/vidu.png Graphic file (type png)
 <use img/butterworthhighpass/vidu.png>
-Package pdftex.def Info: img/butterworthhighpass/vidu.png  used on input line 1565.
+Package pdftex.def Info: img/butterworthhighpass/vidu.png  used on input line 1628.
 (pdftex.def)             Requested size: 368.74905pt x 124.52531pt.
 
 
@@ -2123,13 +2145,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[47 <./img/butterworthhighpass/vidu.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1584--1585
+[49 <./img/butterworthhighpass/vidu.png>]
+<img/ungdungsacanh/vantay.png, id=1062, 564.60938pt x 256.70906pt>
+File: img/ungdungsacanh/vantay.png Graphic file (type png)
+<use img/ungdungsacanh/vantay.png>
+Package pdftex.def Info: img/ungdungsacanh/vantay.png  used on input line 1641.
+(pdftex.def)             Requested size: 405.62466pt x 184.42691pt.
+<img/ungdungsacanh/vantay1.png, id=1063, 270.25969pt x 271.0125pt>
+File: img/ungdungsacanh/vantay1.png Graphic file (type png)
+<use img/ungdungsacanh/vantay1.png>
+Package pdftex.def Info: img/ungdungsacanh/vantay1.png  used on input line 1649.
+(pdftex.def)             Requested size: 313.43213pt x 314.31267pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[50 <./img/ungdungsacanh/vantay.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1655--1656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1588--1589
+Underfull \hbox (badness 10000) in paragraph at lines 1659--1660
 
  []
 
@@ -2140,40 +2181,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 1592--1594
+[51 <./img/ungdungsacanh/vantay1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1663--1665
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1595--1596
+Underfull \hbox (badness 10000) in paragraph at lines 1666--1667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1611--1613
+Underfull \hbox (badness 10000) in paragraph at lines 1682--1684
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1616--1618
+Underfull \hbox (badness 10000) in paragraph at lines 1687--1689
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1619--1621
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 1632--1634
+Underfull \hbox (badness 10000) in paragraph at lines 1690--1692
 
  []
 
@@ -2184,7 +2213,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 1705--1707
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[53
 
 ]
 
@@ -2194,17 +2235,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
+[54
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52
-
-] [53] (doan.aux)
+pdfTeX warning (ext4): destination with the same identifier (name{cite.V}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1764 	\newpage
+                 % Add a new page after the bibliography] [55] (doan.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2214,21 +2252,24 @@ L3 programming layer <2020/03/25>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `doan.out' has not changed.
-(rerunfilecheck)             Checksum: 88BE0E7A464210DC6063AB298C3DD3AC;7410.
+(rerunfilecheck)             Checksum: 6F8A1CA723F4A918DB35E66A341C85BC;7410.
  ) 
 Here is how much of TeX's memory you used:
- 38578 strings out of 475248
- 785508 string characters out of 5758285
+ 38663 strings out of 475248
+ 787202 string characters out of 5758285
  2243785 words of memory out of 5000000
- 58708 multiletter control sequences out of 15000+600000
+ 58733 multiletter control sequences out of 15000+600000
  584785 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,117p,1208b,2030s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Home\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on doan.pdf (60 pages, 7399584 bytes).
+ <C:\Users\Home\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on doan.pdf (62 pages, 7948089 bytes).
 PDF statistics:
- 1235 PDF objects out of 1440 (max. 8388607)
- 609 named destinations out of 1000 (max. 500000)
- 473 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1326 PDF objects out of 1440 (max. 8388607)
+ 669 named destinations out of 1000 (max. 500000)
+ 488 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -747,7 +747,7 @@ Phép làm mờ ảnh bằng bộ lọc thông thấp có những tính chất s
 \begin{center}
 \textbf{Một số bộ lọc thông thấp}
 \end{center}
-Các bộ lọc thông thấp $\hat{h}(u,v)$ thường được sử dụng trong miền tần số gồm:
+Các bộ lọc thông thấp $H(u,v)$ thường được sử dụng trong miền tần số gồm:
 
 \begin{itemize}
 	\item \textbf{Bộ lọc thông thấp lý tưởng (Ideal-ILPF)}
@@ -815,7 +815,7 @@ Khi giảm tần số cao nhiều hơn (tức là giảm $D_0$ hoặc $\sigma$),
 Ngược lại, nếu chọn ngưỡng lớn, ảnh chỉ bị làm mờ nhẹ và vẫn giữ được các chi tiết biên.
 
 \subsubsection{Lọc thông thấp Ideal}
-Là phép lọc hai chiều qua tất cả tần số cắt mà không làm giảm nó trong bán kính đường tròn $D_0$ từ tâm phép lọc và "cắt" hết tần số bên ngoài hình tròn.
+Là phép lọc hai chiều qua tất cả tần số cắt mà không làm giảm nó trong bán kính đường tròn $D_0$ từ tâm phép lọc và "cắt " hết tần số bên ngoài hình tròn.
 
 \begin{equation}
 H(u,v) =
@@ -1329,7 +1329,7 @@ Cơ chế hoạt động & Loại bỏ thành phần tần số thấp, giữ l�
 \end{tabular}
 \end{table}
 
-
+Code gợi ý
 
 \begin{lstlisting}
 import numpy as np
@@ -1499,12 +1499,14 @@ Ta được ảnh của bộ lọc trong miền không gian và miền tần s�
 \caption{Ảnh bộ lọc miền không gian (trái) sang miền tần số (phải)}
 \end{figure}
 Ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sau đó lấy chuyển đổi ngược. 
+
+Ảnh với tần số cắt $D_0=30$
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth]{img/butterworthhighpass/anhsaulocHighpass.png}
-\caption{Ảnh sau lọc}
+\caption{Ảnh sau lọc với tần số cắt $D_0=30$}
 \end{figure}
-
+Code gợi ý
 \begin{lstlisting}
 import numpy as np
 import matplotlib.pyplot as plt
@@ -1556,6 +1558,67 @@ plt.show()
 
 \end{lstlisting}
 
+Ảnh với tần số cắt $D_0=70$
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{img/butterworthhighpass/anhsaulocD0=70.png}
+\caption{Ảnh sau lọc với tần số cắt $D_0$}
+\end{figure}
+
+\begin{lstlisting}
+# butterworth_highpass_duahau.py
+# loc thong cao Butterworth cho anh duahau.png va chi hien thi anh sau khi loc
+
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+
+# === a doc anh goc (grayscale) ===
+img = Image.open("C:\ImageProcessing\Doan-xulyanh\img\pumpkin.png").convert("L")
+f = np.array(img, dtype=np.float64)
+P, Q = f.shape
+
+# === b tao bo loc thong cao Butterworth ===
+D0 = 70       # tan so cat
+n = 2         # cap cua bo loc
+
+# tao luoi toa do
+u = np.arange(P)
+v = np.arange(Q)
+U, V = np.meshgrid(u, v, indexing='ij')
+
+# khoang cach D(u,v) den tam
+D = np.sqrt((U - P/2)**2 + (V - Q/2)**2)
+
+# ham loc thong cao Butterworth
+H = 1 / (1 + (D0 / (D + 1e-5))**(2 * n))  # cong 1e-5 de tranh chia 0
+
+# === c bien doi Fourier anh goc ===
+F = np.fft.fft2(f)
+F_shift = np.fft.fftshift(F)
+
+# === d nhan pho anh voi bo loc ===
+G_shift = F_shift * H
+
+# === e bien doi nguoc Fourier ===
+G = np.fft.ifftshift(G_shift)
+g = np.fft.ifft2(G)
+g_real = np.real(g)
+
+# === f chuan hoa  ===
+g_min, g_max = g_real.min(), g_real.max()
+g_norm = (g_real - g_min) / (g_max - g_min) * 255
+g_uint8 = np.clip(g_norm, 0, 255).astype(np.uint8)
+
+# === g hien thi anh sau khi loc ===
+plt.figure(figsize=(6,6))
+plt.title("anh sau khi loc Butterworth highpass")
+plt.imshow(g_uint8, cmap='gray')
+plt.axis('off')
+plt.show()
+
+\end{lstlisting}
+
 Ảnh sau khi lọc có xảy ra hiệu ứng chuông nhưng nhẹ hơn lọc thông cao Ideal, phổ tần số và ảnh cho thấy phần biên có tần số cao hơn hẳn những phần khác.
 
 Hình ảnh sau là ví dụ của phép lọc thông cao Butterworth cấp 2 với các mức $D_0$ lần lượt (trái sang phải) là 15, 30 và 80
@@ -1571,13 +1634,21 @@ Các phép lọc ảnh tần số cao này còn được sử dụng để nhậ
 
 Để tăng cường độ sắc của đường vân ta chú tâm vào yếu tố quan trọng chính là đường vân tay chứa các tần số cao, không thay đổi khi ta sử dụng phép lọc thông cao. Mặt khác phép lọc này còn giảm các thầnh phần chứa tần số thấp ví dụ như phông nền hoặc các vết bẩn. Vì vậy, ta thu được ảnh tăng cường bằng cách giảm tất cả đặc trưng khác ngoại trừ đặc trưng có tần số cao.
 
-Hình ảnh vân tay này là sử dụng phép lọc thông cao Butterworth cấp 4 và tần số chặt cụt là 50.
+Hình ảnh vân tay này là sử dụng phép lọc thông cao Butterworth cấp 4 và tần số cắt là 50.
 
-*hình 1.5-36*
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.88\linewidth]{img/ungdungsacanh/vantay.png}
+	\caption{(Trái): ảnh vân tay có nhiều vết mờ, bẩn, đường vân có nơi không rõ nét và nứt gãy - (Phải): ảnh vân tay rõ nét sau khi sử dụng  phép lọc thông cao Butterworth}
+\end{figure}
 
 Để có thể quan sát, ta sẽ biến đổi ảnh bên phải theo quy tắc điểm ảnh là giá trị âm sẽ có màu đen, còn dương thì sẽ có màu trắng
 
-*hình 1.5-37*
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.68\linewidth]{img/ungdungsacanh/vantay1.png}
+	\caption{Biến đổi ảnh phải phía trên, điểm ảnh có giá trị âm sẽ có màu đen, có giá trị dương là màu trắng}
+\end{figure}
 
 Sử dụng phép lọc thông cao, ta loại bỏ những vết bẩn có trong ảnh ta đang xét và thu về ảnh vân tay rõ nét, thuận lợi hơn nếu công tác trong điều tra vụ án.
 \subsection{Lọc chặn}
@@ -1623,7 +1694,9 @@ Các bước lọc chặn:
 
     *hình 1.5-42*
 	\chapter*{Kết luận}
-    Sau khi tìm hiểu về lọc ảnh trong miền tần số, ta thấy phép lọc này có chức năng lọc những tần số thấp và cao trong ảnh.
+	Bài báo cáo này đạt được các vấn đề sau đây:
+
+   - Sau khi tìm hiểu về lọc ảnh trong miền tần số, ta thấy phép lọc này có chức năng lọc những tần số thấp và cao trong ảnh.
     \begin{enumerate}
         \item Với thành phần có tần số cao liên quan đến biên vật thể trong ảnh, làm rõ biên. Các phép lọc trong cao làm giảm các thành phần số và bỏ qua thành phần tần số cao.
         \item Với thành phần có thành số thấp liên quan đến vùng mượt trong ảnh, làm mở ảnh. Cho phép lọc thông thấp giảm các thành phần tần số cao và bỏ qua thành phần tần số thấp.
@@ -1646,21 +1719,7 @@ Các bước lọc chặn:
 	\thispagestyle{fancy}
 	
 
-Bài báo cáo này đạt được các vấn đề sau đây:
-	
-	\begin{itemize}
-	\item Chương 1:
-	
 
-	
-	\item Chương 2:
-
-	
-	\item Chương 3: 
-	
-
-	
-	\end{itemize}
 	
 	\begin{thebibliography}{99}
 		\addcontentsline{toc}{chapter}{{\bf  Tài liệu tham khảo}} 
@@ -1674,7 +1733,14 @@ Bài báo cáo này đạt được các vấn đề sau đây:
 		
 
 		
-		\bibitem{P} Phạm Thế Bảo - Bài giảng Phân tích và xử lý ảnh (2025).
+		\bibitem{P} Phạm Thế Bảo - \textit{Bài giảng Phân tích và xử lý ảnh}, Trường Đại học Sài Gòn(2025).
+		\bibitem{V} Võ Hoàng Trọng - \textit{LỌC TRONG MIỀN TẦN SỐ VÀ LỌC CONTOURLET},ĐH KHTN(2015).
+		\bibitem{M} Md Zobaer Islam -  \textit{Image Enhancement in Frequency Domain} - PhD student, Oklahoma State University.
+		\bibitem{R}Rafael C. Gonzalez(University of Tennessee), Richard E. Woods(Interapptics) - \textit{Digital Image
+ Processing ( Fourth edition)(2018)}, NXB Pearson.
+ \bibitem{N} Nguyễn Đình Cường -  \textit{image processing Lecture(2020)}.
+		\bibitem{V}Vidya Manian - \textit{Image Enhancement in the frequency 
+domain}.
 		
 	%	\bibitem{H} Hu T.C.-Linear and Integer Programming Made Easy.
 		

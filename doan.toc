@@ -30,7 +30,7 @@
 \contentsline {subsubsection}{\numberline {1.4.5.1}Lọc thông cao Ideal}{34}{subsubsection.1.4.5.1}%
 \contentsline {subsubsection}{\numberline {1.4.5.2}Lọc thông cao Gauss}{37}{subsubsection.1.4.5.2}%
 \contentsline {subsubsection}{\numberline {1.4.5.3}Lọc thông cao Butterworth}{43}{subsubsection.1.4.5.3}%
-\contentsline {subsection}{\numberline {1.4.6}Ứng dụng phép lọc sắc nét ảnh}{48}{subsection.1.4.6}%
-\contentsline {subsection}{\numberline {1.4.7}Lọc chặn}{48}{subsection.1.4.7}%
-\contentsline {chapter}{{\bf Kết luận}\rm }{50}{Item.33}%
-\contentsline {chapter}{{\bf Tài liệu tham khảo}}{52}{chapter*.52}%
+\contentsline {subsection}{\numberline {1.4.6}Ứng dụng phép lọc sắc nét ảnh}{50}{subsection.1.4.6}%
+\contentsline {subsection}{\numberline {1.4.7}Lọc chặn}{51}{subsection.1.4.7}%
+\contentsline {chapter}{{\bf Kết luận}\rm }{53}{Item.33}%
+\contentsline {chapter}{{\bf Tài liệu tham khảo}}{54}{chapter*.55}%
