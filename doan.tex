@@ -1332,9 +1332,6 @@ Cơ chế hoạt động & Loại bỏ thành phần tần số thấp, giữ l�
 
 
 \begin{lstlisting}
-	# gaussian_highpass_duahau.py
-# Loc thong cao Gauss cho anh duahau.png va hien thi pho tan so
-
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -1419,37 +1416,156 @@ plt.show()
 
 
 
-Phép lọc thông cao Butterworth trong không gian 2 chiều có cấp $n$ và tần số chặt cụt $D_0$ xác định bởi công thức
+Phép lọc thông cao Butterworth trong không gian 2 chiều có cấp $n$ và tần số cắt $D_0$ xác định bởi công thức
+\begin{equation}
+H(u,v) = \frac{1}{1 + \left[\dfrac{D_0}{D(u,v)}\right]^{2n}},
+\end{equation}
+trong đó: 
+\begin{enumerate}
+	\item[-] n là thứ tự lọc.
+	\item[-] $D_0$ là tần số cắt.
 
-*công thức*
-
+\end{enumerate}
 Với $D(u,v)$ là khoảng cách từ tâm hình ảnh đến tọa độ $(u,v)$.
 
-Ta dùng bộ lọc này để lọc hình quả bí ngô:
+Ta dùng bộ lọc này để lọc hình quả bí ngô sau:
 
-*hình ảnh*
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/pumpkin.png}
+\end{figure}
 Khởi tạo bộ lọc
 
-*Code*
+\begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+
+# 1 doc anh goc
+img = Image.open('C:\ImageProcessing\Doan-xulyanh\img\pumpkin.png').convert("L")
+f = np.array(img)
+P, Q = f.shape
+
+# 2 tao bo loc thong cao Butterworth
+D0 = 30     # tan so cat
+n = 2       # cap cua bo loc
+
+h = np.zeros((P, Q))
+for i in range(P):
+    for j in range(Q):
+        D = np.sqrt((i - P/2)**2 + (j - Q/2)**2)
+        if D == 0:
+            h[i, j] = 0
+        else:
+            h[i, j] = 1 / (1 + (D0 / D)**(2 * n))
+
+# dich tam bo loc ve giua
+H = np.fft.fftshift(h)
+
+# 3 bien doi Fourier anh va ap bo loc
+F = np.fft.fft2(f)
+F_shift = np.fft.fftshift(F)
+G = H * F_shift
+
+# 4 bien doi nguoc de lay anh sau loc
+G_ishift = np.fft.ifftshift(G)
+filtered_img = np.abs(np.fft.ifft2(G_ishift))
+
+# 5 hien thi ket qua
+plt.figure(figsize=(10, 6))
+
+# bo loc trong mien khong gian
+plt.subplot(1, 3, 1)
+plt.imshow(h, cmap='gray')
+plt.title("bo loc Butterworth trong mien khong gian")
+plt.axis('off')
+
+# bo loc trong mien tan so
+plt.subplot(1, 3, 2)
+plt.imshow(H, cmap='gray')
+plt.title("bo loc Butterworth trong mien tan so")
+plt.axis('off')
+
+
+plt.tight_layout()
+plt.show()
+
+\end{lstlisting}
 
 Ta được ảnh của bộ lọc trong miền không gian và miền tần số như sau:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/butterworthhighpass/bolocKG-TS.png}
+\caption{Ảnh bộ lọc miền không gian (trái) sang miền tần số (phải)}
+\end{figure}
+Ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sau đó lấy chuyển đổi ngược. 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{img/butterworthhighpass/anhsaulocHighpass.png}
+\caption{Ảnh sau lọc}
+\end{figure}
 
-*ảnh*
+\begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
 
-Sử dụng thuật toán 1.5-3, ta tính tích chập của ảnh gốc trong miền tần số và bộ lọc trong miền tần số, sau đó lấy chuyển đổi ngược. 
+# === a doc anh goc (grayscale) ===
+img = Image.open("C:\ImageProcessing\Doan-xulyanh\img\pumpkin.png").convert("L")
+f = np.array(img, dtype=np.float64)
+P, Q = f.shape
 
-*ảnh*
+# === b tao bo loc thong cao Butterworth ===
+D0 = 30       # tan so cat
+n = 2         # cap cua bo loc
 
-Ta quan sát phổ của ảnh trước và sau khi lọc
+# tao luoi toa do
+u = np.arange(P)
+v = np.arange(Q)
+U, V = np.meshgrid(u, v, indexing='ij')
 
-*ảnh*
+# khoang cach D(u,v) den tam
+D = np.sqrt((U - P/2)**2 + (V - Q/2)**2)
+
+# ham loc thong cao Butterworth
+H = 1 / (1 + (D0 / (D + 1e-5))**(2 * n))  # cong 1e-5 de tranh chia 0
+
+# === c bien doi Fourier anh goc ===
+F = np.fft.fft2(f)
+F_shift = np.fft.fftshift(F)
+
+# === d nhan pho anh voi bo loc ===
+G_shift = F_shift * H
+
+# === e bien doi nguoc Fourier ===
+G = np.fft.ifftshift(G_shift)
+g = np.fft.ifft2(G)
+g_real = np.real(g)
+
+
+g_min, g_max = g_real.min(), g_real.max()
+g_norm = (g_real - g_min) / (g_max - g_min) * 255
+g_uint8 = np.clip(g_norm, 0, 255).astype(np.uint8)
+
+# === g hien thi anh sau khi loc ===
+plt.figure(figsize=(6,6))
+plt.title("anh sau khi loc Butterworth highpass")
+plt.imshow(g_uint8, cmap='gray')
+plt.axis('off')
+plt.show()
+
+\end{lstlisting}
 
 Ảnh sau khi lọc có xảy ra hiệu ứng chuông nhưng nhẹ hơn lọc thông cao Ideal, phổ tần số và ảnh cho thấy phần biên có tần số cao hơn hẳn những phần khác.
 
 Hình ảnh sau là ví dụ của phép lọc thông cao Butterworth cấp 2 với các mức $D_0$ lần lượt (trái sang phải) là 15, 30 và 80
 
-*ảnh*
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{img/butterworthhighpass/vidu.png}
+\caption{Hiệu ứng chuông trong ảnh sử dụng bộ lọc thông cao Butterworth}
+\end{figure}
+
 \subsection{Ứng dụng phép lọc sắc nét ảnh}
 Các phép lọc ảnh tần số cao này còn được sử dụng để nhận diện dấu vân tay con người. Một yếu tố quan trọng để máy móc nhận diện được vân tay đó là làm sao để tăng cường các đường vân và giảm thiểu đi các vết bẩn trên vân. 
 
