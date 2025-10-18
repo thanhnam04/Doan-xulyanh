@@ -252,14 +252,22 @@ Tiểu luận này được hoàn thành tại trường Đại Học Sài Gòn 
 	\addcontentsline{toc}{chapter}{{\bf  Lời nói đầu}\rm}
 	\renewcommand{\baselinestretch}{1.2}
 
-	
-\vspace{3cm}
-\rightline{{\it {Tp. HCM, tháng 5  năm 2025}} \hspace*{0cm}}
-\rightline{\textbf{Tác giả} \hspace*{2cm}}
+	\indent
+	Xử lý ảnh là một lĩnh vực quan trọng trong khoa học máy tính và kỹ thuật, đóng vai trò thiết yếu trong nhiều ứng dụng thực tế như nhận dạng khuôn mặt, phân tích hình ảnh y tế, xử lý video, và trí tuệ nhân tạo. Trong bối cảnh đó, việc xử lý ảnh trên miền tần số mang lại những lợi thế đặc biệt so với xử lý trong miền không gian, đặc biệt là khả năng lọc và tăng cường ảnh một cách hiệu quả thông qua các phép biến đổi Fourier.
+
+	Báo cáo này tập trung vào chủ đề "Xử lý ảnh trên miền tần số (Image Enhancement in the Frequency Domain)", nhằm trình bày các phương pháp cơ bản và ứng dụng của việc lọc ảnh trong miền tần số. Chúng em sẽ tìm hiểu các khái niệm nền tảng như biến đổi Fourier, chuỗi Fourier, và các bộ lọc thông thấp, thông cao, cũng như ứng dụng thực tế của chúng trong việc làm mờ, làm sắc nét ảnh và loại bỏ nhiễu.
+
+	Cấu trúc của báo cáo được tổ chức như sau: Chương 1 giới thiệu về miền tần số, khái niệm biến đổi Fourier và các tính chất của nó. Chương 2 trình bày chi tiết các phương pháp lọc ảnh trong miền tần số, bao gồm lọc thông thấp và thông cao với các loại bộ lọc phổ biến như Ideal, Gauss và Butterworth. Chương 3 kết luận và tổng hợp lại những nội dung chính.
+
+	Hy vọng rằng báo cáo này sẽ cung cấp cái nhìn toàn diện và hữu ích về xử lý ảnh trong miền tần số, góp phần vào việc nâng cao kiến thức và kỹ năng trong lĩnh vực phân tích và xử lý ảnh.
+
+	\vspace{3cm}
+	\rightline{{\it {Tp. HCM, tháng 11  năm 2025}} \hspace*{0cm}}
+	\rightline{\textbf{Tác giả} \hspace*{2cm}}
 
 
 
-\rightline{\textbf{Nguyễn Thành Nam}\hspace*{0.9cm}}
+	\rightline{\textbf{Nguyễn Thành Nam}\hspace*{0.9cm}}
 
 	
 	
@@ -1656,12 +1664,69 @@ Sử dụng phép lọc thông cao, ta loại bỏ những vết bẩn có trong
 
 Ví dụ về nhiễu chu kỳ như khảm ảnh khi kết hợp nhiều ảnh lại để tạo khảm, nhiễu dòng quét khi dùng máy ảnh quét, hay nhiễu bán sắc (kiểu gợn sóng) của bức ảnh trong tờ báo dưới đây.
 
-*hình 1.5-38*\\
+Chuyển ảnh vào miền tần số, ta được ảnh sau
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth]{img/locChan/XehoiSaulocchan.png}
+\caption{Ảnh xe hơi trên tờ báo và ảnh sau khi chuyển sang miền tần số}
+\end{figure}
 
-Chuyển ảnh vào miền tần số, ta được ảnh sau:
+Code gợi ý
+\begin{lstlisting}
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 
-*hình 1.5-39*
-\\
+def image_to_frequency_domain(image_path):
+    """
+    Chuyen anh sang mien tan so su dung FFT
+    """
+    # Doc anh va chuyen sang grayscale neu can
+    img = cv2.imread(image_path)
+    if img is None:
+        print("Khong the doc anh. Kiem tra lai duong dan!")
+        return None, None, None
+    
+    if len(img.shape) == 3:
+        img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    else:
+        img_gray = img
+    
+    # Thuc hien Fast Fourier Transform (FFT)
+    f = np.fft.fft2(img_gray)
+    
+    # Dich tan so zero vao trung tam
+    fshift = np.fft.fftshift(f)
+    
+    # Tinh magnitude spectrum (pho bien do)
+    magnitude_spectrum = 20 * np.log(np.abs(fshift) + 1)  # +1 de tranh log(0)
+    
+    return img_gray, magnitude_spectrum, fshift
+
+# Su dung ham
+image_path = r"C:\ImageProcessing\Doan-xulyanh\img\locChan\anhXehoi.png"
+original_img, freq_domain, fshift = image_to_frequency_domain(image_path)
+
+# Kiem tra xem anh co doc thanh cong khong
+if original_img is not None:
+    # Hien thi ket qua
+    plt.figure(figsize=(12, 6))
+
+    plt.subplot(1, 2, 1)
+    plt.imshow(original_img, cmap='gray')
+    plt.title('Anh goc')
+    plt.axis('off')
+
+    plt.subplot(1, 2, 2)
+    plt.imshow(freq_domain, cmap='gray')
+    plt.title('Mien tan so (Pho bien do)')
+    plt.axis('off')
+
+    plt.tight_layout()
+    plt.show()
+else:
+    print("Co loi xay ra khi xu ly anh!")
+\end{lstlisting}
 
 Ta có thể thấy trên ảnh có những đỉnh nhỏ, các đỉnh này tương ứng với dạng nhiễu chu kì của ảnh bên miền không gian.\\
 
@@ -1678,21 +1743,27 @@ Các bước lọc chặn:
     
 \end{enumerate}
  Ta xác định vị trí có vết khuyết trong ảnh miền tần số sau:
-
-    *hình 1.5-40*
-    \\
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\linewidth]{img/locChan/Anhdiemchamden.png} 
+\end{figure}
 
     Lấy tích chập, chuyển đổi ngược, ta được kết quả:
-
-    *hình1.5-41*
-    \\
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\linewidth]{img/locChan/AnhXehoisaulocchan.png}
+\end{figure}
 
     Như vậy ta đã loại bỏ các đường quết của ảnh ban đầu.
     \\
 
     Một ví dụ sau về phép lọc ảnh
 
-    *hình 1.5-42*
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth]{img/locChan/bongbauduclocchan.png}
+\caption{Ảnh trái là ảnh có đường kẻ sọc ngang, dọc và ảnh phải là ảnh dùng phép lọc chặn để thu được ảnh rõ ràng hơn }
+\end{figure}
 	\chapter*{Kết luận}
 	Bài báo cáo này đạt được các vấn đề sau đây:
 
