@@ -840,7 +840,7 @@ trong đó $D(u,v) = \sqrt{(u - u_0)^2 + (v - v_0)^2}$, thường chọn $(u_0, 
 \textbf{Một số bộ lọc thông cao}
 \end{center}
 \begin{enumerate}[label=$\bullet$]
-\item \textbf{Bộ lọc thông cao Ideal}
+\item \textbf{Bộ lọc thông cao lý tưởng (Ideal-IHPF)}
 \[
 H(u,v) =
 \begin{cases}
@@ -849,7 +849,7 @@ H(u,v) =
 \end{cases}
 \]
 trong đó $D(u,v) = \sqrt{(u - u_0)^2 + (v - v_0)^2}$, thường chọn $(u_0, v_0) = (0,0)$.
-\item \textbf{Bộ lọc thông cao Butterworth}
+\item \textbf{Bộ lọc thông cao Butterworth (BHPF)}
 \[H(u,v) = \frac{1}{1 + \left[\dfrac{D_0}{D(u,v)}\right]^{2n}},\]
 trong đó: 
 \begin{enumerate}
@@ -858,7 +858,7 @@ trong đó:
 
 \end{enumerate}
 
-\item \textbf{Bộ lọc thông cao Gauss}
+\item \textbf{Bộ lọc thông cao Gauss (GHPF)}
 \[H(u,v) = 1- e^{-\dfrac{D(u,v)^2}{2\sigma^2}},\]
 trong đó: 
 \begin{enumerate}
@@ -956,6 +956,77 @@ print("Bo loc h da tao xong voi ban kinh D0 =", D0)
 \label{fig114}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{img/IdealLowpassBlur.png}
+\caption{Ảnh mờ sau khi dùng lọc thông thấp Ideal}
+\end{figure}
+
+\begin{lstlisting}
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+
+def load_image_grayscale(path):
+    """Doc anh muc xam."""
+    if os.path.exists(path):
+        img = Image.open(path).convert('L')
+        arr = np.array(img).astype(np.float32)
+        print(f"Da mo file: {path} (shape={arr.shape})")
+        return arr
+    else:
+        raise FileNotFoundError(f"Khong tim thay file: {path}")
+
+def ideal_lowpass_filter(image, D0):
+    """Bo loc thong thap iDeal trong mien tan so."""
+    M, N = image.shape
+    F = np.fft.fft2(image)
+    Fshift = np.fft.fftshift(F)
+
+    u = np.arange(0, M)
+    v = np.arange(0, N)
+    U, V = np.meshgrid(u, v, indexing='ij')
+    D = np.sqrt((U - M//2)**2 + (V - N//2)**2)
+    H = (D <= D0).astype(float)
+
+    Gshift = Fshift * H
+    G = np.fft.ifftshift(Gshift)
+    img_back = np.fft.ifft2(G)
+    img_back = np.real(img_back)
+
+    # chuan hoa 0-255
+    img_back = img_back - img_back.min()
+    img_back = img_back / img_back.max() * 255.0
+    return img_back
+
+# --------- tham so ----------
+input_path = "C:\ImageProcessing\Doan-xulyanh\img\moon.jpg"  # anh dau vao
+D0 = 40                      # ban kinh cat (cang lon cang it mo)
+# ----------------------------
+
+img = load_image_grayscale(input_path)
+result = ideal_lowpass_filter(img, D0)
+
+out_path = "output_moon_ideal_lp.png"
+Image.fromarray(np.clip(result, 0, 255).astype(np.uint8)).save(out_path)
+print(f"Da luu ket qua: {out_path}")
+
+# hien thi
+plt.figure(figsize=(12,5))
+plt.subplot(1,2,1)
+plt.title("Anh goc")
+plt.axis('off')
+plt.imshow(img, cmap='gray')
+
+plt.subplot(1,2,2)
+plt.title(f"Bo loc Ideal LP (D0={D0})")
+plt.axis('off')
+plt.imshow(result, cmap='gray')
+plt.show()
+
+\end{lstlisting}
+Như vậy với phép lọc thông thấp Ideal, ta đã làm mờ ảnh, làm ảnh giảm các tần số cao, ví dụ như độ nét biên của hình mặt trăng phía trên sau khi lọc đã giảm và các chi tiết cũng mờ đi.
 \subsubsection{Lọc thông thấp Gauss}
 
 Đặc trưng cho nhiễu đó là hàm mật độ xác suất thể hiện sự phân bố của nhiễu. Ta sử dụng hàm phân phối Gauss làm bộ lọc nhằm làm mờ ảnh và giảm nhiễu. Trong trường hợp 1 chiều, phân phối Gauss có công thức:
@@ -1007,13 +1078,8 @@ Ta được ảnh sau khi lọc là:
 \caption{Ảnh mặt trăng sau bộ lọc thông thấp Gauss}
 \label{fig118}
 \end{figure}
-Ta quan sát phổ của ảnh ban đầu và sau khi lọc (hướng trên - phải xuống dưới - trái)
 
-*hình*
-
-Ta thấy rằng sau khi lọc, độ biến thiên tần số của ảnh ít hơn ảnh gốc, đồng thời các giá trị tần số ảnh sau khi lọc cao hơn ảnh gốc.
-
-Ảnh sau khi lọc không xảy ra hiệu ứng chuông như phép lọc thông thấp Ideal. Phép lọc thông thấp Gauss này cho ảnh mượt hơn.
+Ảnh sau khi lọc không xảy ra hiệu ứng chuông ở biên mặt trăng như phép lọc thông thấp Ideal. Phép lọc thông thấp Gauss này cho ảnh mượt hơn.
 \subsubsection{Lọc thông thấp Butterworth}
 
 Bộ lọc này bao gồm các tính chất của lọc thông thấp Ideal và lọc thông thấp Gauss. Bộ lọc thông thấp Butterworth có dạng sau:

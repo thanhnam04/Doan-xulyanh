@@ -23,14 +23,14 @@
 \contentsline {subsection}{\numberline {1.4.2}Các bộ lọc băng thông trong miền tần số}{16}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}Làm mờ ảnh trong miền tần số}{16}{subsection.1.4.3}%
 \contentsline {subsubsection}{\numberline {1.4.3.1}Lọc thông thấp Ideal}{19}{subsubsection.1.4.3.1}%
-\contentsline {subsubsection}{\numberline {1.4.3.2}Lọc thông thấp Gauss}{22}{subsubsection.1.4.3.2}%
-\contentsline {subsubsection}{\numberline {1.4.3.3}Lọc thông thấp Butterworth}{25}{subsubsection.1.4.3.3}%
-\contentsline {subsection}{\numberline {1.4.4}Ứng dụng phép lọc làm mờ ảnh}{29}{subsection.1.4.4}%
-\contentsline {subsection}{\numberline {1.4.5}Làm sắc ảnh trong miền tần số}{32}{subsection.1.4.5}%
-\contentsline {subsubsection}{\numberline {1.4.5.1}Lọc thông cao Ideal}{33}{subsubsection.1.4.5.1}%
-\contentsline {subsubsection}{\numberline {1.4.5.2}Lọc thông cao Gauss}{36}{subsubsection.1.4.5.2}%
-\contentsline {subsubsection}{\numberline {1.4.5.3}Lọc thông cao Butterworth}{42}{subsubsection.1.4.5.3}%
-\contentsline {subsection}{\numberline {1.4.6}Ứng dụng phép lọc sắc nét ảnh}{49}{subsection.1.4.6}%
-\contentsline {subsection}{\numberline {1.4.7}Lọc chặn}{50}{subsection.1.4.7}%
-\contentsline {chapter}{{\bf Kết luận}\rm }{55}{Item.33}%
-\contentsline {chapter}{{\bf Tài liệu tham khảo}}{56}{chapter*.59}%
+\contentsline {subsubsection}{\numberline {1.4.3.2}Lọc thông thấp Gauss}{25}{subsubsection.1.4.3.2}%
+\contentsline {subsubsection}{\numberline {1.4.3.3}Lọc thông thấp Butterworth}{27}{subsubsection.1.4.3.3}%
+\contentsline {subsection}{\numberline {1.4.4}Ứng dụng phép lọc làm mờ ảnh}{31}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Làm sắc ảnh trong miền tần số}{34}{subsection.1.4.5}%
+\contentsline {subsubsection}{\numberline {1.4.5.1}Lọc thông cao Ideal}{35}{subsubsection.1.4.5.1}%
+\contentsline {subsubsection}{\numberline {1.4.5.2}Lọc thông cao Gauss}{38}{subsubsection.1.4.5.2}%
+\contentsline {subsubsection}{\numberline {1.4.5.3}Lọc thông cao Butterworth}{44}{subsubsection.1.4.5.3}%
+\contentsline {subsection}{\numberline {1.4.6}Ứng dụng phép lọc sắc nét ảnh}{51}{subsection.1.4.6}%
+\contentsline {subsection}{\numberline {1.4.7}Lọc chặn}{52}{subsection.1.4.7}%
+\contentsline {chapter}{{\bf Kết luận}\rm }{57}{Item.33}%
+\contentsline {chapter}{{\bf Tài liệu tham khảo}}{58}{chapter*.60}%
