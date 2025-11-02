@@ -156,15 +156,15 @@
 	\large{}
 	\vspace{1.5cm}
 	
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|}
   \hline
-  MSV & Họ và tên  \\ 
+  MSV & Họ và tên &$\%$ \\ 
 	\hline
-	   3122480001  &   Trần Đức Anh                    \\
+	   3122480001  &   Trần Đức Anh        &100            \\
   \hline
-   3122480034  &  Nguyễn Thành Nam                       \\ 
+   3122480034  &  Nguyễn Thành Nam  &100                     \\ 
   \hline
-   3122480042  &   Bùi Tấn Phát                       \\ 
+   3122480042  &   Bùi Tấn Phát & 100                      \\ 
   \hline
  \end{tabular}
 
@@ -958,7 +958,7 @@ print("Bo loc h da tao xong voi ban kinh D0 =", D0)
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{img/IdealLowpassBlur.png}
+\includegraphics[width=0.9\linewidth]{img/IdealLowpassBlur.png}
 \caption{Ảnh mờ sau khi dùng lọc thông thấp Ideal}
 \end{figure}
 
@@ -1026,7 +1026,29 @@ plt.imshow(result, cmap='gray')
 plt.show()
 
 \end{lstlisting}
-Như vậy với phép lọc thông thấp Ideal, ta đã làm mờ ảnh, làm ảnh giảm các tần số cao, ví dụ như độ nét biên của hình mặt trăng phía trên sau khi lọc đã giảm và các chi tiết cũng mờ đi.
+Như vậy với phép lọc thông thấp Ideal, ta đã làm mờ ảnh, làm ảnh giảm các tần số cao, ví dụ như độ nét biên của hình mặt trăng phía trên sau khi lọc đã giảm và các chi tiết cũng mờ đi. Ta cũng có thể thấy biên ảnh mặt trăng sau lọc cũng có hiệu ứng chuông nhẹ một vài vòng hơi mờ. 
+
+\begin{table}[H]
+\centering
+\caption{Tổng hợp đặc điểm và tác dụng của lọc thông thấp Ideal}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Nội dung} & \textbf{Mô tả} \\ \hline
+Ảnh gốc & Chứa nhiều chi tiết và nhiễu cao tần, biên rõ nét \\ \hline
+Ảnh sau lọc & Mờ đi rõ rệt, đặc biệt ở các vùng biên và chi tiết nhỏ \\ \hline
+Độ mịn & Tăng cao, ảnh trở nên mượt nhưng mất chi tiết \\ \hline
+Độ sắc nét & Giảm mạnh do loại bỏ phần lớn thành phần tần số cao \\ \hline
+Phổ tần số ảnh gốc & Có cả thành phần thấp và cao, năng lượng phân bố rộng \\ \hline
+Phổ tần số sau lọc & Chỉ còn phần trung tâm, tần số thấp chiếm ưu thế \\ \hline
+Tác dụng chính & Làm mờ ảnh mạnh, loại bỏ nhiễu cao tần \\ \hline
+Cơ chế hoạt động & Cắt đột ngột tất cả tần số cao hơn ngưỡng $D_0$ \\ \hline
+Nhược điểm & Gây hiệu ứng dao động Gibbs quanh biên (hiệu ứng chuông) \\ \hline
+Ứng dụng & Minh họa nguyên lý lọc, ít dùng trong thực tế do không tự nhiên \\ \hline
+\end{tabular}
+\end{table}
+
+
+
 \subsubsection{Lọc thông thấp Gauss}
 
 Đặc trưng cho nhiễu đó là hàm mật độ xác suất thể hiện sự phân bố của nhiễu. Ta sử dụng hàm phân phối Gauss làm bộ lọc nhằm làm mờ ảnh và giảm nhiễu. Trong trường hợp 1 chiều, phân phối Gauss có công thức:
@@ -1080,6 +1102,25 @@ Ta được ảnh sau khi lọc là:
 \end{figure}
 
 Ảnh sau khi lọc không xảy ra hiệu ứng chuông ở biên mặt trăng như phép lọc thông thấp Ideal. Phép lọc thông thấp Gauss này cho ảnh mượt hơn.
+\begin{table}[H]
+\centering
+\caption{Tổng hợp đặc điểm và tác dụng của lọc thông thấp Gauss}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Nội dung} & \textbf{Mô tả} \\ \hline
+Ảnh gốc & Gồm các chi tiết và nhiễu cao tần ở biên \\ \hline
+Ảnh sau lọc & Mờ nhẹ, các biên được làm mượt tự nhiên \\ \hline
+Độ mịn & Tăng hợp lý, ảnh vẫn giữ cảm giác tự nhiên \\ \hline
+Độ sắc nét & Giảm nhẹ, không gây hiện tượng mờ đục hoặc nhòe mạnh \\ \hline
+Phổ tần số ảnh gốc & Phân bố đều cả vùng thấp và cao \\ \hline
+Phổ tần số sau lọc & Giảm mượt dần theo hàm Gauss từ tâm ra rìa \\ \hline
+Tác dụng chính & Làm mờ nhẹ, khử nhiễu, giữ biên mềm mại \\ \hline
+Cơ chế hoạt động & Giảm biên độ tần số theo hàm mũ Gauss, không cắt gắt \\ \hline
+Ưu điểm & Không gây hiệu ứng chuông, đường cong trơn và ổn định \\ \hline
+Ứng dụng & Làm mờ mềm, tiền xử lý trước phát hiện cạnh, xử lý ảnh tự nhiên \\ \hline
+\end{tabular}
+\end{table}
+
 \subsubsection{Lọc thông thấp Butterworth}
 
 Bộ lọc này bao gồm các tính chất của lọc thông thấp Ideal và lọc thông thấp Gauss. Bộ lọc thông thấp Butterworth có dạng sau:
@@ -1180,6 +1221,25 @@ Ta được ảnh sau khi lọc là:
 \label{fig121}
 \end{figure}
 Ảnh bị mờ và hầu như mất các chi tiết cần có của ảnh gốc đi. Biến động khá nhiều và hầu như  giữ lại thông số ảnh khá ít. 
+\begin{table}[H]
+\centering
+\caption{Tổng hợp đặc điểm và tác dụng của lọc thông thấp Butterworth }
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Nội dung} & \textbf{Mô tả} \\ \hline
+Ảnh gốc & Có nhiều chi tiết và biên rõ nét, chứa cả tần số thấp và cao \\ \hline
+Ảnh sau lọc & Các chi tiết nhỏ bị làm mờ, nhưng cấu trúc tổng thể của ảnh vẫn nhận thấy rõ \\ \hline
+Độ mịn & Tăng vừa phải, ảnh trở nên mượt nhưng không bị nhòe hoàn toàn \\ \hline
+Độ sắc nét & Giảm nhẹ, vẫn còn giữ được biên mềm và vùng chuyển tiếp tự nhiên \\ \hline
+Phổ tần số ảnh gốc & Phân bố năng lượng tương đối rộng, bao gồm cả vùng trung tâm và rìa \\ \hline
+Phổ tần số sau lọc & Biên độ giảm dần mượt từ tâm ra rìa, không cắt gắt như Ideal \\ \hline
+Tác dụng chính & Làm mờ nhiễu cao tần, đồng thời vẫn giữ được thông tin chính của ảnh \\ \hline
+Cơ chế hoạt động & Giảm biên độ tần số cao theo hàm bậc $n$ của Butterworth, thay vì loại bỏ hoàn toàn \\ \hline
+Ưu điểm & Ảnh sau lọc trơn, tự nhiên; không có hiệu ứng chuông, có thể điều chỉnh mức mờ qua bậc $n$ \\ \hline
+Ứng dụng & Làm mượt ảnh, khử nhiễu trong xử lý ảnh y tế hoặc ảnh vệ tinh, nơi cần cân bằng giữa mờ và chi tiết \\ \hline
+\end{tabular}
+\end{table}
+
 
 Một số ví dụ khác.
 \begin{figure}[H]
@@ -1375,6 +1435,24 @@ Phép lọc này biến các giá trị tần số khác biên trở nên gần 
 \caption{Hiệu ứng chuông trong ảnh sử dụng bộ lọc thông cao Ideal}
 \label{fig131}
 \end{figure}
+\begin{table}[H]
+\centering
+\caption{Tổng hợp đặc điểm và tác dụng của lọc thông cao Ideal}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Nội dung} & \textbf{Mô tả} \\ \hline
+Ảnh gốc & Gồm nhiều thành phần tần số thấp, vùng phẳng và mượt \\ \hline
+Ảnh sau lọc & Chỉ giữ lại các chi tiết, biên và vùng biến thiên mạnh \\ \hline
+Độ mịn & Giảm mạnh, ảnh trở nên gắt và có thể xuất hiện nhiễu biên \\ \hline
+Độ sắc nét & Tăng cao, các đường biên rõ ràng nhưng dễ bị méo sáng tối \\ \hline
+Phổ tần số ảnh gốc & Tập trung năng lượng chủ yếu ở trung tâm (tần số thấp) \\ \hline
+Phổ tần số sau lọc & Trung tâm bị loại bỏ, chỉ còn năng lượng ở vùng rìa (tần số cao) \\ \hline
+Tác dụng chính & Làm nổi bật các biên, nhấn mạnh thay đổi cường độ sáng \\ \hline
+Cơ chế hoạt động & Cắt hoàn toàn tần số thấp nhỏ hơn ngưỡng $D_0$, giữ nguyên phần cao \\ \hline
+Nhược điểm & Gây hiệu ứng dao động Gibbs quanh biên (hiệu ứng chuông) \\ \hline
+Ứng dụng & Phát hiện biên, tăng cường chi tiết ảnh kỹ thuật và ảnh y học \\ \hline
+\end{tabular}
+\end{table}
 
 \subsubsection{Lọc thông cao Gauss}
 Phép lọc thông cao Gauss 2 chiều (2-D) có dạng: 
@@ -1784,6 +1862,25 @@ Hình ảnh sau là ví dụ của phép lọc thông cao Butterworth cấp 2 v�
 \caption{Hiệu ứng chuông trong ảnh sử dụng bộ lọc thông cao Butterworth}
 \label{fig139}
 \end{figure}
+\begin{table}[H]
+\centering
+\caption{Tổng hợp đặc điểm và tác dụng của lọc thông cao Butterworth}
+\begin{tabular}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Nội dung} & \textbf{Mô tả} \\ \hline
+Ảnh gốc & Bao gồm cả vùng phẳng và vùng có chi tiết, tần số thấp chiếm ưu thế \\ \hline
+Ảnh sau lọc & Các chi tiết và biên được làm nổi bật, vùng phẳng bị làm tối đi \\ \hline
+Độ mịn & Giảm nhẹ, ảnh vẫn giữ độ tự nhiên hơn so với lọc Ideal \\ \hline
+Độ sắc nét & Tăng vừa phải, biên rõ nhưng không bị gắt hoặc méo sáng tối \\ \hline
+Phổ tần số ảnh gốc & Tập trung nhiều ở trung tâm (tần số thấp) \\ \hline
+Phổ tần số sau lọc & Giảm mượt biên độ vùng trung tâm, tăng dần năng lượng ở rìa \\ \hline
+Tác dụng chính & Làm rõ các chi tiết nhỏ và biên vật thể, loại bỏ vùng mượt \\ \hline
+Cơ chế hoạt động & Giảm dần tần số thấp theo bậc $n$, không cắt đột ngột như Ideal \\ \hline
+Ưu điểm & Ảnh rõ hơn nhưng vẫn mượt, không có hiệu ứng chuông, điều chỉnh linh hoạt bằng $n$ \\ \hline
+Ứng dụng & Tăng cường chi tiết trong ảnh tự nhiên, phát hiện biên mềm, xử lý ảnh vệ tinh \\ \hline
+\end{tabular}
+\end{table}
+
 
 \subsection{Ứng dụng phép lọc sắc nét ảnh}
 Các phép lọc ảnh tần số cao này còn được sử dụng để nhận diện dấu vân tay con người. Một yếu tố quan trọng để máy móc nhận diện được vân tay đó là làm sao để tăng cường các đường vân và giảm thiểu đi các vết bẩn trên vân. 
