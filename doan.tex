@@ -603,14 +603,14 @@ Khi đó, ta có thể giảm khối lượng tính toán xuống một nửa. V
 \end{equation}
 
 
-\begin{lstlisting}[caption={Thuật toán FFT đệ quy dạng ditfft2}, label={code:fft}]
+\begin{lstlisting}[ label={code:fft}]
 import cmath
 
 def ditfft2(x, N, s):
     """
-    x: list day so (co the la phuc)
+    x: list day so 
     N: kich thuoc FFT (phai la luy thua cua 2)
-    s: buoc nhay (stride)
+    s: buoc nhay (step)
     """
     if N == 1:
         return [x[0]]  # Truong hop co so
@@ -1998,6 +1998,34 @@ Các bước lọc chặn:
 \caption{Ảnh trái là ảnh có đường kẻ sọc ngang, dọc và ảnh phải là ảnh dùng phép lọc chặn để thu được ảnh rõ ràng hơn }
 \label{fig145}
 \end{figure}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Phụ lục: Mã nguồn chương trình}
+\chapter*{Phụ lục: Mã nguồn chương trình}
+
+%--- Ví dụ chèn code Python ---
+\section*{Thuật toán xử lý dữ liệu}
+\begin{lstlisting}[language=Python, caption={Hàm đọc và xử lý dữ liệu từ file}]
+def read_data(filename):
+    data = []
+    with open(filename, 'r') as f:
+        for line in f:
+            data.append(line.strip().split())
+    return data
+\end{lstlisting}
+
+\section*{Thuật toán chính}
+\begin{lstlisting}[language=Python, caption={Thuật toán chính của chương trình}]
+def main():
+    cities = read_data("cities.txt")
+    print(":", len(cities))
+
+if __name__ == "__main__":
+    main()
+\end{lstlisting}
+
+
 	\chapter*{Kết luận}
 	Bài báo cáo này đạt được các vấn đề sau đây:
 
