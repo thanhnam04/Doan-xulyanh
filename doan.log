@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  11 NOV 2025 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9) (preloaded format=pdflatex 2023.9.25)  18 NOV 2025 11:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1313,7 +1313,7 @@ Package caption Info: scrextend package is loaded.
 \caption@addmargin@hsize=\dimen392
 \caption@addmargin@linewidth=\dimen393
 Package caption Info: End \AtBeginDocument code.
-<img/logodhsg.png, id=149, 1223.57124pt x 1223.57124pt>
+<img/logodhsg.png, id=145, 1223.57124pt x 1223.57124pt>
 File: img/logodhsg.png Graphic file (type png)
 <use img/logodhsg.png>
 Package pdftex.def Info: img/logodhsg.png  used on input line 118.
@@ -1340,12 +1340,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
                    \relax 
 l.178 \end{titlingpage}
                         [1]
-Underfull \hbox (badness 10000) in paragraph at lines 195--201
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 217--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--201
+Underfull \hbox (badness 10000) in paragraph at lines 217--223
 
  []
 
@@ -1356,12 +1366,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.205 	\newpage
-                [1
+[2
 
 ] (doan.toc
 
@@ -1403,7 +1408,7 @@ LaTeX Font Warning: Font shape `U/lasy/m/n' in size <13> not available
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <6.5> not available
 (Font)              size <6> substituted on input line 2.
 
-[2])
+[3])
 \tf@toc=\write5
 \openout5 = `doan.toc'.
 
@@ -1415,26 +1420,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[3]
-Underfull \hbox (badness 2941) in paragraph at lines 220--220
+[4]
+Underfull \hbox (badness 2941) in paragraph at lines 258--258
 []|\T5/cmr/m/n/13 Discrete Fourier Trans-
  []
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 221--221
+Underfull \hbox (badness 1275) in paragraph at lines 259--259
 []|\T5/cmr/m/n/13 Inverse Dis-crete Fourier
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+[]|\T5/cmr/m/n/13 Butterworth Low-Pass
+ []
 
-[4
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 263--263
+[]|\T5/cmr/m/n/13 Ideal High-Pass Fil-ter
+ []
+
+
+Underfull \hbox (badness 3826) in paragraph at lines 263--263
+\T5/cmr/m/n/13 (Bë låc thæng cao lþ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+[]|\T5/cmr/m/n/13 Butterworth High-Pass
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 265--265
+\T5/cmr/m/n/13 ter (Bë låc thæng cao
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1452,7 +1472,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6]
+[6] (doan.lof
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 12.
+ (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [7])
+\tf@lof=\write6
+\openout6 = `doan.lof'.
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1460,7 +1488,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7]
+[8]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1468,72 +1496,70 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[1
-
-]
+[9]
 Ch\uhorn \ohorn ng 1.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 320.
+(hyperref)                removing `\<let>-command' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 320.
+(hyperref)                removing `\\' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 320.
+(hyperref)                removing `\@centercr' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 320.
+(hyperref)                removing `\rightskip' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 320.
+(hyperref)                removing `\@flushglue' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 320.
+(hyperref)                removing `\leftskip' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 320.
+(hyperref)                removing `\@flushglue' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 320.
+(hyperref)                removing `\finalhyphendemerits' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 320.
+(hyperref)                removing `\z@' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 320.
+(hyperref)                removing `\parindent' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 320.
+(hyperref)                removing `\z@' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 320.
+(hyperref)                removing `\parfillskip' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 320.
+(hyperref)                removing `\z@skip' on input line 370.
 
-[2
+[10
 
 ]
-<img/Screenshot 2025-10-01 132803.png, id=380, 239.39438pt x 234.8775pt>
+<img/Screenshot 2025-10-01 132803.png, id=349, 239.39438pt x 234.8775pt>
 File: img/Screenshot 2025-10-01 132803.png Graphic file (type png)
 <use img/Screenshot 2025-10-01 132803.png>
-Package pdftex.def Info: img/Screenshot 2025-10-01 132803.png  used on input line 362.
+Package pdftex.def Info: img/Screenshot 2025-10-01 132803.png  used on input line 412.
 (pdftex.def)             Requested size: 230.46729pt x 226.12135pt.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 363.
+(Font)              <6> on input line 413.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1542,7 +1568,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[3]
+[11]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1550,16 +1576,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4 <./img/Screenshot 2025-10-01 132803.png>]
-<img/fourier.png, id=397, 252.945pt x 449.68pt>
+[12 <./img/Screenshot 2025-10-01 132803.png>]
+<img/fourier.png, id=366, 252.945pt x 449.68pt>
 File: img/fourier.png Graphic file (type png)
 <use img/fourier.png>
-Package pdftex.def Info: img/fourier.png  used on input line 406.
+Package pdftex.def Info: img/fourier.png  used on input line 456.
 (pdftex.def)             Requested size: 142.26378pt x 252.91693pt.
-<img/fourier1.png, id=398, 256.70906pt x 394.47375pt>
+<img/fourier1.png, id=367, 256.70906pt x 394.47375pt>
 File: img/fourier1.png Graphic file (type png)
 <use img/fourier1.png>
-Package pdftex.def Info: img/fourier1.png  used on input line 412.
+Package pdftex.def Info: img/fourier1.png  used on input line 462.
 (pdftex.def)             Requested size: 142.26378pt x 218.61047pt.
 
 
@@ -1569,36 +1595,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5
+[13
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.415 		 \end{figure}
+l.465 		 \end{figure}
                      
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.415 		 \end{figure}
+l.465 		 \end{figure}
                      ]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.421 \begin{equation}
+l.471 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.421 \begin{equation}
+l.471 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.421 \begin{equation}
+l.471 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.421 \begin{equation}
+l.471 \begin{equation}
                       
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1607,7 +1633,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6 <./img/fourier.png (PNG copy)> <./img/fourier1.png>]
+[14 <./img/fourier.png (PNG copy)> <./img/fourier1.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1615,21 +1641,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7]
-<img/anhVaphodolon1.png, id=430, 852.18375pt x 401.24907pt>
+[15]
+<img/anhVaphodolon1.png, id=398, 852.18375pt x 401.24907pt>
 File: img/anhVaphodolon1.png Graphic file (type png)
 <use img/anhVaphodolon1.png>
-Package pdftex.def Info: img/anhVaphodolon1.png  used on input line 481.
+Package pdftex.def Info: img/anhVaphodolon1.png  used on input line 531.
 (pdftex.def)             Requested size: 368.74905pt x 173.62967pt.
-<img/anhVaphodolon1-3d.png, id=431, 599.23875pt x 434.37282pt>
+<img/anhVaphodolon1-3d.png, id=399, 599.23875pt x 434.37282pt>
 File: img/anhVaphodolon1-3d.png Graphic file (type png)
 <use img/anhVaphodolon1-3d.png>
-Package pdftex.def Info: img/anhVaphodolon1-3d.png  used on input line 487.
+Package pdftex.def Info: img/anhVaphodolon1-3d.png  used on input line 537.
 (pdftex.def)             Requested size: 368.74905pt x 267.30008pt.
-<img/anhVaphodolon2.png, id=432, 727.21687pt x 301.8778pt>
+<img/anhVaphodolon2.png, id=400, 727.21687pt x 301.8778pt>
 File: img/anhVaphodolon2.png Graphic file (type png)
 <use img/anhVaphodolon2.png>
-Package pdftex.def Info: img/anhVaphodolon2.png  used on input line 493.
+Package pdftex.def Info: img/anhVaphodolon2.png  used on input line 543.
 (pdftex.def)             Requested size: 368.74905pt x 153.07584pt.
 
 
@@ -1639,16 +1665,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8 <./img/anhVaphodolon1.png>]
-<img/anhVaphodolon3.png, id=440, 730.22812pt x 299.61937pt>
+[16 <./img/anhVaphodolon1.png>]
+<img/anhVaphodolon3.png, id=408, 730.22812pt x 299.61937pt>
 File: img/anhVaphodolon3.png Graphic file (type png)
 <use img/anhVaphodolon3.png>
-Package pdftex.def Info: img/anhVaphodolon3.png  used on input line 499.
+Package pdftex.def Info: img/anhVaphodolon3.png  used on input line 549.
 (pdftex.def)             Requested size: 368.74905pt x 151.29973pt.
-<img/anhVaphodolon4.png, id=441, 729.47531pt x 295.1025pt>
+<img/anhVaphodolon4.png, id=409, 729.47531pt x 295.1025pt>
 File: img/anhVaphodolon4.png Graphic file (type png)
 <use img/anhVaphodolon4.png>
-Package pdftex.def Info: img/anhVaphodolon4.png  used on input line 505.
+Package pdftex.def Info: img/anhVaphodolon4.png  used on input line 555.
 (pdftex.def)             Requested size: 368.74905pt x 149.17192pt.
 
 
@@ -1658,7 +1684,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9 <./img/anhVaphodolon1-3d.png> <./img/anhVaphodolon2.png> <./img/anhVaphodolon3.png>]
+[17 <./img/anhVaphodolon1-3d.png> <./img/anhVaphodolon2.png> <./img/anhVaphodolon3.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1666,7 +1692,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10 <./img/anhVaphodolon4.png>]
+[18 <./img/anhVaphodolon4.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1674,11 +1700,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 606.
- (C:\Users\Home\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
-File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
+[19]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1686,7 +1708,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
+[20]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1694,16 +1716,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
-<img/highpassLowpassDemo.png, id=513, 887.56593pt x 535.2497pt>
+[21]
+<img/highpassLowpassDemo.png, id=480, 887.56593pt x 535.2497pt>
 File: img/highpassLowpassDemo.png Graphic file (type png)
 <use img/highpassLowpassDemo.png>
-Package pdftex.def Info: img/highpassLowpassDemo.png  used on input line 668.
+Package pdftex.def Info: img/highpassLowpassDemo.png  used on input line 718.
 (pdftex.def)             Requested size: 426.79134pt x 257.3743pt.
-<img/moonFrequencydomain.png, id=514, 722.7pt x 361.35pt>
+<img/moonFrequencydomain.png, id=481, 722.7pt x 361.35pt>
 File: img/moonFrequencydomain.png Graphic file (type png)
 <use img/moonFrequencydomain.png>
-Package pdftex.def Info: img/moonFrequencydomain.png  used on input line 675.
+Package pdftex.def Info: img/moonFrequencydomain.png  used on input line 725.
 (pdftex.def)             Requested size: 426.79134pt x 213.39867pt.
 
 
@@ -1713,7 +1735,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14 <./img/highpassLowpassDemo.png>]
+[22 <./img/highpassLowpassDemo.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1721,103 +1743,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15 <./img/moonFrequencydomain.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
-
-LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 778.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
-<img/moon.jpg, id=556, 738.76pt x 1391.1975pt>
-File: img/moon.jpg Graphic file (type jpg)
-<use img/moon.jpg>
-Package pdftex.def Info: img/moon.jpg  used on input line 891.
-(pdftex.def)             Requested size: 184.371pt x 347.1829pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[19]
-<img/Ideallowpass.png, id=565, 491.436pt x 252.945pt>
-File: img/Ideallowpass.png Graphic file (type png)
-<use img/Ideallowpass.png>
-Package pdftex.def Info: img/Ideallowpass.png  used on input line 898.
-(pdftex.def)             Requested size: 414.83829pt x 213.52988pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[20 <./img/moon.jpg> <./img/Ideallowpass.png>]
-File: img/moonFrequencydomain.png Graphic file (type png)
-<use img/moonFrequencydomain.png>
-Package pdftex.def Info: img/moonFrequencydomain.png  used on input line 948.
-(pdftex.def)             Requested size: 414.83829pt x 207.42175pt.
-<img/mienKG_mienTS.png, id=573, 431.36156pt x 296.60812pt>
-File: img/mienKG_mienTS.png Graphic file (type png)
-<use img/mienKG_mienTS.png>
-Package pdftex.def Info: img/mienKG_mienTS.png  used on input line 954.
-(pdftex.def)             Requested size: 322.65279pt x 221.86717pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[21]
-<img/IdealLowpassBlur.png, id=616, 528.2937pt x 308.5929pt>
-File: img/IdealLowpassBlur.png Graphic file (type png)
-<use img/IdealLowpassBlur.png>
-Package pdftex.def Info: img/IdealLowpassBlur.png  used on input line 961.
-(pdftex.def)             Requested size: 414.83829pt x 242.32129pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[22 <./img/mienKG_mienTS.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[23 <./img/IdealLowpassBlur.png>]
+[23 <./img/moonFrequencydomain.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1826,11 +1752,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-<img/phanphoigauss.png, id=695, 417.81094pt x 219.06844pt>
-File: img/phanphoigauss.png Graphic file (type png)
-<use img/phanphoigauss.png>
-Package pdftex.def Info: img/phanphoigauss.png  used on input line 1061.
-(pdftex.def)             Requested size: 368.74905pt x 193.35574pt.
+
+LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 828.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1840,9 +1764,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+<img/moon.jpg, id=523, 738.76pt x 1391.1975pt>
 File: img/moon.jpg Graphic file (type jpg)
 <use img/moon.jpg>
-Package pdftex.def Info: img/moon.jpg  used on input line 1079.
+Package pdftex.def Info: img/moon.jpg  used on input line 941.
 (pdftex.def)             Requested size: 184.371pt x 347.1829pt.
 
 
@@ -1852,17 +1785,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26 <./img/phanphoigauss.png>]
-<img/LPG-spacedomainTo-frequency.png, id=709, 605.6226pt x 281.853pt>
-File: img/LPG-spacedomainTo-frequency.png Graphic file (type png)
-<use img/LPG-spacedomainTo-frequency.png>
-Package pdftex.def Info: img/LPG-spacedomainTo-frequency.png  used on input line 1090.
-(pdftex.def)             Requested size: 368.74905pt x 171.62042pt.
-<img/anhsauLocLowpass.png, id=710, 419.8887pt x 281.853pt>
-File: img/anhsauLocLowpass.png Graphic file (type png)
-<use img/anhsauLocLowpass.png>
-Package pdftex.def Info: img/anhsauLocLowpass.png  used on input line 1099.
-(pdftex.def)             Requested size: 368.74905pt x 247.53252pt.
+[27]
+<img/Ideallowpass.png, id=532, 491.436pt x 252.945pt>
+File: img/Ideallowpass.png Graphic file (type png)
+<use img/Ideallowpass.png>
+Package pdftex.def Info: img/Ideallowpass.png  used on input line 948.
+(pdftex.def)             Requested size: 414.83829pt x 213.52988pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1871,19 +1799,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27 <./img/LPG-spacedomainTo-frequency.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[28 <./img/anhsauLocLowpass.png>]
-File: img/moon.jpg Graphic file (type jpg)
-<use img/moon.jpg>
-Package pdftex.def Info: img/moon.jpg  used on input line 1146.
-(pdftex.def)             Requested size: 184.371pt x 347.1829pt.
+[28 <./img/moon.jpg> <./img/Ideallowpass.png>]
+File: img/moonFrequencydomain.png Graphic file (type png)
+<use img/moonFrequencydomain.png>
+Package pdftex.def Info: img/moonFrequencydomain.png  used on input line 998.
+(pdftex.def)             Requested size: 414.83829pt x 207.42175pt.
+<img/mienKG_mienTS.png, id=540, 431.36156pt x 296.60812pt>
+File: img/mienKG_mienTS.png Graphic file (type png)
+<use img/mienKG_mienTS.png>
+Package pdftex.def Info: img/mienKG_mienTS.png  used on input line 1004.
+(pdftex.def)             Requested size: 322.65279pt x 221.86717pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1893,6 +1818,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [29]
+<img/IdealLowpassBlur.png, id=584, 528.2937pt x 308.5929pt>
+File: img/IdealLowpassBlur.png Graphic file (type png)
+<use img/IdealLowpassBlur.png>
+Package pdftex.def Info: img/IdealLowpassBlur.png  used on input line 1011.
+(pdftex.def)             Requested size: 414.83829pt x 242.32129pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1900,11 +1831,102 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[30]
-<img/butterworthKG-TS.png, id=749, 471.26062pt x 325.96782pt>
+[30 <./img/mienKG_mienTS.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31 <./img/IdealLowpassBlur.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32]
+<img/phanphoigauss.png, id=661, 417.81094pt x 219.06844pt>
+File: img/phanphoigauss.png Graphic file (type png)
+<use img/phanphoigauss.png>
+Package pdftex.def Info: img/phanphoigauss.png  used on input line 1111.
+(pdftex.def)             Requested size: 368.74905pt x 193.35574pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[33]
+File: img/moon.jpg Graphic file (type jpg)
+<use img/moon.jpg>
+Package pdftex.def Info: img/moon.jpg  used on input line 1129.
+(pdftex.def)             Requested size: 184.371pt x 347.1829pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[34 <./img/phanphoigauss.png>]
+<img/LPG-spacedomainTo-frequency.png, id=675, 605.6226pt x 281.853pt>
+File: img/LPG-spacedomainTo-frequency.png Graphic file (type png)
+<use img/LPG-spacedomainTo-frequency.png>
+Package pdftex.def Info: img/LPG-spacedomainTo-frequency.png  used on input line 1140.
+(pdftex.def)             Requested size: 368.74905pt x 171.62042pt.
+<img/anhsauLocLowpass.png, id=676, 419.8887pt x 281.853pt>
+File: img/anhsauLocLowpass.png Graphic file (type png)
+<use img/anhsauLocLowpass.png>
+Package pdftex.def Info: img/anhsauLocLowpass.png  used on input line 1149.
+(pdftex.def)             Requested size: 368.74905pt x 247.53252pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35 <./img/LPG-spacedomainTo-frequency.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36 <./img/anhsauLocLowpass.png>]
+File: img/moon.jpg Graphic file (type jpg)
+<use img/moon.jpg>
+Package pdftex.def Info: img/moon.jpg  used on input line 1196.
+(pdftex.def)             Requested size: 184.371pt x 347.1829pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[38]
+<img/butterworthKG-TS.png, id=715, 471.26062pt x 325.96782pt>
 File: img/butterworthKG-TS.png Graphic file (type png)
 <use img/butterworthKG-TS.png>
-Package pdftex.def Info: img/butterworthKG-TS.png  used on input line 1210.
+Package pdftex.def Info: img/butterworthKG-TS.png  used on input line 1260.
 (pdftex.def)             Requested size: 368.74905pt x 255.0646pt.
 
 
@@ -1914,16 +1936,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[31]
-<img/butterworthLowpassFilter.png, id=788, 218.2554pt x 364.2408pt>
+[39]
+<img/butterworthLowpassFilter.png, id=754, 218.2554pt x 364.2408pt>
 File: img/butterworthLowpassFilter.png Graphic file (type png)
 <use img/butterworthLowpassFilter.png>
-Package pdftex.def Info: img/butterworthLowpassFilter.png  used on input line 1219.
+Package pdftex.def Info: img/butterworthLowpassFilter.png  used on input line 1269.
 (pdftex.def)             Requested size: 161.32991pt x 269.24496pt.
-<img/BLPF2.png, id=789, 832.10875pt x 443.6575pt>
+<img/BLPF2.png, id=755, 832.10875pt x 443.6575pt>
 File: img/BLPF2.png Graphic file (type png)
 <use img/BLPF2.png>
-Package pdftex.def Info: img/BLPF2.png  used on input line 1228.
+Package pdftex.def Info: img/BLPF2.png  used on input line 1278.
 (pdftex.def)             Requested size: 405.62466pt x 216.27031pt.
 
 
@@ -1933,11 +1955,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32 <./img/butterworthKG-TS.png> <./img/butterworthLowpassFilter.png>]
-<img/BLPF1.png, id=796, 615.0478pt x 325.96782pt>
+[40 <./img/butterworthKG-TS.png> <./img/butterworthLowpassFilter.png>]
+<img/BLPF1.png, id=762, 615.0478pt x 325.96782pt>
 File: img/BLPF1.png Graphic file (type png)
 <use img/BLPF1.png>
-Package pdftex.def Info: img/BLPF1.png  used on input line 1235.
+Package pdftex.def Info: img/BLPF1.png  used on input line 1285.
 (pdftex.def)             Requested size: 405.62466pt x 214.98026pt.
 
 
@@ -1947,16 +1969,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[33 <./img/BLPF2.png (PNG copy)> <./img/BLPF1.png>]
-<img/ungdungmoanh1.png, id=802, 548.80031pt x 249.93375pt>
+[41 <./img/BLPF2.png (PNG copy)> <./img/BLPF1.png>]
+<img/ungdungmoanh1.png, id=769, 548.80031pt x 249.93375pt>
 File: img/ungdungmoanh1.png Graphic file (type png)
 <use img/ungdungmoanh1.png>
-Package pdftex.def Info: img/ungdungmoanh1.png  used on input line 1258.
+Package pdftex.def Info: img/ungdungmoanh1.png  used on input line 1308.
 (pdftex.def)             Requested size: 414.83829pt x 188.92955pt.
-<img/ungdungmoanh2.png, id=803, 572.1375pt x 391.4625pt>
+<img/ungdungmoanh2.png, id=770, 572.1375pt x 391.4625pt>
 File: img/ungdungmoanh2.png Graphic file (type png)
 <use img/ungdungmoanh2.png>
-Package pdftex.def Info: img/ungdungmoanh2.png  used on input line 1268.
+Package pdftex.def Info: img/ungdungmoanh2.png  used on input line 1318.
 (pdftex.def)             Requested size: 405.62466pt x 277.53413pt.
 
 
@@ -1966,11 +1988,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34 <./img/ungdungmoanh1.png>]
-<img/ungdungmoanh3.png, id=810, 479.54156pt x 249.18094pt>
+[42 <./img/ungdungmoanh1.png>]
+<img/ungdungmoanh3.png, id=776, 479.54156pt x 249.18094pt>
 File: img/ungdungmoanh3.png Graphic file (type png)
 <use img/ungdungmoanh3.png>
-Package pdftex.def Info: img/ungdungmoanh3.png  used on input line 1279.
+Package pdftex.def Info: img/ungdungmoanh3.png  used on input line 1329.
 (pdftex.def)             Requested size: 405.62466pt x 210.77438pt.
 
 
@@ -1980,11 +2002,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[35 <./img/ungdungmoanh2.png (PNG copy)>]
-<img/lamsacanh1.png, id=815, 563.85657pt x 271.0125pt>
+[43 <./img/ungdungmoanh2.png (PNG copy)>]
+<img/lamsacanh1.png, id=781, 563.85657pt x 271.0125pt>
 File: img/lamsacanh1.png Graphic file (type png)
 <use img/lamsacanh1.png>
-Package pdftex.def Info: img/lamsacanh1.png  used on input line 1295.
+Package pdftex.def Info: img/lamsacanh1.png  used on input line 1345.
 (pdftex.def)             Requested size: 405.62466pt x 194.96342pt.
 
 
@@ -1994,11 +2016,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[36 <./img/ungdungmoanh3.png>]
-<img/Duahau.png, id=821, 263.48438pt x 205.5178pt>
+[44 <./img/ungdungmoanh3.png>]
+<img/Duahau.png, id=787, 263.48438pt x 205.5178pt>
 File: img/Duahau.png Graphic file (type png)
 <use img/Duahau.png>
-Package pdftex.def Info: img/Duahau.png  used on input line 1330.
+Package pdftex.def Info: img/Duahau.png  used on input line 1380.
 (pdftex.def)             Requested size: 230.46729pt x 179.77432pt.
 
 
@@ -2008,7 +2030,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[37 <./img/lamsacanh1.png>]
+[45 <./img/lamsacanh1.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2016,16 +2038,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[38 <./img/Duahau.png>]
-<img/idealhighpass/IHPF-bolocKG-bolocTS.png, id=862, 574.5465pt x 244.2726pt>
+[46 <./img/Duahau.png>]
+<img/idealhighpass/IHPF-bolocKG-bolocTS.png, id=828, 574.5465pt x 244.2726pt>
 File: img/idealhighpass/IHPF-bolocKG-bolocTS.png Graphic file (type png)
 <use img/idealhighpass/IHPF-bolocKG-bolocTS.png>
-Package pdftex.def Info: img/idealhighpass/IHPF-bolocKG-bolocTS.png  used on input line 1393.
+Package pdftex.def Info: img/idealhighpass/IHPF-bolocKG-bolocTS.png  used on input line 1443.
 (pdftex.def)             Requested size: 368.74905pt x 156.77747pt.
-<img/idealhighpass/IHPFanhgocvaAnhsauloc.png, id=863, 714.7503pt x 299.1978pt>
+<img/idealhighpass/IHPFanhgocvaAnhsauloc.png, id=829, 714.7503pt x 299.1978pt>
 File: img/idealhighpass/IHPFanhgocvaAnhsauloc.png Graphic file (type png)
 <use img/idealhighpass/IHPFanhgocvaAnhsauloc.png>
-Package pdftex.def Info: img/idealhighpass/IHPFanhgocvaAnhsauloc.png  used on input line 1402.
+Package pdftex.def Info: img/idealhighpass/IHPFanhgocvaAnhsauloc.png  used on input line 1452.
 (pdftex.def)             Requested size: 414.83829pt x 173.6581pt.
 
 
@@ -2035,11 +2057,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[39 <./img/idealhighpass/IHPF-bolocKG-bolocTS.png>]
-<img/idealhighpass/IHPFvidu1.png, id=893, 652.68843pt x 222.8325pt>
+[47 <./img/idealhighpass/IHPF-bolocKG-bolocTS.png>]
+<img/idealhighpass/IHPFvidu1.png, id=860, 652.68843pt x 222.8325pt>
 File: img/idealhighpass/IHPFvidu1.png Graphic file (type png)
 <use img/idealhighpass/IHPFvidu1.png>
-Package pdftex.def Info: img/idealhighpass/IHPFvidu1.png  used on input line 1415.
+Package pdftex.def Info: img/idealhighpass/IHPFvidu1.png  used on input line 1465.
 (pdftex.def)             Requested size: 368.74905pt x 125.89719pt.
 
 
@@ -2049,10 +2071,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40 <./img/idealhighpass/IHPFanhgocvaAnhsauloc.png> <./img/idealhighpass/IHPFvidu1.png>]
+[48 <./img/idealhighpass/IHPFanhgocvaAnhsauloc.png> <./img/idealhighpass/IHPFvidu1.png>]
 File: img/Duahau.png Graphic file (type png)
 <use img/Duahau.png>
-Package pdftex.def Info: img/Duahau.png  used on input line 1446.
+Package pdftex.def Info: img/Duahau.png  used on input line 1496.
 (pdftex.def)             Requested size: 230.46729pt x 179.77432pt.
 
 
@@ -2062,7 +2084,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[41]
+[49]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2070,16 +2092,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42]
-<img/GaussHP-KG-TS.png, id=940, 612.78937pt x 265.74281pt>
+[50]
+<img/GaussHP-KG-TS.png, id=906, 612.78937pt x 265.74281pt>
 File: img/GaussHP-KG-TS.png Graphic file (type png)
 <use img/GaussHP-KG-TS.png>
-Package pdftex.def Info: img/GaussHP-KG-TS.png  used on input line 1505.
+Package pdftex.def Info: img/GaussHP-KG-TS.png  used on input line 1555.
 (pdftex.def)             Requested size: 368.74905pt x 159.91322pt.
-<img/SauLocGaussHP.png, id=941, 406.51875pt x 344.03531pt>
+<img/SauLocGaussHP.png, id=907, 406.51875pt x 344.03531pt>
 File: img/SauLocGaussHP.png Graphic file (type png)
 <use img/SauLocGaussHP.png>
-Package pdftex.def Info: img/SauLocGaussHP.png  used on input line 1512.
+Package pdftex.def Info: img/SauLocGaussHP.png  used on input line 1562.
 (pdftex.def)             Requested size: 276.56355pt x 234.06165pt.
 
 
@@ -2089,11 +2111,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[43 <./img/GaussHP-KG-TS.png>]
-<img/Hinh1-14.png, id=968, 863.47594pt x 731.73375pt>
+[51 <./img/GaussHP-KG-TS.png>]
+<img/Hinh1-14.png, id=934, 863.47594pt x 731.73375pt>
 File: img/Hinh1-14.png Graphic file (type png)
 <use img/Hinh1-14.png>
-Package pdftex.def Info: img/Hinh1-14.png  used on input line 1519.
+Package pdftex.def Info: img/Hinh1-14.png  used on input line 1569.
 (pdftex.def)             Requested size: 368.74905pt x 312.48447pt.
 
 
@@ -2103,7 +2125,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[44 <./img/SauLocGaussHP.png> <./img/Hinh1-14.png>]
+[52 <./img/SauLocGaussHP.png> <./img/Hinh1-14.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2111,7 +2133,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[45]
+[53]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2119,11 +2141,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[46]
-<img/pumpkin.png, id=1046, 752.8125pt x 499.8675pt>
+[54]
+<img/pumpkin.png, id=1012, 752.8125pt x 499.8675pt>
 File: img/pumpkin.png Graphic file (type png)
 <use img/pumpkin.png>
-Package pdftex.def Info: img/pumpkin.png  used on input line 1645.
+Package pdftex.def Info: img/pumpkin.png  used on input line 1695.
 (pdftex.def)             Requested size: 368.74905pt x 244.85332pt.
 
 
@@ -2133,7 +2155,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[47]
+[55]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2141,11 +2163,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[48 <./img/pumpkin.png>]
-<img/butterworthhighpass/bolocKG-TS.png, id=1098, 490.7133pt x 180.675pt>
+[56 <./img/pumpkin.png>]
+<img/butterworthhighpass/bolocKG-TS.png, id=1064, 490.7133pt x 180.675pt>
 File: img/butterworthhighpass/bolocKG-TS.png Graphic file (type png)
 <use img/butterworthhighpass/bolocKG-TS.png>
-Package pdftex.def Info: img/butterworthhighpass/bolocKG-TS.png  used on input line 1710.
+Package pdftex.def Info: img/butterworthhighpass/bolocKG-TS.png  used on input line 1760.
 (pdftex.def)             Requested size: 368.74905pt x 135.77332pt.
 
 
@@ -2155,11 +2177,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[49 <./img/butterworthhighpass/bolocKG-TS.png>]
-<img/butterworthhighpass/anhsaulocHighpass.png, id=1134, 349.7868pt x 253.6677pt>
+[57 <./img/butterworthhighpass/bolocKG-TS.png>]
+<img/butterworthhighpass/anhsaulocHighpass.png, id=1099, 349.7868pt x 253.6677pt>
 File: img/butterworthhighpass/anhsaulocHighpass.png Graphic file (type png)
 <use img/butterworthhighpass/anhsaulocHighpass.png>
-Package pdftex.def Info: img/butterworthhighpass/anhsaulocHighpass.png  used on input line 1718.
+Package pdftex.def Info: img/butterworthhighpass/anhsaulocHighpass.png  used on input line 1768.
 (pdftex.def)             Requested size: 322.65279pt x 233.99254pt.
 
 
@@ -2169,11 +2191,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50 <./img/butterworthhighpass/anhsaulocHighpass.png>]
-<img/butterworthhighpass/anhsaulocD0=70.png, id=1160, 349.7868pt x 253.6677pt>
+[58 <./img/butterworthhighpass/anhsaulocHighpass.png>]
+<img/butterworthhighpass/anhsaulocD0=70.png, id=1125, 349.7868pt x 253.6677pt>
 File: img/butterworthhighpass/anhsaulocD0=70.png Graphic file (type png)
 <use img/butterworthhighpass/anhsaulocD0=70.png>
-Package pdftex.def Info: img/butterworthhighpass/anhsaulocD0=70.png  used on input line 1777.
+Package pdftex.def Info: img/butterworthhighpass/anhsaulocD0=70.png  used on input line 1827.
 (pdftex.def)             Requested size: 322.65279pt x 233.99254pt.
 
 
@@ -2183,7 +2205,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
+[59]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2191,11 +2213,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52 <./img/butterworthhighpass/anhsaulocD0=70.png>]
-<img/butterworthhighpass/vidu.png, id=1224, 633.11531pt x 213.79875pt>
+[60 <./img/butterworthhighpass/anhsaulocD0=70.png>]
+<img/butterworthhighpass/vidu.png, id=1189, 633.11531pt x 213.79875pt>
 File: img/butterworthhighpass/vidu.png Graphic file (type png)
 <use img/butterworthhighpass/vidu.png>
-Package pdftex.def Info: img/butterworthhighpass/vidu.png  used on input line 1842.
+Package pdftex.def Info: img/butterworthhighpass/vidu.png  used on input line 1892.
 (pdftex.def)             Requested size: 368.74905pt x 124.52531pt.
 
 
@@ -2205,11 +2227,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[53 <./img/butterworthhighpass/vidu.png>]
-<img/ungdungsacanh/vantay.png, id=1256, 564.60938pt x 256.70906pt>
+[61 <./img/butterworthhighpass/vidu.png>]
+<img/ungdungsacanh/vantay.png, id=1221, 564.60938pt x 256.70906pt>
 File: img/ungdungsacanh/vantay.png Graphic file (type png)
 <use img/ungdungsacanh/vantay.png>
-Package pdftex.def Info: img/ungdungsacanh/vantay.png  used on input line 1875.
+Package pdftex.def Info: img/ungdungsacanh/vantay.png  used on input line 1925.
 (pdftex.def)             Requested size: 405.62466pt x 184.42691pt.
 
 
@@ -2219,11 +2241,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[54]
-<img/ungdungsacanh/vantay1.png, id=1262, 270.25969pt x 271.0125pt>
+[62]
+<img/ungdungsacanh/vantay1.png, id=1227, 270.25969pt x 271.0125pt>
 File: img/ungdungsacanh/vantay1.png Graphic file (type png)
 <use img/ungdungsacanh/vantay1.png>
-Package pdftex.def Info: img/ungdungsacanh/vantay1.png  used on input line 1884.
+Package pdftex.def Info: img/ungdungsacanh/vantay1.png  used on input line 1934.
 (pdftex.def)             Requested size: 313.43213pt x 314.31267pt.
 
 
@@ -2233,15 +2255,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[55 <./img/ungdungsacanh/vantay.png> <./img/ungdungsacanh/vantay1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1891--1892
+[63 <./img/ungdungsacanh/vantay.png> <./img/ungdungsacanh/vantay1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1941--1942
 
  []
 
-<img/locChan/XehoiSaulocchan.png, id=1269, 681.5061pt x 426.393pt>
+<img/locChan/XehoiSaulocchan.png, id=1234, 681.5061pt x 426.393pt>
 File: img/locChan/XehoiSaulocchan.png Graphic file (type png)
 <use img/locChan/XehoiSaulocchan.png>
-Package pdftex.def Info: img/locChan/XehoiSaulocchan.png  used on input line 1898.
+Package pdftex.def Info: img/locChan/XehoiSaulocchan.png  used on input line 1948.
 (pdftex.def)             Requested size: 396.404pt x 248.01077pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2250,7 +2272,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[56 <./img/locChan/XehoiSaulocchan.png>]
+[64 <./img/locChan/XehoiSaulocchan.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2258,15 +2280,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[57]
-Underfull \hbox (badness 10000) in paragraph at lines 1960--1961
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 2010--2011
 
  []
 
-<img/locChan/Anhdiemchamden.png, id=1326, 172.39406pt x 259.7203pt>
+<img/locChan/Anhdiemchamden.png, id=1292, 172.39406pt x 259.7203pt>
 File: img/locChan/Anhdiemchamden.png Graphic file (type png)
 <use img/locChan/Anhdiemchamden.png>
-Package pdftex.def Info: img/locChan/Anhdiemchamden.png  used on input line 1977.
+Package pdftex.def Info: img/locChan/Anhdiemchamden.png  used on input line 2027.
 (pdftex.def)             Requested size: 184.371pt x 277.7672pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2275,14 +2297,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58]
-<img/locChan/AnhXehoisaulocchan.png, id=1343, 179.16937pt x 268.00125pt>
+[66]
+<img/locChan/AnhXehoisaulocchan.png, id=1308, 179.16937pt x 268.00125pt>
 File: img/locChan/AnhXehoisaulocchan.png Graphic file (type png)
 <use img/locChan/AnhXehoisaulocchan.png>
-Package pdftex.def Info: img/locChan/AnhXehoisaulocchan.png  used on input line 1985.
+Package pdftex.def Info: img/locChan/AnhXehoisaulocchan.png  used on input line 2035.
 (pdftex.def)             Requested size: 184.371pt x 275.799pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1990--1992
+Underfull \hbox (badness 10000) in paragraph at lines 2040--2042
 
  []
 
@@ -2293,11 +2315,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[59 <./img/locChan/Anhdiemchamden.png> <./img/locChan/AnhXehoisaulocchan.png>]
-<img/locChan/bongbauduclocchan.png, id=1350, 527.72156pt x 206.27063pt>
+[67 <./img/locChan/Anhdiemchamden.png> <./img/locChan/AnhXehoisaulocchan.png>]
+<img/locChan/bongbauduclocchan.png, id=1315, 527.72156pt x 206.27063pt>
 File: img/locChan/bongbauduclocchan.png Graphic file (type png)
 <use img/locChan/bongbauduclocchan.png>
-Package pdftex.def Info: img/locChan/bongbauduclocchan.png  used on input line 1997.
+Package pdftex.def Info: img/locChan/bongbauduclocchan.png  used on input line 2047.
 (pdftex.def)             Requested size: 396.404pt x 154.94179pt.
 
 
@@ -2307,14 +2329,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[60 <./img/locChan/bongbauduclocchan.png>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 2009.
- [61
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 2038--2040
+[68 <./img/locChan/bongbauduclocchan.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2088--2090
 
  []
 
@@ -2325,7 +2341,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[62
+[69
 
 ]
 
@@ -2335,14 +2351,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[63
+[70
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{cite.V}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2097 	\newpage
-                 % Add a new page after the bibliography] [64] (doan.aux)
+l.2147 	\newpage
+                 % Add a new page after the bibliography] [71] (doan.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2356,20 +2372,20 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `doan.out' has not changed.
-(rerunfilecheck)             Checksum: 7DFEC10C2E67D0B72940E5A8B8AD0C40;7642.
+(rerunfilecheck)             Checksum: B9BD823FF595B05D4C71BAC03E3D9BEA;7352.
  ) 
 Here is how much of TeX's memory you used:
- 38938 strings out of 475248
- 791681 string characters out of 5758285
- 2224785 words of memory out of 5000000
- 58854 multiletter control sequences out of 15000+600000
+ 38910 strings out of 475248
+ 791322 string characters out of 5758285
+ 2225785 words of memory out of 5000000
+ 58841 multiletter control sequences out of 15000+600000
  584785 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,117p,1208b,2093s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Home\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr6.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/Home/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on doan.pdf (73 pages, 8903266 bytes).
+Output written on doan.pdf (73 pages, 8895697 bytes).
 PDF statistics:
- 1650 PDF objects out of 1728 (max. 8388607)
- 823 named destinations out of 1000 (max. 500000)
- 521 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1591 PDF objects out of 1728 (max. 8388607)
+ 805 named destinations out of 1000 (max. 500000)
+ 513 words of extra memory for PDF output out of 10000 (max. 10000000)
 
