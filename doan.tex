@@ -120,7 +120,7 @@
 	\end{figure}
 	
 	\vspace{1cm}
-	{\Huge\textbf{BÁO CÁO TỔNG KẾT \\ \hspace{0.5cm} ĐỒ ÁN MÔN HỌC\\PHÂN TÍCH VÀ XỬ LÝ ẢNH}\par}
+	{\Huge\textbf{BÁO CÁO \\ \hspace{0.5cm} ĐỒ ÁN MÔN HỌC\\PHÂN TÍCH VÀ XỬ LÝ ẢNH}\par}
 	\vspace{3cm}
 	{\Huge\textbf{Xử lý ảnh trên miền tần số \\(Image Enhancement in the Frequency Domain) }\par}
 	% \large\textbf{ Thuộc nhóm ngành khoa học: Toán-Ứng dụng\\ Chủ nhiệm đề tài: Nguyễn Thành Nam }\par		
@@ -143,9 +143,7 @@
 	\rule{5cm}{0.5pt}\par
 	\vspace{5cm}
 	
-	
-	\vspace{1cm}
-	{\Large\textbf{BÁO CÁO TỔNG KẾT \\ \hspace{0.5cm} ĐỒ ÁN MÔN HỌC \\
+	{\huge\textbf{BÁO CÁO \\ \hspace{0.5cm} ĐỒ ÁN MÔN HỌC \\
   PHÂN TÍCH VÀ XỬ LÝ ẢNH}\par}
 	\vspace{2cm}
 	{\huge\textbf{Xử lý ảnh trên miền tần số \\(Image Enhancement in the Frequency Domain)}\par}
@@ -193,7 +191,7 @@
 
 	Báo cáo này tập trung vào chủ đề "Xử lý ảnh trên miền tần số (Image Enhancement in the Frequency Domain)", nhằm trình bày các phương pháp cơ bản và ứng dụng của việc lọc ảnh trong miền tần số. Chúng em sẽ tìm hiểu các khái niệm nền tảng như biến đổi Fourier, chuỗi Fourier, và các bộ lọc thông thấp, thông cao, cũng như ứng dụng thực tế của chúng trong việc làm mờ, làm sắc nét ảnh và loại bỏ nhiễu.
 
-	Cấu trúc của báo cáo được tổ chức như sau: Chương 1 giới thiệu về miền tần số, khái niệm biến đổi Fourier và các tính chất của nó. Chương 2 trình bày chi tiết các phương pháp lọc ảnh trong miền tần số, bao gồm lọc thông thấp và thông cao với các loại bộ lọc phổ biến như Ideal, Gauss và Butterworth. Chương 3 kết luận và tổng hợp lại những nội dung chính.
+	Cấu trúc của báo cáo được tổ chức trong một chương như sau: Chương 1 giới thiệu về miền tần số, khái niệm biến đổi Fourier và các tính chất của nó. Chương 2 trình bày chi tiết các phương pháp lọc ảnh trong miền tần số, bao gồm lọc thông thấp và thông cao với các loại bộ lọc phổ biến như Ideal, Gauss và Butterworth. Chương 3 kết luận và tổng hợp lại những nội dung chính.
 
 	Hy vọng rằng báo cáo này sẽ cung cấp một vài tri thức hữu ích về xử lý ảnh trong miền tần số, góp phần vào việc nâng cao kiến thức và kỹ năng trong lĩnh vực phân tích và xử lý ảnh.
 
@@ -210,7 +208,7 @@
 	\vspace{1cm}
 	\indent
 	
-Tiểu luận này được hoàn thành tại trường Đại Học Sài Gòn dưới sự hướng dẫn của \textit{PGS.TS. Phạm Thế Bảo}. Em xin bày tỏ lòng biết ơn chân thành và sâu sắc về sự tận tâm và nhiệt tình của Thầy trong suốt quá trình tác giả thực hiện đề tài.
+Bài báo cáo này được hoàn thành tại trường Đại Học Sài Gòn dưới sự hướng dẫn của \textit{PGS.TS. Phạm Thế Bảo}. Em xin bày tỏ lòng biết ơn chân thành và sâu sắc về sự tận tâm và nhiệt tình của Thầy trong suốt quá trình tác giả thực hiện đề tài.
 	
 	
 	\bigskip
@@ -957,7 +955,6 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 # Doc anh va chuyen sang kieu float (tuong duong double)
-# Dung r'' de tranh loi escape ky tu trong duong dan Windows
 f = Image.open(r'C:\ImageProcessing\Doan-xulyanh\img\moon.jpg').convert('L')
 f = np.array(f, dtype=float)
 
@@ -1201,7 +1198,7 @@ Bây giờ, ta sử dụng bộ lọc này để lọc ảnh Mặt Trăng
 Khởi tạo bộ lọc có kích thước $P \times Q$ (bằng với kích thước hình ban đầu)
 
 \begin{lstlisting}
-	import numpy as np
+import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
@@ -1262,17 +1259,17 @@ Khi đó, ta được ảnh bộ lọc trong miền không gian và miền tần
 \label{fig120}
 \end{figure}
 
-Ta được ảnh sau khi lọc là:
+% Ta được ảnh sau khi lọc là:
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.35\linewidth]{img/butterworthLowpassFilter.png}
-\caption{Ảnh sau lọc}
-\label{fig121}
-\end{figure}
-Ảnh bị mờ và hầu như mất các chi tiết cần có của ảnh gốc đi. Biến động khá nhiều và hầu như  giữ lại thông số ảnh khá ít. 
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.35\linewidth]{img/butterworthLowpassFilter.png}
+% \caption{Ảnh sau lọc}
+% \label{fig121}
+% \end{figure}
+% Ảnh bị mờ và hầu như mất các chi tiết cần có của ảnh gốc đi. Biến động khá nhiều và hầu như  giữ lại thông số ảnh khá ít. 
 
-Một số ví dụ khác.
+Một số hình ảnh áp dụng bộ lọc :
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.88\linewidth]{img/BLPF2.png}
@@ -1830,9 +1827,6 @@ plt.show()
 \end{figure}
 
 \begin{lstlisting}
-# butterworth_highpass_duahau.py
-# loc thong cao Butterworth cho anh duahau.png va chi hien thi anh sau khi loc
-
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -2037,7 +2031,7 @@ Các bước lọc chặn:
 \label{fig144}
 \end{figure}
 
-    Như vậy ta đã loại bỏ các đường quết của ảnh ban đầu.
+    Như vậy ta đã giảm nhiễu và mờ đi các đường sọc chéo caro của ảnh ban đầu và nhìn tổng thể bức hình sẽ tốt hơn, không gây khó chịu khi nhìn lâu vào các điểm sọc caro.
     \\
 
     Một ví dụ sau về phép lọc ảnh
